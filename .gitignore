@@ -10,3 +10,9 @@ node_modules/
 *.swo
 .cache/
 dist/
+
+# Saved-page exports dropped into the working tree (not ours to ship)
+images/Slideshow*
+images/Slidesshow*
+images/Logo.jpg
+
