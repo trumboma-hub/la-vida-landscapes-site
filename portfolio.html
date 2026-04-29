@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio &mdash; La Vida Landscapes | Birmingham, AL</title>
+  <meta name="description" content="A selection of recent residential, commercial, and lake-country landscape projects from La Vida Landscapes." />
+  <link rel="canonical" href="https://lavidalandscapes.com/portfolio.html" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Portfolio &mdash; La Vida Landscapes" />
+  <meta property="og:description" content="Recent landscape design, hardscape, pool, and putting-green projects from La Vida." />
+  <meta property="og:image" content="https://lavidalandscapes.com/images/og-default.svg" />
+  <meta property="og:url" content="https://lavidalandscapes.com/portfolio.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { forest:'#2C4A3E', moss:'#6B8E5A', bark:'#3D2E1F', stone:'#A89B8C', cream:'#F5F1E8', sun:'#C9A961', ink:'#1A1F1B' },
+      fontFamily: { serif:['"Cormorant Garamond"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'], script:['Caveat','cursive'] }
+    }}}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://lavidalandscapes.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Portfolio", "item": "https://lavidalandscapes.com/portfolio.html" }
+    ]
+  }
+  </script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  <a href="#main" class="skip-link bg-forest text-cream px-4 py-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun">Skip to content</a>
+
+  <!-- nav:start -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/75 border-b border-stone/20">
+    <nav aria-label="Primary" class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif text-xl group-hover:bg-bark transition-colors">LV</span>
+        <span class="flex flex-col leading-none">
+          <span class="font-serif text-xl text-ink">La Vida Landscapes</span>
+          <span class="text-[11px] tracking-[0.2em] uppercase text-stone">Birmingham, AL</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-8 text-sm tracking-wide text-ink">
+        <li><a href="services.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Services</a></li>
+        <li><a href="portfolio.html" class="text-forest font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5" aria-current="page">Portfolio</a></li>
+        <li><a href="about.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">About</a></li>
+        <li><a href="vida-gardens.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Vida Gardens</a></li>
+        <li><a href="contact.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Contact</a></li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:+12058008432" aria-label="Call La Vida Landscapes at (205) 800-8432" class="text-sm text-ink hover:text-forest transition-colors">(205) 800-8432</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-forest hover:bg-bark text-cream text-sm tracking-wide px-5 py-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">Request a Consultation <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-ink hover:bg-stone/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" hidden class="lg:hidden border-t border-stone/20 bg-cream">
+      <ul class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-1 text-base">
+        <li><a href="services.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Services</a></li>
+        <li><a href="portfolio.html" class="block py-3 px-2 rounded-md bg-stone/10 text-forest" aria-current="page">Portfolio</a></li>
+        <li><a href="about.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">About</a></li>
+        <li><a href="vida-gardens.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Vida Gardens</a></li>
+        <li><a href="contact.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Contact</a></li>
+      </ul>
+      <div class="max-w-7xl mx-auto px-6 pb-6 flex flex-col gap-3">
+        <a href="tel:+12058008432" class="inline-flex items-center justify-center gap-2 bg-cream border border-forest/30 text-forest text-sm tracking-wide px-5 py-3 rounded-full">Call (205) 800-8432</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-forest text-cream text-sm tracking-wide px-5 py-3 rounded-full">Request a Consultation</a>
+      </div>
+    </div>
+  </header>
+  <!-- nav:end -->
+
+  <main id="main">
+    <!-- Hero -->
+    <section aria-labelledby="page-title" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <p class="text-moss text-xs tracking-[0.3em] uppercase">Portfolio</p>
+        <h1 id="page-title" class="mt-6 font-serif text-5xl md:text-7xl leading-[1.05] text-ink max-w-3xl">A selection of recent work.</h1>
+        <p class="mt-8 max-w-2xl text-stone text-lg leading-relaxed">Residential design-build, lake-country retreats, commercial landscape construction, and the new pool &amp; putting-green division. Real photography from current installs is being added as projects wrap.</p>
+        <p class="mt-4 max-w-2xl text-xs italic text-stone/80">Tile imagery shown below is illustrative pending final project photography release.</p>
+      </div>
+    </section>
+
+    <!-- Filter chips -->
+    <nav aria-label="Filter projects" class="border-y border-stone/20 bg-cream sticky top-20 z-30">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-4 flex gap-2 overflow-x-auto">
+        <button type="button" data-filter="all" class="whitespace-nowrap text-sm border bg-forest text-cream border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="true">All Work</button>
+        <button type="button" data-filter="design-build" class="whitespace-nowrap text-sm border bg-cream text-ink border-stone/30 hover:border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="false">Design-Build</button>
+        <button type="button" data-filter="hardscapes" class="whitespace-nowrap text-sm border bg-cream text-ink border-stone/30 hover:border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="false">Hardscapes</button>
+        <button type="button" data-filter="maintenance" class="whitespace-nowrap text-sm border bg-cream text-ink border-stone/30 hover:border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="false">Maintenance</button>
+        <button type="button" data-filter="commercial" class="whitespace-nowrap text-sm border bg-cream text-ink border-stone/30 hover:border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="false">Commercial</button>
+        <button type="button" data-filter="pools" class="whitespace-nowrap text-sm border bg-cream text-ink border-stone/30 hover:border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="false">Pools</button>
+        <button type="button" data-filter="putting-greens" class="whitespace-nowrap text-sm border bg-cream text-ink border-stone/30 hover:border-forest px-4 py-2 rounded-full transition-colors" aria-pressed="false">Putting Greens</button>
+      </div>
+    </nav>
+
+    <!-- Grid -->
+    <section aria-label="Project gallery" class="py-12 md:py-16">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <li data-tags="design-build hardscapes">
+            <button type="button" data-lightbox data-lightbox-title="Magnolia Estate Renewal" data-lightbox-meta="Mountain Brook, AL &middot; Design-Build &amp; Hardscapes" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-1 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Mountain Brook</p>
+                <p class="mt-2 font-serif text-2xl">Magnolia Estate Renewal</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="commercial design-build">
+            <button type="button" data-lightbox data-lightbox-title="UAB Quad Install" data-lightbox-meta="Birmingham, AL &middot; Commercial Landscape Construction" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-4 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">UAB Campus</p>
+                <p class="mt-2 font-serif text-2xl">University Quad Install</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="design-build pools">
+            <button type="button" data-lightbox data-lightbox-title="Lakefront Retreat" data-lightbox-meta="Lake Martin, AL &middot; Design-Build with Pool" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-3 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Lake Martin</p>
+                <p class="mt-2 font-serif text-2xl">Lakefront Retreat</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="putting-greens">
+            <button type="button" data-lightbox data-lightbox-title="RGB Putting Green" data-lightbox-meta="Lake Martin, AL &middot; Custom Putting Green" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-7 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Lake Martin</p>
+                <p class="mt-2 font-serif text-2xl">RGB Putting Green</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="hardscapes">
+            <button type="button" data-lightbox data-lightbox-title="Highland Avenue Hardscape" data-lightbox-meta="Birmingham, AL &middot; Patio &amp; Retaining Wall" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-2 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Highland Avenue</p>
+                <p class="mt-2 font-serif text-2xl">Bluestone Patio &amp; Wall</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="pools design-build">
+            <button type="button" data-lightbox data-lightbox-title="Sunset Pool" data-lightbox-meta="Smith Lake, AL &middot; Pool Division" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-6 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Smith Lake</p>
+                <p class="mt-2 font-serif text-2xl">Sunset Pool</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="design-build">
+            <button type="button" data-lightbox data-lightbox-title="Crest Road Cottage Garden" data-lightbox-meta="Mountain Brook, AL &middot; Cottage Garden Design" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-3 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Crest Road</p>
+                <p class="mt-2 font-serif text-2xl">Cottage Garden</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="commercial">
+            <button type="button" data-lightbox data-lightbox-title="Office Plaza Sitework" data-lightbox-meta="Birmingham, AL &middot; Brasfield &amp; Gorrie Partnership" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-5 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Brasfield &amp; Gorrie</p>
+                <p class="mt-2 font-serif text-2xl">Office Plaza Sitework</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="commercial">
+            <button type="button" data-lightbox data-lightbox-title="Townhomes Common Areas" data-lightbox-meta="Birmingham, AL &middot; Stone Building Co. Partnership" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-8 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Stone Building Co.</p>
+                <p class="mt-2 font-serif text-2xl">Townhomes Common Areas</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="maintenance">
+            <button type="button" data-lightbox data-lightbox-title="Vestavia Hills Maintenance" data-lightbox-meta="Vestavia Hills, AL &middot; Year-Round Maintenance Program" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-1 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Vestavia Hills</p>
+                <p class="mt-2 font-serif text-2xl">Maintenance Program</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="putting-greens">
+            <button type="button" data-lightbox data-lightbox-title="Hoover Family Putting Green" data-lightbox-meta="Hoover, AL &middot; Custom Putting Green" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-3 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Hoover</p>
+                <p class="mt-2 font-serif text-2xl">Family Putting Green</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="design-build">
+            <button type="button" data-lightbox data-lightbox-title="Forest Park Restoration" data-lightbox-meta="Forest Park, Birmingham &middot; Heritage Garden Restoration" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-8 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Forest Park</p>
+                <p class="mt-2 font-serif text-2xl">Heritage Garden</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="commercial design-build">
+            <button type="button" data-lightbox data-lightbox-title="UAB Healing Garden" data-lightbox-meta="UAB Medical &middot; Therapeutic Garden Pilot" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-7 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">UAB Medical</p>
+                <p class="mt-2 font-serif text-2xl">Healing Garden</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="design-build">
+            <button type="button" data-lightbox data-lightbox-title="Riverbend Lighting Plan" data-lightbox-meta="Birmingham, AL &middot; Architectural Lighting Plan" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-4 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Riverbend</p>
+                <p class="mt-2 font-serif text-2xl">Architectural Lighting</p>
+              </div>
+            </button>
+          </li>
+          <li data-tags="design-build hardscapes">
+            <button type="button" data-lightbox data-lightbox-title="Woodland Sensory Garden" data-lightbox-meta="Vestavia Hills, AL &middot; Therapeutic Garden Install" class="group block w-full text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded-lg">
+              <div data-lightbox-tile class="aspect-[4/5] gradient-5 rounded-lg flex flex-col justify-end p-6 text-cream group-hover:opacity-90 transition-opacity">
+                <p class="text-xs tracking-[0.2em] uppercase text-cream/70">Vestavia Hills</p>
+                <p class="mt-2 font-serif text-2xl">Woodland Sensory Garden</p>
+              </div>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section aria-labelledby="cta-title" class="py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-6 md:px-10 text-center">
+        <h2 id="cta-title" class="font-serif text-4xl md:text-5xl text-ink leading-tight">Have a project of your own in mind?</h2>
+        <p class="mt-6 text-stone text-lg max-w-2xl mx-auto leading-relaxed">A 30-minute on-property consultation is on us &mdash; we&rsquo;ll listen, sketch, and tell you honestly whether we&rsquo;re the right fit.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html" class="inline-flex items-center gap-3 bg-forest hover:bg-bark text-cream text-base tracking-wide px-8 py-4 rounded-full transition-colors">Request a Consultation <span aria-hidden="true">&rarr;</span></a>
+          <a href="services.html" class="inline-flex items-center gap-3 border border-forest/40 hover:border-forest text-forest text-base tracking-wide px-8 py-4 rounded-full transition-colors">Explore Services</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer:start -->
+  <footer class="bg-forest text-cream/90">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream text-forest font-serif text-xl">LV</span>
+          <span class="font-serif text-2xl text-cream">La Vida Landscapes</span>
+        </a>
+        <p class="mt-6 max-w-md font-serif italic text-cream/80 text-lg leading-relaxed">&ldquo;Using Creation to Glorify the Creator.&rdquo;</p>
+        <p class="mt-4 max-w-md text-sm leading-relaxed text-cream/70">Faith-driven design-build &amp; maintenance landscapes serving Birmingham and the greater Southeast since 2018.</p>
+      </div>
+      <div>
+        <h3 class="text-xs tracking-[0.25em] uppercase text-sun mb-5">Explore</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="services.html" class="hover:text-cream text-cream/70 transition-colors">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-cream text-cream/70 transition-colors">Portfolio</a></li>
+          <li><a href="about.html" class="hover:text-cream text-cream/70 transition-colors">About</a></li>
+          <li><a href="vida-gardens.html" class="hover:text-cream text-cream/70 transition-colors">Vida Gardens</a></li>
+          <li><a href="contact.html" class="hover:text-cream text-cream/70 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs tracking-[0.25em] uppercase text-sun mb-5">Connect</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="tel:+12058008432" aria-label="Call La Vida Landscapes" class="hover:text-cream text-cream/70 transition-colors">(205) 800-8432</a></li>
+          <li><a href="mailto:livinlavida@lavidalandscapes.com" class="hover:text-cream text-cream/70 transition-colors break-all">livinlavida@lavidalandscapes.com</a></li>
+        </ul>
+        <ul class="mt-6 flex flex-wrap gap-3" aria-label="Social media">
+          <li><a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a></li>
+          <li><a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l.5-4H13V6.5c0-1 .3-1.7 1.8-1.7H17V1.2C16.6 1.1 15.4 1 14.1 1 11.4 1 9.6 2.6 9.6 5.7V9H7v4h2.6v9z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/company/la-vida-landscapes-llc" target="_blank" rel="noopener" aria-label="LinkedIn" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.55 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.48 3.04 5.48 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H7.77V8z"/></svg></a></li>
+          <li><a href="https://nextdoor.com/pages/la-vida-landscapes-birmingham-al/" target="_blank" rel="noopener" aria-label="Nextdoor" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors text-xs font-bold"><span aria-hidden="true">ND</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=La+Vida+Landscapes+Birmingham+AL" target="_blank" rel="noopener" aria-label="Google Business profile" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-xs text-cream/60">
+        <p>&copy; <span data-year>2026</span> La Vida Landscapes, LLC. All rights reserved.</p>
+        <p class="font-serif italic">Faith &middot; Family &middot; Integrity &middot; Positive Mindset &middot; Responsibility &middot; Teamwork &middot; Commitment &middot; Fun</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer:end -->
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" width="200" height="60" role="img" aria-label="La Vida Landscapes">
+  <circle cx="30" cy="30" r="24" fill="#2C4A3E"/>
+  <text x="30" y="38" text-anchor="middle" font-family="Georgia, serif" font-size="22" fill="#F5F1E8" font-style="italic">LV</text>
+  <text x="62" y="28" font-family="Georgia, serif" font-size="20" fill="#1A1F1B">La Vida</text>
+  <text x="62" y="48" font-family="Georgia, serif" font-size="14" fill="#6B8E5A" letter-spacing="2">LANDSCAPES</text>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2C4A3E"/>
+      <stop offset="100%" stop-color="#1A1F1B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="160" cy="315" r="100" fill="#F5F1E8"/>
+  <text x="160" y="345" text-anchor="middle" font-family="Georgia, serif" font-size="80" fill="#2C4A3E" font-style="italic">LV</text>
+  <text x="320" y="280" font-family="Georgia, serif" font-size="80" fill="#F5F1E8">La Vida Landscapes</text>
+  <text x="320" y="350" font-family="Georgia, serif" font-size="32" fill="#C9A961" font-style="italic">Using Creation to Glorify the Creator</text>
+  <text x="320" y="410" font-family="Inter, sans-serif" font-size="22" fill="#A89B8C" letter-spacing="3">BIRMINGHAM &middot; HUNTSVILLE &middot; LAKE MARTIN &middot; SMITH LAKE</text>
+</svg>

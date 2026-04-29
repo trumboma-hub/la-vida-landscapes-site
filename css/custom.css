@@ -1,0 +1,24 @@
+html { scroll-behavior: smooth; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+  scroll-behavior: auto !important;
+}
+
+.skip-link { position: absolute; top: -100px; left: 1rem; }
+.skip-link:focus { top: 1rem; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translateY(12px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+}
+
+.gradient-1 { background: linear-gradient(135deg, #2C4A3E 0%, #6B8E5A 100%); }
+.gradient-2 { background: linear-gradient(135deg, #3D2E1F 0%, #C9A961 100%); }
+.gradient-3 { background: linear-gradient(135deg, #6B8E5A 0%, #C9A961 100%); }
+.gradient-4 { background: linear-gradient(135deg, #1A1F1B 0%, #2C4A3E 100%); }
+.gradient-5 { background: linear-gradient(135deg, #A89B8C 0%, #3D2E1F 100%); }
+.gradient-6 { background: linear-gradient(135deg, #2C4A3E 0%, #1A1F1B 100%); }
+.gradient-7 { background: linear-gradient(135deg, #C9A961 0%, #6B8E5A 100%); }
+.gradient-8 { background: linear-gradient(135deg, #6B8E5A 0%, #2C4A3E 100%); }

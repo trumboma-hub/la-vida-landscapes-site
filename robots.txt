@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lavidalandscapes.com/sitemap.xml

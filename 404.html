@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page Not Found &mdash; La Vida Landscapes</title>
+  <meta name="description" content="The page you were looking for could not be found." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: { forest:'#2C4A3E', moss:'#6B8E5A', bark:'#3D2E1F', stone:'#A89B8C', cream:'#F5F1E8', sun:'#C9A961', ink:'#1A1F1B' },
+      fontFamily: { serif:['"Cormorant Garamond"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'] }
+    }}}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="bg-cream text-ink font-sans antialiased min-h-screen flex flex-col">
+  <main class="flex-1 flex items-center justify-center px-6 py-24 text-center">
+    <div class="max-w-xl">
+      <p class="text-sm tracking-[0.3em] uppercase text-moss">404</p>
+      <h1 class="mt-4 font-serif text-5xl md:text-6xl text-ink leading-tight">This path is overgrown.</h1>
+      <p class="mt-6 text-stone leading-relaxed">The page you were looking for isn&rsquo;t here. Let&rsquo;s get you back on the trail.</p>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="index.html" class="inline-flex items-center gap-2 bg-forest hover:bg-bark text-cream text-sm tracking-wide px-6 py-3 rounded-full transition-colors">Return Home</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 border border-forest/40 hover:border-forest text-forest text-sm tracking-wide px-6 py-3 rounded-full transition-colors">Contact Us</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
