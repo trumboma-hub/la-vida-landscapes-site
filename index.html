@@ -4,102 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>La Vida Landscapes &mdash; Design-Build &amp; Maintenance Landscaping in Birmingham, AL</title>
-  <meta name="description" content="Faith-driven design-build and maintenance landscaping serving Birmingham, Huntsville, Lake Martin and the greater Southeast since 2018." />
+  <meta name="description" content="Faith-driven design-build and maintenance landscaping serving Birmingham, Huntsville, Lake Martin and the greater Southeast since 2018. Custom design, hardscapes, pools, and putting greens." />
   <link rel="canonical" href="https://lavidalandscapes.com/" />
-  <link rel="icon" href="assets/logo.jpg" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="La Vida Landscapes &mdash; Birmingham, AL" />
-  <meta property="og:description" content="Boutique design-build and full-service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast." />
+  <meta property="og:description" content="Custom landscape design, hardscapes, maintenance, and outdoor living. Faith-driven craft serving Birmingham and the Southeast." />
   <meta property="og:image" content="https://lavidalandscapes.com/images/og-default.svg" />
   <meta property="og:url" content="https://lavidalandscapes.com/" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <script>
     tailwind.config = { theme: { extend: {
-      colors: {
-        forest:'#2C4A3E','forest-deep':'#1F3528',
-        moss:'#6B8E5A','moss-soft':'#8FA67E',
-        bark:'#3D2E1F','bark-deep':'#2A1F14',
-        stone:'#A89B8C','stone-soft':'#C8BFB3',
-        cream:'#F5F1E8','cream-warm':'#EFE8D6',
-        paper:'#FAF7F0',
-        sun:'#C9A961','sun-soft':'#DEC489',
-        ink:'#1A1F1B'
-      },
-      fontFamily: {
-        serif:['"Cormorant Garamond"','Georgia','serif'],
-        sans:['Inter','system-ui','sans-serif'],
-        script:['Caveat','cursive'],
-        mono:['"JetBrains Mono"','ui-monospace','monospace']
-      }
+      colors: { forest:'#2C4A3E', moss:'#6B8E5A', bark:'#3D2E1F', stone:'#A89B8C', cream:'#F5F1E8', sun:'#C9A961', ink:'#1A1F1B' },
+      fontFamily: { serif:['"Cormorant Garamond"','Georgia','serif'], sans:['Inter','system-ui','sans-serif'], script:['Caveat','cursive'] }
     }}}
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/custom.css" />
-
-  <style>
-    /* Nav state transitions */
-    #site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background 500ms ease, border-color 500ms ease, height 400ms ease, backdrop-filter 500ms ease; background: transparent; border-bottom: 1px solid transparent; }
-    #site-nav .nav-row { display: flex; align-items: center; justify-content: center; gap: 40px; height: 174px; transition: height 400ms ease; }
-    @media (min-width: 1280px) { #site-nav .nav-row { gap: 56px; } }
-    #site-nav.is-scrolled { background: rgba(245,241,232,0.92); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid rgba(168,155,140,.22); }
-    #site-nav.is-scrolled .nav-row { height: 138px; }
-
-    .nav-link, .nav-meta { color: var(--cream); text-shadow: 0 1px 10px rgba(0,0,0,.45); transition: color 350ms ease, text-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-link, #site-nav.is-scrolled .nav-meta { color: var(--ink); text-shadow: none; }
-    .nav-meta-divider { color: rgba(245,241,232,.6); }
-    #site-nav.is-scrolled .nav-meta-divider { color: var(--stone); }
-
-    .nav-logo-mark { background: var(--cream); border: 1px solid rgba(245,241,232,.35); box-shadow: 0 2px 18px rgba(0,0,0,.35); transition: border-color 350ms ease, box-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-logo-mark { border-color: rgba(168,155,140,.22); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-    .nav-logo-wordmark { color: var(--cream); text-shadow: 0 1px 14px rgba(0,0,0,.5); transition: color 350ms ease, text-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-logo-wordmark { color: var(--ink); text-shadow: none; }
-    .nav-logo-sub { color: rgba(245,241,232,.9); text-shadow: 0 1px 8px rgba(0,0,0,.5); transition: color 350ms ease, text-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-logo-sub { color: var(--stone); text-shadow: none; }
-
-    .nav-cta { background: var(--cream); color: var(--forest); transition: background 350ms ease, color 350ms ease; }
-    #site-nav.is-scrolled .nav-cta { background: var(--forest); color: var(--cream); }
-    #site-nav.is-scrolled .nav-cta:hover { background: var(--bark); }
-
-    .nav-social { color: var(--cream); border-color: rgba(245,241,232,.55); background: rgba(26,31,27,.25); backdrop-filter: blur(2px); }
-    #site-nav.is-scrolled .nav-social { color: var(--ink); border-color: rgba(31,53,40,.25); background: transparent; backdrop-filter: none; }
-
-    /* Marker */
-    .marker { position: absolute; transform: translate(-50%,-50%); border: 0; background: transparent; padding: 0; cursor: pointer; }
-    .marker-dot { display: block; width: 12px; height: 12px; border-radius: 999px; background: var(--moss); position: relative; transition: background 300ms ease; }
-    .marker.is-active .marker-dot { background: var(--sun); }
-    .marker.is-active .marker-pulse { animation: pulse-ring 2.4s ease-out infinite; }
-    .marker-pulse { position: absolute; inset: 0; border-radius: 999px; background: var(--sun); opacity: 0; }
-    .marker-label { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); white-space: nowrap; font-family: 'Cormorant Garamond', serif; font-size: 16px; color: rgba(245,241,232,.7); transition: color 250ms ease; }
-    .marker.is-active .marker-label { color: var(--sun-soft); }
-
-    .area-row { width: 100%; text-align: left; padding: 20px 0; display: grid; grid-template-columns: 1fr 7fr 4fr; align-items: baseline; gap: 16px; border-bottom: 1px solid rgba(245,241,232,.15); background: transparent; border-left: 0; border-right: 0; cursor: pointer; transition: background 200ms; }
-    .area-row:first-child { border-top: 1px solid rgba(245,241,232,.15); }
-    .area-row .num { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: rgba(245,241,232,.4); transition: color 250ms; }
-    .area-row .name { font-family: 'Cormorant Garamond', serif; font-size: 28px; color: var(--cream); transition: color 250ms; }
-    @media (min-width: 768px) { .area-row .name { font-size: 32px; } }
-    .area-row .sub { text-align: right; font-family: 'JetBrains Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(245,241,232,.5); }
-    .area-row.is-active .num { color: var(--sun); }
-    .area-row.is-active .name { color: var(--sun-soft); }
-
-    /* Showcase thumb active outline */
-    [data-thumb] .thumb-frame { outline: 1px solid rgba(245,241,232,.15); outline-offset: 0; transition: outline 350ms ease; }
-    [data-thumb].is-active .thumb-frame { outline: 2px solid var(--sun); outline-offset: 4px; }
-    [data-thumb] .thumb-frame img { transition: transform 700ms ease; }
-    [data-thumb].is-active .thumb-frame img { transform: scale(1.04); }
-    [data-thumb] .thumb-title { color: var(--cream); transition: color 250ms; }
-    [data-thumb].is-active .thumb-title { color: var(--sun-soft); }
-
-    /* Testimonial fade */
-    [data-quote] { display: none; }
-    [data-quote].is-active { display: block; }
-  </style>
 
   <script type="application/ld+json">
   {
@@ -107,7 +34,7 @@
     "@type": "LandscapeBusiness",
     "name": "La Vida Landscapes, LLC",
     "url": "https://lavidalandscapes.com/",
-    "logo": "https://lavidalandscapes.com/assets/logo.jpg",
+    "logo": "https://lavidalandscapes.com/images/logo.svg",
     "image": "https://lavidalandscapes.com/images/og-default.svg",
     "telephone": "+1-205-800-8432",
     "email": "livinlavida@lavidalandscapes.com",
@@ -126,851 +53,468 @@
   }
   </script>
 </head>
-<body>
-  <a href="#main" class="skip-link">Skip to content</a>
+<body class="bg-cream text-ink font-sans antialiased">
+  <a href="#main" class="skip-link bg-forest text-cream px-4 py-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun">Skip to content</a>
 
-  <!-- ========== Nav ========== -->
-  <header id="site-nav" role="banner">
-    <div class="container-wide nav-row">
-      <a href="#top" class="flex items-center gap-4 group shrink-0">
-        <span class="nav-logo-mark inline-flex items-center justify-center rounded-full overflow-hidden shrink-0" style="width:72px;height:72px">
-          <img src="assets/logo.jpg" alt="La Vida Landscapes" class="w-full h-full object-cover" />
-        </span>
+  <!-- nav:start -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/75 border-b border-stone/20">
+    <nav aria-label="Primary" class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif text-xl group-hover:bg-bark transition-colors">LV</span>
         <span class="flex flex-col leading-none">
-          <span class="nav-logo-wordmark font-serif" style="font-size:33px;letter-spacing:-0.005em">La Vida Landscapes</span>
-          <span class="nav-logo-sub eyebrow mt-2" style="font-size:13px">Birmingham &middot; Est. 2018</span>
+          <span class="font-serif text-xl text-ink">La Vida Landscapes</span>
+          <span class="text-[11px] tracking-[0.2em] uppercase text-stone">Birmingham, AL</span>
         </span>
       </a>
-
-      <ul class="hidden lg:flex items-center gap-7 xl:gap-12 whitespace-nowrap" style="font-size:19px">
-        <li><a href="#work" class="nav-link u-link">Work</a></li>
-        <li><a href="#services" class="nav-link u-link">Services</a></li>
-        <li><a href="#process" class="nav-link u-link">Process</a></li>
-        <li><a href="#story" class="nav-link u-link">Story</a></li>
-        <li><a href="#gardens" class="nav-link u-link">Vida Gardens</a></li>
-        <li><a href="#contact" class="nav-link u-link">Contact</a></li>
+      <ul class="hidden lg:flex items-center gap-8 text-sm tracking-wide text-ink">
+        <li><a href="services.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Services</a></li>
+        <li><a href="portfolio.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Portfolio</a></li>
+        <li><a href="vida-gardens.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Vida Gardens</a></li>
+        <li><a href="blog.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Journal</a></li>
+        <li><a href="about.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">About</a></li>
+        <li><a href="contact.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Contact</a></li>
       </ul>
-
-      <div class="hidden lg:flex items-center gap-5 shrink-0">
-        <div class="hidden xl:flex items-center gap-2 nav-meta" style="font-size:18px">
-          <span style="color:var(--sun)" aria-hidden="true">&starf;</span>
-          <span>5.0 on Google</span>
-          <span class="nav-meta-divider">&middot;</span>
-          <a href="tel:+12058008432" class="u-link">(205) 800-8432</a>
-        </div>
-        <div class="flex items-center gap-2">
-          <a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-          </a>
-          <a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" class="nav-social">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.27-1.46 1.5-1.46H17V4.45c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.04 1.48-4.04 4.2v2.34H8v3h2.5V21h3z"/></svg>
-          </a>
-        </div>
-        <a href="#contact" class="btn nav-cta" style="font-size:18px;padding:18px 30px;gap:14px">
-          Begin a project
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:+12058008432" aria-label="Call La Vida Landscapes at (205) 800-8432" class="text-sm text-ink hover:text-forest transition-colors">(205) 800-8432</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-forest hover:bg-bark text-cream text-sm tracking-wide px-5 py-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">
+          Request a Consultation <span aria-hidden="true">&rarr;</span>
         </a>
       </div>
-
-      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full nav-meta">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-ink hover:bg-stone/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
-    </div>
-
-    <div id="mobile-menu" hidden class="lg:hidden border-t" style="background:var(--cream);border-color:rgba(168,155,140,.22)">
-      <ul class="container-wide py-6 flex flex-col gap-1">
-        <li><a href="#work" class="block py-3 text-base" style="color:var(--ink)">Work</a></li>
-        <li><a href="#services" class="block py-3 text-base" style="color:var(--ink)">Services</a></li>
-        <li><a href="#process" class="block py-3 text-base" style="color:var(--ink)">Process</a></li>
-        <li><a href="#story" class="block py-3 text-base" style="color:var(--ink)">Story</a></li>
-        <li><a href="#gardens" class="block py-3 text-base" style="color:var(--ink)">Vida Gardens</a></li>
-        <li><a href="#contact" class="block py-3 text-base" style="color:var(--ink)">Contact</a></li>
-        <li class="pt-4 mt-2 border-t" style="border-color:rgba(168,155,140,.22)">
-          <a href="#contact" class="btn btn-primary w-full justify-center">Begin a project
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </li>
+    </nav>
+    <div id="mobile-menu" hidden class="lg:hidden border-t border-stone/20 bg-cream">
+      <ul class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-1 text-base">
+        <li><a href="services.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Services</a></li>
+        <li><a href="portfolio.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Portfolio</a></li>
+        <li><a href="vida-gardens.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Vida Gardens</a></li>
+        <li><a href="blog.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Journal</a></li>
+        <li><a href="about.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">About</a></li>
+        <li><a href="contact.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Contact</a></li>
       </ul>
+      <div class="max-w-7xl mx-auto px-6 pb-6 flex flex-col gap-3">
+        <a href="tel:+12058008432" class="inline-flex items-center justify-center gap-2 bg-cream border border-forest/30 text-forest text-sm tracking-wide px-5 py-3 rounded-full">Call (205) 800-8432</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-forest text-cream text-sm tracking-wide px-5 py-3 rounded-full">Request a Consultation</a>
+      </div>
     </div>
   </header>
+  <!-- nav:end -->
 
   <main id="main">
-    <!-- ========== Hero ========== -->
-    <section id="top" class="relative isolate overflow-hidden" style="min-height:100vh;background:var(--ink)">
-      <div data-hero-parallax class="absolute inset-0 -z-10 photo-warm" style="min-height:100vh">
-        <img src="assets/hero/hero-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover hero-img" style="min-height:100vh" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,.55) 0%, rgba(31,53,40,.35) 40%, rgba(26,31,27,.85) 100%)"></div>
+    <!-- Hero -->
+    <section aria-labelledby="hero-title" class="relative isolate overflow-hidden">
+      <div class="absolute inset-0 -z-10">
+        <video
+          id="hero-video"
+          class="w-full h-full object-cover motion-reduce:hidden"
+          autoplay muted loop playsinline preload="metadata"
+          poster="https://images.unsplash.com/photo-1558293842-c0fd3db86157?w=1920&q=80&auto=format"
+          aria-hidden="true">
+          <source src="videos/hero-loop.mp4" type="video/mp4" />
+        </video>
+        <img
+          src="https://images.unsplash.com/photo-1558293842-c0fd3db86157?w=1920&q=80&auto=format"
+          alt=""
+          width="1920" height="1080"
+          class="hidden motion-reduce:block w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-br from-ink/70 via-forest/55 to-ink/40"></div>
       </div>
-
-      <div class="container-wide relative pt-44 md:pt-52 pb-24 md:pb-32" style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between">
-        <div class="reveal">
-          <h1 class="display" style="color:var(--cream);font-size:clamp(56px,9vw,168px)">Landscapes that<br/><span class="font-serif italic" style="color:var(--sun-soft)">tell your story.</span></h1>
-          <div class="grid lg:grid-cols-12 gap-10 mt-14 items-end">
-            <p class="lg:col-span-5 leading-relaxed" style="color:rgba(245,241,232,.85);font-size:clamp(20px,2.4vw,30px)">
-              Boutique design-build and full-service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast.
-            </p>
-            <div class="lg:col-span-7 flex flex-wrap items-center gap-4 lg:justify-end">
-              <a href="#work" class="btn" style="background:var(--cream);color:var(--forest)">See the work
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-              </a>
-              <a href="#contact" class="btn btn-ghost-light">Begin a project</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="reveal reveal-delay-2 mt-20">
-          <div class="flex items-center gap-5 mb-6">
-            <span class="block w-10 h-px" style="background:rgba(245,241,232,.4)"></span>
-            <span class="eyebrow" style="color:rgba(245,241,232,.7);font-size:13px;letter-spacing:0.24em">What we do</span>
-          </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-px" style="background:rgba(245,241,232,.18);border:1px solid rgba(245,241,232,.18)">
-            <a href="#services" class="hero-service-tile group">
-              <img src="assets/hero/02-vida-gardens-entry-thumb.jpg" alt="" />
-              <div class="hero-service-tile-overlay"></div>
-              <div class="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
-                <span class="font-mono text-[11px] tracking-[0.22em]" style="color:var(--sun-soft)">01</span>
-                <div class="flex items-end justify-between gap-3">
-                  <span class="font-serif leading-[1.05]" style="color:var(--cream);font-size:clamp(22px,3vw,28px)">Design-Build</span>
-                  <span class="hero-service-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
-                </div>
-              </div>
-            </a>
-            <a href="#services" class="hero-service-tile group">
-              <img src="assets/hero/07-stone-walls-ferns-thumb.jpg" alt="" />
-              <div class="hero-service-tile-overlay"></div>
-              <div class="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
-                <span class="font-mono text-[11px] tracking-[0.22em]" style="color:var(--sun-soft)">02</span>
-                <div class="flex items-end justify-between gap-3">
-                  <span class="font-serif leading-[1.05]" style="color:var(--cream);font-size:clamp(22px,3vw,28px)">Hardscapes</span>
-                  <span class="hero-service-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
-                </div>
-              </div>
-            </a>
-            <a href="#services" class="hero-service-tile group">
-              <img src="assets/hero/01-lake-fireplace-thumb.jpg" alt="" />
-              <div class="hero-service-tile-overlay"></div>
-              <div class="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
-                <span class="font-mono text-[11px] tracking-[0.22em]" style="color:var(--sun-soft)">03</span>
-                <div class="flex items-end justify-between gap-3">
-                  <span class="font-serif leading-[1.05]" style="color:var(--cream);font-size:clamp(22px,3vw,28px)">Pools</span>
-                  <span class="hero-service-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
-                </div>
-              </div>
-            </a>
-            <a href="#services" class="hero-service-tile group">
-              <img src="assets/hero/05-putting-green-lake-thumb.jpg" alt="" />
-              <div class="hero-service-tile-overlay"></div>
-              <div class="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
-                <span class="font-mono text-[11px] tracking-[0.22em]" style="color:var(--sun-soft)">04</span>
-                <div class="flex items-end justify-between gap-3">
-                  <span class="font-serif leading-[1.05]" style="color:var(--cream);font-size:clamp(22px,3vw,28px)">Putting Greens</span>
-                  <span class="hero-service-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
-                </div>
-              </div>
-            </a>
-            <a href="#services" class="hero-service-tile group">
-              <img src="assets/hero/06-lake-porch-dining-thumb.jpg" alt="" />
-              <div class="hero-service-tile-overlay"></div>
-              <div class="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
-                <span class="font-mono text-[11px] tracking-[0.22em]" style="color:var(--sun-soft)">05</span>
-                <div class="flex items-end justify-between gap-3">
-                  <span class="font-serif leading-[1.05]" style="color:var(--cream);font-size:clamp(22px,3vw,28px)">Lighting</span>
-                  <span class="hero-service-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
-                </div>
-              </div>
-            </a>
-            <a href="#services" class="hero-service-tile group">
-              <img src="assets/hero/03-courtyard-garden-thumb.jpg" alt="" />
-              <div class="hero-service-tile-overlay"></div>
-              <div class="absolute inset-0 p-5 md:p-6 flex flex-col justify-between">
-                <span class="font-mono text-[11px] tracking-[0.22em]" style="color:var(--sun-soft)">06</span>
-                <div class="flex items-end justify-between gap-3">
-                  <span class="font-serif leading-[1.05]" style="color:var(--cream);font-size:clamp(22px,3vw,28px)">Maintenance</span>
-                  <span class="hero-service-arrow" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M7 17L17 7M9 7h8v8"/></svg></span>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="absolute left-1/2 -translate-x-1/2 bottom-8 hidden md:flex flex-col items-center gap-3" style="color:rgba(245,241,232,.55)">
-        <span class="eyebrow">Scroll</span>
-        <span class="block w-px h-10" style="background:rgba(245,241,232,.5)"></span>
-      </div>
-    </section>
-
-    <!-- ========== Mission ========== -->
-    <section aria-labelledby="mission-title" class="relative" style="background:var(--paper);border-top:1px solid rgba(168,155,140,.22);border-bottom:1px solid rgba(168,155,140,.22)">
-      <div class="container-wide py-16 md:py-24 grid lg:grid-cols-12 gap-10 items-end reveal">
-        <div class="lg:col-span-1 hidden lg:block">
-          <span class="font-serif italic text-7xl" style="color:var(--sun)">&ldquo;</span>
-        </div>
-        <div class="lg:col-span-7">
-          <p id="mission-title" class="display italic font-serif" style="color:var(--forest);font-size:clamp(32px,4vw,56px)">Using Creation to Glorify the Creator.</p>
-        </div>
-        <div class="lg:col-span-4">
-          <p class="text-base leading-relaxed" style="color:var(--bark)">Our mission, our compass, and the heartbeat behind every blade, beam, and bloom we install.</p>
-          <p class="font-script text-3xl mt-4" style="color:var(--moss)">&mdash; Triston Parsons</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Services ========== -->
-    <section id="services" class="section" style="background:var(--cream)">
-      <div class="container-wide">
-        <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; 02</p></div>
-          <div class="lg:col-span-7">
-            <p class="eyebrow" style="color:var(--moss)">What we do</p>
-            <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">A full-service partner<br/><span class="italic" style="color:var(--moss)">for the spaces around your home.</span></h2>
-          </div>
-          <div class="lg:col-span-4 lg:pl-8 flex flex-col justify-end">
-            <p class="text-base leading-relaxed mb-6" style="color:var(--bark)">Vertically integrated. The person who designs your space talks weekly with the person installing it &mdash; and the same crew comes back to maintain it.</p>
-            <a href="#process" class="link-arrow">Read the process
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px" style="background:rgba(168,155,140,.22);border:1px solid rgba(168,155,140,.22)">
-          <article class="reveal p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">01</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Landscape Design</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Site plans, planting schemes, and 3D renderings tailored to how you live outdoors.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal reveal-delay-1 p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">02</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Hardscapes</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Patios, retaining walls, walkways, fire features, and outdoor living rooms built to last.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal reveal-delay-2 p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">03</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Maintenance</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Mowing, aeration, edging, mulch, and seasonal cleanups on a rhythm that fits your property.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal reveal-delay-3 p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">04</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Lighting</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Low-voltage architectural and path lighting that turns dusk into a second hour for the yard.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">05</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Irrigation</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Smart-controlled systems that conserve water and keep beds and lawn healthy through Alabama summers.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal reveal-delay-1 p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">06</span>
-              <span class="text-[10px] font-mono tracking-[0.2em] uppercase px-2 py-1 rounded-full" style="background:rgba(201,169,97,.18);color:var(--bark)">New 2025</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Pool Division</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Fully integrated pools designed alongside your landscape, hardscape, and lighting plan.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal reveal-delay-2 p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">07</span>
-              <span class="text-[10px] font-mono tracking-[0.2em] uppercase px-2 py-1 rounded-full" style="background:rgba(201,169,97,.18);color:var(--bark)">New 2025</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Custom Putting Greens</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">RGB-lit synthetic putting greens engineered for true roll and after-dark play.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-          <article class="reveal reveal-delay-3 p-7 md:p-8 relative group" style="background:var(--cream);transition:background .35s ease">
-            <div class="flex items-baseline justify-between mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">08</span>
-            </div>
-            <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Horticultural Therapy</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Sensory and therapeutic gardens designed for healing &mdash; the seed of our Vida Gardens vision.</p>
-            <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Showcase ========== -->
-    <section id="work" class="section relative" style="background:var(--forest)">
-      <div class="container-wide" id="showcase">
-        <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 03</p></div>
-          <div class="lg:col-span-7">
-            <p class="eyebrow" style="color:var(--sun)">Recent Work</p>
-            <h2 class="display mt-4" style="color:var(--cream);font-size:clamp(40px,5.5vw,80px)">Designed by hand.<br/><span class="italic" style="color:var(--sun-soft)">Built by craftsmen.</span></h2>
-          </div>
-          <div class="lg:col-span-4 flex flex-col justify-end">
-            <p class="leading-relaxed" style="color:rgba(245,241,232,.7)">Drag the slider to compare the property at intake against the finished install. Each project carried by one crew, one phone number, end to end.</p>
-          </div>
-        </div>
-
-        <!-- Project data for JS to read -->
-        <div hidden>
-          <div data-slide
-               data-title="Lakeside Fireplace"
-               data-location="Smith Lake, AL"
-               data-year="2024"
-               data-summary="A lakefront gathering room anchored by a hand-laid brick fireplace, festival lighting, and a rug-warm patio facing the water."
-               data-services="Hardscapes|Lighting|Outdoor Living"
-               data-details="Patio:480 sq ft|Fireplace:Hand-laid brick|Lighting:Bistro string"
-               data-before="https://images.unsplash.com/photo-1572731065-2c2e30c4d4f1?w=1400&q=85&auto=format&fit=crop"
-               data-after="assets/hero/01-lake-fireplace-hero.jpg"></div>
-          <div data-slide
-               data-title="Vida Gardens · Pepper Place"
-               data-location="Birmingham, AL"
-               data-year="2025"
-               data-summary="A walled urban garden welcoming guests off Pepper Place — olive trees, perennials, and a stately gate framed by linen draping."
-               data-services="Design-Build|Plantings|Hardscapes"
-               data-details="Footprint:1,200 sq ft|Specimen:Olive trees|Built:6 weeks"
-               data-before="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1400&q=85&auto=format&fit=crop"
-               data-after="assets/hero/02-vida-gardens-entry-hero.jpg"></div>
-          <div data-slide
-               data-title="Lakeside Putting Green"
-               data-location="Lake Martin, AL"
-               data-year="2025"
-               data-summary="Tour-spec synthetic surface with hand-cut stone path and a backdrop that drops straight to the water — one of our 2025 installs."
-               data-services="Putting Greens|Hardscapes"
-               data-details="Surface:1,200 sq ft|Breaks:3|Stone Path:Hand-cut"
-               data-before="https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=1400&q=85&auto=format&fit=crop"
-               data-after="assets/hero/05-putting-green-lake-hero.jpg"></div>
-          <div data-slide
-               data-title="Dry-Stack Stone Walls"
-               data-location="Mountain Brook, AL"
-               data-year="2024"
-               data-summary="Stacked-stone retaining walls and bluestone path through layered ferns — a quiet, woodland-shaded approach to the front entry."
-               data-services="Hardscapes|Plantings"
-               data-details="Wall:42 linear ft|Stone:Local fieldstone|Plantings:Native ferns"
-               data-before="https://images.unsplash.com/photo-1572731065-2c2e30c4d4f1?w=1400&q=85&auto=format&fit=crop"
-               data-after="assets/hero/07-stone-walls-ferns-hero.jpg"></div>
-        </div>
-
-        <div class="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start reveal">
-          <div class="lg:col-span-8">
-            <div data-ba class="ba-wrap aspect-[4/3] cursor-ew-resize" style="--ba:50%">
-              <img data-after-img src="assets/hero/01-lake-fireplace-hero.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
-              <div class="ba-after">
-                <img data-before-img src="https://images.unsplash.com/photo-1572731065-2c2e30c4d4f1?w=1400&q=85&auto=format&fit=crop" alt="" class="w-full h-full object-cover" style="filter:saturate(.85) brightness(.92)" />
-              </div>
-              <span class="ba-tag" style="left:16px">After</span>
-              <span class="ba-tag" style="right:16px">Before</span>
-              <div class="ba-handle"></div>
-              <div class="ba-knob">
-                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>
-              </div>
-            </div>
-
-            <div class="mt-6 flex items-center gap-3">
-              <button data-dot class="dot" aria-label="Project 1"></button>
-              <button data-dot class="dot" aria-label="Project 2"></button>
-              <button data-dot class="dot" aria-label="Project 3"></button>
-              <button data-dot class="dot" aria-label="Project 4"></button>
-              <div class="ml-auto flex items-center gap-3">
-                <button data-prev aria-label="Previous project" class="w-11 h-11 rounded-full flex items-center justify-center" style="border:1px solid rgba(245,241,232,.25);color:var(--cream);background:transparent;cursor:pointer">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
-                </button>
-                <button data-next aria-label="Next project" class="w-11 h-11 rounded-full flex items-center justify-center" style="background:var(--sun);color:var(--forest);border:0;cursor:pointer">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
-                </button>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-4 lg:pl-4">
-            <div class="font-mono text-xs flex items-center gap-3" style="color:var(--sun)">
-              <span data-counter>01 / 04</span>
-              <span class="block w-8 h-px" style="background:var(--sun)"></span>
-              <span data-year-current>2024</span>
-            </div>
-            <h3 data-title class="display leading-[1.02] mt-5" style="color:var(--cream);font-size:clamp(40px,4vw,52px)">Lakeside Fireplace</h3>
-            <p data-location class="mt-3" style="color:var(--sun-soft)">Smith Lake, AL</p>
-            <p data-summary class="mt-6 leading-relaxed" style="color:rgba(245,241,232,.78)"></p>
-            <ul data-services class="mt-8 flex flex-wrap gap-2"></ul>
-            <dl data-details class="mt-10 grid grid-cols-3 gap-4"></dl>
-          </div>
-        </div>
-
-        <div class="mt-20 grid grid-cols-2 md:grid-cols-4 gap-4 reveal">
-          <button data-thumb class="group block text-left" type="button">
-            <div class="thumb-frame aspect-[4/3] overflow-hidden">
-              <img src="assets/hero/01-lake-fireplace-thumb.jpg" alt="Lakeside Fireplace" class="w-full h-full object-cover" />
-            </div>
-            <div class="mt-3 flex items-baseline justify-between">
-              <p class="thumb-title font-serif text-lg">Lakeside Fireplace</p>
-              <span class="font-mono text-[10px]" style="color:rgba(245,241,232,.5)">2024</span>
-            </div>
-            <p class="font-mono text-[10px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.5)">Smith Lake, AL</p>
-          </button>
-          <button data-thumb class="group block text-left" type="button">
-            <div class="thumb-frame aspect-[4/3] overflow-hidden">
-              <img src="assets/hero/02-vida-gardens-entry-thumb.jpg" alt="Vida Gardens · Pepper Place" class="w-full h-full object-cover" />
-            </div>
-            <div class="mt-3 flex items-baseline justify-between">
-              <p class="thumb-title font-serif text-lg">Vida Gardens &middot; Pepper Place</p>
-              <span class="font-mono text-[10px]" style="color:rgba(245,241,232,.5)">2025</span>
-            </div>
-            <p class="font-mono text-[10px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.5)">Birmingham, AL</p>
-          </button>
-          <button data-thumb class="group block text-left" type="button">
-            <div class="thumb-frame aspect-[4/3] overflow-hidden">
-              <img src="assets/hero/05-putting-green-lake-thumb.jpg" alt="Lakeside Putting Green" class="w-full h-full object-cover" />
-            </div>
-            <div class="mt-3 flex items-baseline justify-between">
-              <p class="thumb-title font-serif text-lg">Lakeside Putting Green</p>
-              <span class="font-mono text-[10px]" style="color:rgba(245,241,232,.5)">2025</span>
-            </div>
-            <p class="font-mono text-[10px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.5)">Lake Martin, AL</p>
-          </button>
-          <button data-thumb class="group block text-left" type="button">
-            <div class="thumb-frame aspect-[4/3] overflow-hidden">
-              <img src="assets/hero/07-stone-walls-ferns-thumb.jpg" alt="Dry-Stack Stone Walls" class="w-full h-full object-cover" />
-            </div>
-            <div class="mt-3 flex items-baseline justify-between">
-              <p class="thumb-title font-serif text-lg">Dry-Stack Stone Walls</p>
-              <span class="font-mono text-[10px]" style="color:rgba(245,241,232,.5)">2024</span>
-            </div>
-            <p class="font-mono text-[10px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.5)">Mountain Brook, AL</p>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Process ========== -->
-    <section id="process" class="section" style="background:var(--paper)">
-      <div class="container-wide">
-        <div class="grid lg:grid-cols-12 gap-10 mb-20 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; 04</p></div>
-          <div class="lg:col-span-7">
-            <p class="eyebrow" style="color:var(--moss)">Our Process</p>
-            <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">From sketch<br/><span class="italic" style="color:var(--moss)">to soil.</span></h2>
-          </div>
-          <div class="lg:col-span-4 flex flex-col justify-end">
-            <p class="leading-relaxed" style="color:var(--bark)">No handoffs, no finger-pointing. One drawing set, one install schedule, one warranty.</p>
-          </div>
-        </div>
-
-        <ol class="grid md:grid-cols-2 lg:grid-cols-5 gap-px" style="background:rgba(168,155,140,.22);border:1px solid rgba(168,155,140,.22)">
-          <li class="reveal p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 01</span>
-            <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Walk the property</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Thirty minutes on-site, on us. We listen, sketch, and tell you honestly whether we are the right fit.</p>
-            <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
-          </li>
-          <li class="reveal reveal-delay-1 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 02</span>
-            <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Design &amp; sketch</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Site plans, planting schemes, and 2D/3D renderings &mdash; signed off by ownership before a shovel moves.</p>
-            <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
-          </li>
-          <li class="reveal reveal-delay-2 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 03</span>
-            <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Build &amp; install</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Our crews carry the project end-to-end. Same hands from week one to walk-through.</p>
-            <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
-          </li>
-          <li class="reveal reveal-delay-3 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 04</span>
-            <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Light &amp; irrigate</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Smart irrigation, low-voltage layered lighting, and any pool or putting-green integration.</p>
-            <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
-          </li>
-          <li class="reveal reveal-delay-4 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 05</span>
-            <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Steward</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">A maintenance program tuned to your property keeps the install thriving for years to come.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ========== Partners marquee ========== -->
-    <section class="py-14" style="background:var(--paper);border-top:1px solid rgba(168,155,140,.22);border-bottom:1px solid rgba(168,155,140,.22)">
-      <div class="container-wide flex items-center gap-10">
-        <p class="eyebrow shrink-0 hidden md:block" style="color:var(--stone)">Trusted by</p>
-        <div class="overflow-hidden fade-edges flex-1">
-          <div class="marquee">
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">UAB<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Brasfield &amp; Gorrie<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Stone Building Co.<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">NALP<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Mountain Brook<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Lake Martin<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Smith Lake<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Vestavia Hills<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <!-- duplicate for seamless loop -->
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">UAB<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Brasfield &amp; Gorrie<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Stone Building Co.<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">NALP<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Mountain Brook<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Lake Martin<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Smith Lake<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-            <span class="font-serif text-2xl md:text-3xl shrink-0" style="color:var(--forest);opacity:.65">Vestavia Hills<span class="ml-16" style="color:var(--sun)">&#10023;</span></span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Story ========== -->
-    <section id="story" class="section relative overflow-hidden" style="background:var(--cream)">
-      <div class="container-wide">
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          <div class="lg:col-span-5 reveal">
-            <div class="aspect-[4/5] overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=85&auto=format&fit=crop" alt="Hands tending a young tree" class="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div class="mt-6 grid grid-cols-2 gap-4">
-              <div class="p-5" style="background:var(--paper);border:1px solid rgba(168,155,140,.25)">
-                <p class="eyebrow" style="color:var(--moss)">Featured In</p>
-                <p class="font-serif text-xl mt-2" style="color:var(--ink)">NALP &mdash; Faces of the Industry</p>
-                <p class="font-mono text-[10px] mt-1" style="color:var(--stone)">April 2022</p>
-              </div>
-              <div class="p-5" style="background:var(--forest);color:var(--cream)">
-                <p class="eyebrow" style="color:var(--sun)">Founder</p>
-                <p class="font-serif text-xl mt-2">Triston Parsons</p>
-                <p class="font-mono text-[10px] mt-1" style="color:rgba(245,241,232,.55)">Designer &middot; Builder &middot; Steward</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 lg:pl-10 reveal reveal-delay-2">
-            <div class="flex items-center gap-4 mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">&sect; 05</span>
-              <span class="block w-8 h-px" style="background:var(--moss)"></span>
-              <span class="eyebrow" style="color:var(--moss)">Our Story</span>
-            </div>
-            <h2 class="display" style="color:var(--ink);font-size:clamp(40px,5vw,72px)">Started with 15 lawns<br/><span class="italic" style="color:var(--bark)">and a knock on a door.</span></h2>
-            <p class="mt-8 text-lg leading-relaxed" style="color:var(--bark)">Triston Parsons started La Vida in high school with a push mower and a stubborn faith. A pivot from occupational therapy at UAB into full-time design-build came when one client asked if he could handle more than maintenance &mdash; and the answer became the company.</p>
-
-            <blockquote class="mt-12 pl-8 relative">
-              <span class="absolute left-0 top-0 bottom-0 w-px" style="background:var(--sun)"></span>
-              <p class="font-serif italic text-2xl md:text-3xl leading-snug" style="color:var(--ink)">&ldquo;I didn&rsquo;t have any systems and was taking on a lot of work. The lack of systems was hurting me. So I built them.&rdquo;</p>
-              <cite class="not-italic block mt-5 font-mono text-[11px] tracking-[0.2em] uppercase" style="color:var(--stone)">&mdash; Triston Parsons, founder</cite>
-            </blockquote>
-
-            <div class="mt-14 grid grid-cols-3 gap-px" style="background:rgba(168,155,140,.25)">
-              <div class="p-6" style="background:var(--cream)">
-                <p class="display text-4xl md:text-5xl" style="color:var(--forest)">15</p>
-                <p class="eyebrow mt-2" style="color:var(--stone)">Started with</p>
-              </div>
-              <div class="p-6" style="background:var(--cream)">
-                <p class="display text-4xl md:text-5xl" style="color:var(--forest)">8 yrs</p>
-                <p class="eyebrow mt-2" style="color:var(--stone)">In business</p>
-              </div>
-              <div class="p-6" style="background:var(--cream)">
-                <p class="display text-4xl md:text-5xl" style="color:var(--forest)">5.0&starf;</p>
-                <p class="eyebrow mt-2" style="color:var(--stone)">Google rating</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Service area map ========== -->
-    <section id="area" class="section" style="background:var(--bark-deep);color:var(--cream)">
-      <div class="container-wide" id="service-map">
-        <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 06</p></div>
-          <div class="lg:col-span-7">
-            <p class="eyebrow" style="color:var(--sun)">Where we work</p>
-            <h2 class="display mt-4" style="font-size:clamp(40px,5vw,72px)">The heart of the<br/><span class="italic" style="color:var(--sun-soft)">Southeast.</span></h2>
-          </div>
-          <div class="lg:col-span-4 flex flex-col justify-end">
-            <p class="leading-relaxed" style="color:rgba(245,241,232,.7)">Headquartered in Birmingham, serving homeowners and commercial partners across central Alabama and the lake country.</p>
-          </div>
-        </div>
-
-        <div class="grid lg:grid-cols-12 gap-10 reveal">
-          <div class="lg:col-span-7">
-            <div class="relative aspect-[4/5] md:aspect-[5/4]" style="background:rgba(245,241,232,.04);border:1px solid rgba(245,241,232,.12)">
-              <svg viewBox="0 0 100 110" class="absolute inset-0 w-full h-full" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M22 6 L72 5 L74 22 L78 36 L82 50 L84 70 L80 95 L74 102 L60 104 L52 102 L48 96 L42 96 L38 102 L24 100 L20 88 L18 70 L16 52 L18 32 L20 18 Z" fill="rgba(107,142,90,.06)" stroke="rgba(201,169,97,.35)" stroke-width="0.4" stroke-dasharray="0.6 0.8" />
-                <path d="M30 20 Q40 40 35 60 T55 100" fill="none" stroke="rgba(107,142,90,.35)" stroke-width="0.35" stroke-dasharray="0.4 1" />
-                <path d="M18 60 L82 56" stroke="rgba(245,241,232,.1)" stroke-width="0.3" />
-                <path d="M40 12 L48 100" stroke="rgba(245,241,232,.1)" stroke-width="0.3" />
-              </svg>
-
-              <button data-marker class="marker" style="left:38%;top:56%" aria-label="Birmingham"><span class="marker-dot"><span class="marker-pulse"></span></span><span class="marker-label">Birmingham</span></button>
-              <button data-marker class="marker" style="left:42%;top:18%" aria-label="Huntsville"><span class="marker-dot"><span class="marker-pulse"></span></span><span class="marker-label">Huntsville</span></button>
-              <button data-marker class="marker" style="left:26%;top:50%" aria-label="Jasper"><span class="marker-dot"><span class="marker-pulse"></span></span><span class="marker-label">Jasper</span></button>
-              <button data-marker class="marker" style="left:70%;top:70%" aria-label="Lake Martin"><span class="marker-dot"><span class="marker-pulse"></span></span><span class="marker-label">Lake Martin</span></button>
-              <button data-marker class="marker" style="left:28%;top:38%" aria-label="Smith Lake"><span class="marker-dot"><span class="marker-pulse"></span></span><span class="marker-label">Smith Lake</span></button>
-              <button data-marker class="marker" style="left:64%;top:64%" aria-label="Alex City"><span class="marker-dot"><span class="marker-pulse"></span></span><span class="marker-label">Alex City</span></button>
-
-              <div class="absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.4)">Alabama &middot; 33.5&deg;N 86.8&deg;W</div>
-              <div class="absolute top-4 right-4 font-mono text-[10px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.4)">N &uarr;</div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-5 lg:pl-6">
-            <ul role="list">
-              <li><button data-area-row class="area-row" type="button"><span class="num">01</span><span class="name">Birmingham</span><span class="sub">Headquarters</span></button></li>
-              <li><button data-area-row class="area-row" type="button"><span class="num">02</span><span class="name">Huntsville</span><span class="sub">North Region</span></button></li>
-              <li><button data-area-row class="area-row" type="button"><span class="num">03</span><span class="name">Jasper</span><span class="sub">West Region</span></button></li>
-              <li><button data-area-row class="area-row" type="button"><span class="num">04</span><span class="name">Lake Martin</span><span class="sub">Lake Country</span></button></li>
-              <li><button data-area-row class="area-row" type="button"><span class="num">05</span><span class="name">Smith Lake</span><span class="sub">Lake Country</span></button></li>
-              <li><button data-area-row class="area-row" type="button"><span class="num">06</span><span class="name">Alex City</span><span class="sub">East Region</span></button></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== Vida Gardens ========== -->
-    <section id="gardens" class="relative overflow-hidden" style="background:var(--bark)">
-      <div class="container-wide section grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5 reveal order-2 lg:order-1">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="font-mono text-xs" style="color:var(--sun)">&sect; 07</span>
-            <span class="block w-8 h-px" style="background:var(--sun)"></span>
-            <span class="eyebrow" style="color:var(--sun)">A Vision Taking Root</span>
-          </div>
-          <h2 class="display" style="color:var(--cream);font-size:clamp(40px,5vw,72px)">More than landscaping.<br/><span class="italic" style="color:var(--sun-soft)">A garden for healing.</span></h2>
-          <p class="mt-8 text-lg leading-relaxed" style="color:rgba(245,241,232,.78)">Vida Gardens is our long-term vision &mdash; therapeutic gardens for pediatric and geriatric wellness, an attached nursery, and a sensory-gardens nonprofit serving the Southeast.</p>
-          <ul class="mt-10 space-y-3">
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Sensory &amp; accessibility-first plantings</li>
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Pediatric &amp; geriatric wellness programming</li>
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Attached production nursery</li>
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Sensory-gardens nonprofit</li>
-          </ul>
-          <a href="#contact" class="btn mt-10" style="background:var(--cream);color:var(--bark)">Explore Vida Gardens
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-32 md:py-44 lg:py-56">
+        <p class="text-sun text-xs md:text-sm tracking-[0.3em] uppercase">Design &middot; Build &middot; Maintain</p>
+        <h1 id="hero-title" class="mt-6 font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] text-cream max-w-4xl">Landscapes that<br/>tell your story.</h1>
+        <p class="mt-8 max-w-xl text-cream/85 text-lg md:text-xl leading-relaxed">Boutique design-build and full-service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast.</p>
+        <div class="mt-12 flex flex-wrap items-center gap-4">
+          <a href="contact.html" class="inline-flex items-center gap-3 bg-cream hover:bg-sun text-forest text-sm md:text-base tracking-wide px-7 py-4 rounded-full transition-colors">
+            Request a Consultation <span aria-hidden="true">&rarr;</span>
           </a>
+          <a href="portfolio.html" class="inline-flex items-center gap-3 border border-cream/60 hover:border-cream text-cream text-sm md:text-base tracking-wide px-7 py-4 rounded-full transition-colors">View Our Work</a>
         </div>
-        <div class="lg:col-span-7 reveal reveal-delay-2 order-1 lg:order-2">
-          <div class="aspect-[5/4] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=85&auto=format&fit=crop" alt="Sunlit therapeutic garden path" class="w-full h-full object-cover" loading="lazy" />
+        <dl class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl">
+          <div>
+            <dt class="text-cream/60 text-xs tracking-[0.2em] uppercase">Established</dt>
+            <dd class="mt-2 font-serif text-3xl md:text-4xl text-cream">2018</dd>
           </div>
+          <div>
+            <dt class="text-cream/60 text-xs tracking-[0.2em] uppercase">Google Rating</dt>
+            <dd class="mt-2 font-serif text-3xl md:text-4xl text-cream">5.0&starf;</dd>
+          </div>
+          <div>
+            <dt class="text-cream/60 text-xs tracking-[0.2em] uppercase">Service Lines</dt>
+            <dd class="mt-2 font-serif text-3xl md:text-4xl text-cream">10+</dd>
+          </div>
+          <div>
+            <dt class="text-cream/60 text-xs tracking-[0.2em] uppercase">Markets Served</dt>
+            <dd class="mt-2 font-serif text-3xl md:text-4xl text-cream">6</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Mission strip -->
+    <section aria-label="Mission" class="border-y border-stone/20 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <p class="font-serif italic text-2xl md:text-3xl text-forest leading-snug max-w-3xl">&ldquo;Using Creation to Glorify the Creator.&rdquo;</p>
+        <p class="text-stone text-sm md:text-base max-w-md">Our mission, our compass, and the heartbeat behind every blade, beam, and bloom we install.</p>
+      </div>
+    </section>
+
+    <!-- Vida Gardens — promoted differentiator -->
+    <section aria-labelledby="vg-title" class="bg-bark text-cream">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center py-20 md:py-28">
+        <div class="order-2 lg:order-1">
+          <p class="text-sun text-xs tracking-[0.3em] uppercase">What Makes Us Different</p>
+          <h2 id="vg-title" class="mt-4 font-serif text-4xl md:text-5xl text-cream leading-tight">Gardens that don&rsquo;t just look beautiful.<br/>They help people heal.</h2>
+          <p class="mt-6 text-cream/85 text-lg leading-relaxed">Founder Triston Parsons started in occupational therapy at UAB before pivoting to landscaping &mdash; and he never left the wellness mission behind. Every La Vida design is informed by how plants, light, texture, and sound actually affect the people who live inside them.</p>
+          <p class="mt-4 text-cream/85 text-lg leading-relaxed"><span class="font-serif italic text-sun">Vida Gardens</span> is the long-term expression of that work: therapeutic sensory gardens for pediatric and geriatric wellness, a working nursery, and a Southeast nonprofit dedicated to the science of horticultural therapy.</p>
+          <ul class="mt-8 grid sm:grid-cols-3 gap-4 text-sm">
+            <li class="border-l-2 border-sun pl-4"><span class="block text-sun text-[11px] tracking-[0.2em] uppercase">Pediatric</span><span class="mt-1 block text-cream/90 font-serif text-base">Sensory play &amp; calming spaces</span></li>
+            <li class="border-l-2 border-sun pl-4"><span class="block text-sun text-[11px] tracking-[0.2em] uppercase">Geriatric</span><span class="mt-1 block text-cream/90 font-serif text-base">Memory care garden design</span></li>
+            <li class="border-l-2 border-sun pl-4"><span class="block text-sun text-[11px] tracking-[0.2em] uppercase">Residential</span><span class="mt-1 block text-cream/90 font-serif text-base">Wellness gardens for home</span></li>
+          </ul>
+          <a href="vida-gardens.html" class="mt-10 inline-flex items-center gap-3 bg-cream hover:bg-sun text-bark text-sm tracking-wide px-7 py-4 rounded-full transition-colors">Explore Vida Gardens <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="order-1 lg:order-2">
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1200&q=80&auto=format" alt="Sunlit therapeutic garden path" width="1200" height="900" loading="lazy" class="w-full aspect-[4/3] object-cover rounded-lg" />
         </div>
       </div>
     </section>
 
-    <!-- ========== Testimonials ========== -->
-    <section id="testimonials" class="section" style="background:var(--cream)">
-      <div class="container-wide">
-        <div class="grid lg:grid-cols-12 gap-10 reveal">
-          <div class="lg:col-span-4">
-            <p class="eyebrow" style="color:var(--moss)">Reviews &middot; 5.0 on Google</p>
-            <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(36px,4vw,56px)">What our<br/><span class="italic" style="color:var(--moss)">neighbors say.</span></h2>
-            <div class="mt-8 flex items-center gap-3">
-              <button data-quote-dot class="dot dot-dark" aria-label="Quote 1"></button>
-              <button data-quote-dot class="dot dot-dark" aria-label="Quote 2"></button>
-              <button data-quote-dot class="dot dot-dark" aria-label="Quote 3"></button>
-            </div>
+    <!-- Service overview -->
+    <section aria-labelledby="services-title" class="py-20 md:py-28 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+          <div class="max-w-2xl">
+            <p class="text-moss text-xs tracking-[0.3em] uppercase">What We Do</p>
+            <h2 id="services-title" class="mt-4 font-serif text-4xl md:text-5xl text-ink">A full-service partner for the spaces around your home.</h2>
           </div>
-          <div class="lg:col-span-8 lg:pl-10">
-            <div class="relative">
-              <span class="font-serif italic absolute -top-12 -left-4 leading-none" style="color:rgba(44,74,62,.08);font-size:200px">&ldquo;</span>
-              <div data-quote>
-                <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">Triston is great to work with &mdash; honest, hardworking, and incredibly professional. The retaining wall came out beautiful.</p>
-                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">&mdash; Birmingham homeowner</p>
-              </div>
-              <div data-quote>
-                <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">Communication on the job was constant. They treated our yard like it was their own.</p>
-                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">&mdash; Mountain Brook client</p>
-              </div>
-              <div data-quote>
-                <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">You can feel the faith and integrity behind this team. Rare in this industry.</p>
-                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">&mdash; Repeat client</p>
-              </div>
-            </div>
-          </div>
+          <a href="services.html" class="inline-flex items-center gap-2 text-forest text-sm tracking-wide hover:text-bark transition-colors">Explore all services <span aria-hidden="true">&rarr;</span></a>
         </div>
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors">
+            <div class="w-12 h-12 rounded-full gradient-1 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Landscape Design</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Site plans, planting schemes, and 3D renderings tailored to how you live outdoors.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors">
+            <div class="w-12 h-12 rounded-full gradient-2 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20h16M6 16h12M8 12h8M10 8h4"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Hardscapes</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Patios, retaining walls, walkways, fire features, and outdoor living rooms built to last.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors">
+            <div class="w-12 h-12 rounded-full gradient-3 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2v8M12 22v-4M5 12H2M22 12h-3M6 6l-2-2M20 20l-2-2M6 18l-2 2M20 4l-2 2"/><circle cx="12" cy="14" r="4"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Maintenance</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Mowing, aeration, edging, mulch, and seasonal cleanups on a rhythm that fits your property.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors">
+            <div class="w-12 h-12 rounded-full gradient-4 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3v3M5.6 5.6l2.1 2.1M3 12h3M5.6 18.4l2.1-2.1M12 18a4 4 0 100-8 4 4 0 000 8zM12 21v-3M16.3 16.3l2.1 2.1M21 12h-3M16.3 7.7l2.1-2.1"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Lighting</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Low-voltage architectural and path lighting that turns dusk into a second hour for the yard.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors">
+            <div class="w-12 h-12 rounded-full gradient-5 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 12c4-6 14-6 18 0M3 18c4-6 14-6 18 0"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Irrigation</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Smart-controlled systems that conserve water and keep beds and lawn healthy through Alabama summers.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors relative">
+            <span class="absolute top-4 right-4 inline-flex items-center text-[10px] tracking-[0.2em] uppercase bg-sun/20 text-bark px-2 py-1 rounded-full">New 2025</span>
+            <div class="w-12 h-12 rounded-full gradient-6 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 16c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2M3 12c2 0 2-2 4-2s2 2 4 2 2-2 4-2 2 2 4 2"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Pool Division</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Fully integrated pools designed alongside your landscape, hardscape, and lighting plan.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors relative">
+            <span class="absolute top-4 right-4 inline-flex items-center text-[10px] tracking-[0.2em] uppercase bg-sun/20 text-bark px-2 py-1 rounded-full">New 2025</span>
+            <div class="w-12 h-12 rounded-full gradient-7 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Custom Putting Greens</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">RGB-lit synthetic putting greens engineered for true roll and after-dark play.</p>
+          </li>
+          <li class="group bg-cream border border-stone/20 hover:border-forest/40 rounded-lg p-7 transition-colors">
+            <div class="w-12 h-12 rounded-full gradient-8 flex items-center justify-center text-cream mb-5">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22V10M12 10l-4-4M12 10l4-4M6 14c-2 0-3 2-3 4M18 14c2 0 3 2 3 4"/></svg>
+            </div>
+            <h3 class="font-serif text-2xl text-ink">Horticultural Therapy</h3>
+            <p class="mt-3 text-stone text-sm leading-relaxed">Sensory and therapeutic gardens designed for healing &mdash; the seed of our Vida Gardens vision.</p>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <!-- ========== Contact ========== -->
-    <section id="contact" class="section relative overflow-hidden" style="background:var(--forest-deep);color:var(--cream)">
-      <div class="container-wide grid lg:grid-cols-12 gap-12">
-        <div class="lg:col-span-5 reveal">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="font-mono text-xs" style="color:var(--sun)">&sect; 08</span>
-            <span class="block w-8 h-px" style="background:var(--sun)"></span>
-            <span class="eyebrow" style="color:var(--sun)">Begin a project</span>
-          </div>
-          <h2 class="display" style="font-size:clamp(40px,5vw,72px)">Tell us about<br/><span class="italic" style="color:var(--sun-soft)">your property.</span></h2>
-          <p class="mt-8 text-lg leading-relaxed" style="color:rgba(245,241,232,.78)">A 30-minute on-property consultation is on us. We&rsquo;ll listen, sketch, and tell you honestly whether we&rsquo;re the right fit.</p>
-
-          <div class="mt-12 space-y-6">
-            <div>
-              <p class="eyebrow" style="color:var(--sun)">By Phone</p>
-              <a href="tel:+12058008432" class="display text-3xl md:text-4xl mt-2 block u-link">(205) 800-8432</a>
-            </div>
-            <div>
-              <p class="eyebrow" style="color:var(--sun)">By Email</p>
-              <a href="mailto:livinlavida@lavidalandscapes.com" class="font-serif text-xl mt-2 block u-link break-all">livinlavida@lavidalandscapes.com</a>
-            </div>
-            <div>
-              <p class="eyebrow" style="color:var(--sun)">Studio</p>
-              <p class="font-serif text-xl mt-2">Birmingham, Alabama</p>
-              <p class="font-mono text-[11px] tracking-[0.2em] uppercase mt-1" style="color:rgba(245,241,232,.55)">Mon&ndash;Fri &middot; By appointment</p>
-            </div>
-            <div>
-              <p class="eyebrow" style="color:var(--sun)">Follow</p>
-              <div class="mt-3 flex flex-wrap items-center gap-3">
-                <a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" class="social-pill">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-                  <span>@la.vida.landscapes</span>
-                </a>
-                <a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" class="social-pill">
-                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.27-1.46 1.5-1.46H17V4.45c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.04 1.48-4.04 4.2v2.34H8v3h2.5V21h3z"/></svg>
-                  <span>La Vida Landscape</span>
-                </a>
-              </div>
-            </div>
+    <!-- Signature Projects — unique / distinctive work -->
+    <section aria-labelledby="signature-title" class="py-20 md:py-28 lg:py-32 bg-cream">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+          <div class="max-w-2xl">
+            <p class="text-sun text-xs tracking-[0.3em] uppercase">Signature Work</p>
+            <h2 id="signature-title" class="mt-4 font-serif text-4xl md:text-5xl text-ink leading-tight">Projects that don&rsquo;t fit a template.</h2>
+            <p class="mt-5 text-stone text-lg leading-relaxed">Some yards ask for the standard playbook. Others ask for something nobody&rsquo;s built before. These are the ones we love most &mdash; designs that started as a sketch on a napkin and ended up in the neighborhood&rsquo;s memory.</p>
           </div>
         </div>
-
-        <div class="lg:col-span-7 reveal reveal-delay-2">
-          <div id="contact-form-wrap">
-            <form id="contact-form" class="grid gap-6">
-              <div class="grid md:grid-cols-2 gap-6">
-                <label class="block">
-                  <span class="eyebrow block mb-2" style="color:rgba(245,241,232,.55)">Name</span>
-                  <input type="text" name="name" class="form-input" autocomplete="name" />
-                </label>
-                <label class="block">
-                  <span class="eyebrow block mb-2" style="color:rgba(245,241,232,.55)">Email</span>
-                  <input type="email" name="email" class="form-input" autocomplete="email" />
-                </label>
-              </div>
-              <label class="block">
-                <span class="eyebrow block mb-2" style="color:rgba(245,241,232,.55)">Property address or neighborhood</span>
-                <input type="text" name="property" class="form-input" />
-              </label>
+        <div class="grid lg:grid-cols-3 gap-6">
+          <article class="group relative rounded-lg overflow-hidden border border-stone/20 hover:border-sun/60 transition-colors bg-ink">
+            <div class="aspect-[4/5] gradient-7 flex flex-col justify-between p-7">
+              <span class="self-start inline-flex items-center text-[10px] tracking-[0.25em] uppercase bg-sun/30 text-cream px-3 py-1.5 rounded-full backdrop-blur">Signature</span>
               <div>
-                <p class="eyebrow mb-4" style="color:rgba(245,241,232,.55)">Services of interest</p>
-                <div class="flex flex-wrap gap-2">
-                  <button type="button" data-svc-pill="Design-Build" class="svc-pill" aria-pressed="false">Design-Build</button>
-                  <button type="button" data-svc-pill="Hardscapes" class="svc-pill" aria-pressed="false">Hardscapes</button>
-                  <button type="button" data-svc-pill="Maintenance" class="svc-pill" aria-pressed="false">Maintenance</button>
-                  <button type="button" data-svc-pill="Lighting" class="svc-pill" aria-pressed="false">Lighting</button>
-                  <button type="button" data-svc-pill="Pool" class="svc-pill" aria-pressed="false">Pool</button>
-                  <button type="button" data-svc-pill="Putting Green" class="svc-pill" aria-pressed="false">Putting Green</button>
-                  <button type="button" data-svc-pill="Other" class="svc-pill" aria-pressed="false">Other</button>
-                </div>
-                <input type="hidden" name="services" data-services-hidden value="" />
+                <p class="text-cream/70 text-xs tracking-[0.2em] uppercase">Lake Martin, AL</p>
+                <h3 class="mt-2 font-serif text-3xl text-cream leading-tight">RGB Lit Putting Green</h3>
               </div>
-              <label class="block">
-                <span class="eyebrow block mb-2" style="color:rgba(245,241,232,.55)">Tell us what you&rsquo;re envisioning</span>
-                <textarea rows="4" name="message" class="form-input"></textarea>
-              </label>
-              <div class="flex flex-wrap items-center justify-between gap-4 pt-4">
-                <p class="font-mono text-[11px] tracking-[0.2em] uppercase" style="color:rgba(245,241,232,.45)">We respond within one business day</p>
-                <button type="submit" class="btn" style="background:var(--sun);color:var(--forest)">Send request
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-                </button>
+            </div>
+            <div class="p-7 text-sm text-stone leading-relaxed bg-cream">
+              A backyard putting green engineered with programmable RGB lighting under the cup &mdash; true tournament roll by day, color-shifting after-dark theater by night. One of the first installs from our 2025 line.
+            </div>
+          </article>
+          <article class="group relative rounded-lg overflow-hidden border border-stone/20 hover:border-sun/60 transition-colors bg-ink">
+            <div class="aspect-[4/5] gradient-3 flex flex-col justify-between p-7">
+              <span class="self-start inline-flex items-center text-[10px] tracking-[0.25em] uppercase bg-sun/30 text-cream px-3 py-1.5 rounded-full backdrop-blur">Signature</span>
+              <div>
+                <p class="text-cream/70 text-xs tracking-[0.2em] uppercase">Birmingham, AL</p>
+                <h3 class="mt-2 font-serif text-3xl text-cream leading-tight">Sensory Healing Garden</h3>
               </div>
-            </form>
+            </div>
+            <div class="p-7 text-sm text-stone leading-relaxed bg-cream">
+              A pediatric sensory garden built around fragrant herbs, textured paths, and water sound &mdash; designed with our occupational-therapy framework. The seed of the Vida Gardens vision.
+            </div>
+          </article>
+          <article class="group relative rounded-lg overflow-hidden border border-stone/20 hover:border-sun/60 transition-colors bg-ink">
+            <div class="aspect-[4/5] gradient-2 flex flex-col justify-between p-7">
+              <span class="self-start inline-flex items-center text-[10px] tracking-[0.25em] uppercase bg-sun/30 text-cream px-3 py-1.5 rounded-full backdrop-blur">Signature</span>
+              <div>
+                <p class="text-cream/70 text-xs tracking-[0.2em] uppercase">Mountain Brook, AL</p>
+                <h3 class="mt-2 font-serif text-3xl text-cream leading-tight">Cut-Stone Ravine Pool</h3>
+              </div>
+            </div>
+            <div class="p-7 text-sm text-stone leading-relaxed bg-cream">
+              A hillside lot turned hardscape masterpiece &mdash; cut-stone retaining walls cascading down to a fully integrated pool deck, with low-voltage architectural lighting set into every tread.
+            </div>
+          </article>
+        </div>
+        <p class="mt-10 text-center text-sm text-stone italic">Have a project that needs a from-scratch design? <a href="contact.html" class="text-forest hover:text-bark underline-offset-4 hover:underline">Tell us about it.</a></p>
+      </div>
+    </section>
+
+    <!-- Featured projects — before/after with locations -->
+    <section aria-labelledby="featured-title" class="py-20 md:py-28 bg-forest text-cream">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14">
+          <div class="max-w-2xl">
+            <p class="text-sun text-xs tracking-[0.3em] uppercase">Before &amp; After</p>
+            <h2 id="featured-title" class="mt-4 font-serif text-4xl md:text-5xl">The same yard, six months later.</h2>
+            <p class="mt-5 text-cream/80 text-base md:text-lg leading-relaxed max-w-xl">A side-by-side look at recent design-build projects across the Birmingham metro and lake country.</p>
           </div>
-          <div id="contact-success" class="p-12" style="background:rgba(245,241,232,.04);border:1px solid rgba(245,241,232,.18)" hidden>
-            <p class="eyebrow" style="color:var(--sun)">Received</p>
-            <h3 class="display text-4xl mt-4">Thank you, <span data-success-name>friend</span>.</h3>
-            <p class="mt-6 text-lg leading-relaxed" style="color:rgba(245,241,232,.78)">Your email client has been opened with your request. We&rsquo;ll be in touch within one business day to schedule the walk-through.</p>
-            <button id="send-another" type="button" class="mt-10 link-arrow on-dark">Send another
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-            </button>
+          <a href="portfolio.html" class="inline-flex items-center gap-2 text-cream/85 hover:text-cream text-sm tracking-wide transition-colors">See full portfolio <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="group bg-ink/30 rounded-lg overflow-hidden border border-cream/10 hover:border-sun/40 transition-colors">
+            <div class="grid grid-cols-2 aspect-[4/3] relative">
+              <div class="gradient-bw flex items-start justify-start p-3 relative">
+                <span class="text-[10px] tracking-[0.25em] uppercase bg-ink/70 text-cream/90 px-2 py-1 rounded">Before</span>
+              </div>
+              <div class="gradient-3 flex items-start justify-end p-3 relative">
+                <span class="text-[10px] tracking-[0.25em] uppercase bg-sun/40 text-cream px-2 py-1 rounded backdrop-blur">After</span>
+              </div>
+              <div class="absolute inset-y-0 left-1/2 w-px bg-cream/40" aria-hidden="true"></div>
+            </div>
+            <div class="p-6">
+              <p class="text-sun text-[11px] tracking-[0.25em] uppercase">Mountain Brook, AL</p>
+              <h3 class="mt-2 font-serif text-2xl text-cream">Magnolia Estate Renewal</h3>
+              <p class="mt-3 text-sm text-cream/80 leading-relaxed">Full-property redesign anchored by mature magnolias and a cut-stone walkway down to the pool deck.</p>
+            </div>
+          </article>
+          <article class="group bg-ink/30 rounded-lg overflow-hidden border border-cream/10 hover:border-sun/40 transition-colors">
+            <div class="grid grid-cols-2 aspect-[4/3] relative">
+              <div class="gradient-bw flex items-start justify-start p-3 relative">
+                <span class="text-[10px] tracking-[0.25em] uppercase bg-ink/70 text-cream/90 px-2 py-1 rounded">Before</span>
+              </div>
+              <div class="gradient-1 flex items-start justify-end p-3 relative">
+                <span class="text-[10px] tracking-[0.25em] uppercase bg-sun/40 text-cream px-2 py-1 rounded backdrop-blur">After</span>
+              </div>
+              <div class="absolute inset-y-0 left-1/2 w-px bg-cream/40" aria-hidden="true"></div>
+            </div>
+            <div class="p-6">
+              <p class="text-sun text-[11px] tracking-[0.25em] uppercase">UAB Campus &middot; Birmingham, AL</p>
+              <h3 class="mt-2 font-serif text-2xl text-cream">University Quad Install</h3>
+              <p class="mt-3 text-sm text-cream/80 leading-relaxed">Commercial landscape construction for the University of Alabama at Birmingham &mdash; a partnership with Brasfield &amp; Gorrie.</p>
+            </div>
+          </article>
+          <article class="group bg-ink/30 rounded-lg overflow-hidden border border-cream/10 hover:border-sun/40 transition-colors">
+            <div class="grid grid-cols-2 aspect-[4/3] relative">
+              <div class="gradient-bw flex items-start justify-start p-3 relative">
+                <span class="text-[10px] tracking-[0.25em] uppercase bg-ink/70 text-cream/90 px-2 py-1 rounded">Before</span>
+              </div>
+              <div class="gradient-5 flex items-start justify-end p-3 relative">
+                <span class="text-[10px] tracking-[0.25em] uppercase bg-sun/40 text-cream px-2 py-1 rounded backdrop-blur">After</span>
+              </div>
+              <div class="absolute inset-y-0 left-1/2 w-px bg-cream/40" aria-hidden="true"></div>
+            </div>
+            <div class="p-6">
+              <p class="text-sun text-[11px] tracking-[0.25em] uppercase">Lake Martin, AL</p>
+              <h3 class="mt-2 font-serif text-2xl text-cream">Lakefront Retaining &amp; Patio</h3>
+              <p class="mt-3 text-sm text-cream/80 leading-relaxed">Slope stabilization, cut-stone retaining wall, and an entertainment-ready patio overlooking the water.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Story snippet -->
+    <section aria-labelledby="story-title" class="py-20 md:py-28 lg:py-32">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="relative">
+          <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1200&q=80&auto=format" alt="Hands tending a young tree" width="1200" height="1500" loading="lazy" class="w-full aspect-[4/5] object-cover rounded-lg" />
+          <div class="absolute -bottom-6 -right-6 hidden md:block bg-cream border border-stone/20 rounded-lg px-6 py-5 max-w-xs shadow-lg">
+            <p class="text-xs tracking-[0.2em] uppercase text-moss">Featured In</p>
+            <p class="mt-2 font-serif text-xl text-ink leading-snug">NALP &mdash; Faces of the Industry</p>
+            <p class="mt-1 text-xs text-stone">April 2022 feature on founder Triston Parsons</p>
           </div>
+        </div>
+        <div>
+          <p class="text-moss text-xs tracking-[0.3em] uppercase">Our Story</p>
+          <h2 id="story-title" class="mt-4 font-serif text-4xl md:text-5xl text-ink leading-tight">Started with 15 lawns and a knock on a door.</h2>
+          <p class="mt-6 text-stone text-lg leading-relaxed">Triston Parsons started La Vida in high school with a push mower and a stubborn faith. A pivot from occupational therapy at UAB into full-time design-build came when one client asked if he could handle more than maintenance &mdash; and the answer became the company.</p>
+          <blockquote class="mt-8 border-l-2 border-sun pl-6 font-serif italic text-xl md:text-2xl text-bark leading-relaxed">
+            &ldquo;I didn&rsquo;t have any systems and was taking on a lot of work. The lack of systems was hurting me. So I built them.&rdquo;
+            <cite class="block not-italic text-sm text-stone mt-3 font-sans">&mdash; Triston Parsons, founder</cite>
+          </blockquote>
+          <a href="about.html" class="mt-10 inline-flex items-center gap-2 text-forest hover:text-bark text-sm tracking-wide transition-colors">Read the full story <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section aria-labelledby="reviews-title" class="py-20 md:py-28 bg-cream border-y border-stone/20">
+      <div class="max-w-7xl mx-auto px-6 md:px-10">
+        <div class="text-center max-w-2xl mx-auto mb-14">
+          <p class="text-moss text-xs tracking-[0.3em] uppercase">5.0 Stars on Google</p>
+          <h2 id="reviews-title" class="mt-4 font-serif text-4xl md:text-5xl text-ink">What our neighbors say.</h2>
+        </div>
+        <ul class="grid md:grid-cols-3 gap-6">
+          <li class="bg-cream border border-stone/20 rounded-lg p-7">
+            <div class="flex gap-1 text-sun" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span>
+            </div>
+            <p class="mt-5 font-serif text-xl text-ink leading-snug">&ldquo;Triston is great to work with &mdash; honest, hardworking, and incredibly professional. The retaining wall came out beautiful.&rdquo;</p>
+            <p class="mt-5 text-sm text-stone">&mdash; Birmingham homeowner</p>
+          </li>
+          <li class="bg-cream border border-stone/20 rounded-lg p-7">
+            <div class="flex gap-1 text-sun" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span>
+            </div>
+            <p class="mt-5 font-serif text-xl text-ink leading-snug">&ldquo;Communication on the job was constant. They treated our yard like it was their own.&rdquo;</p>
+            <p class="mt-5 text-sm text-stone">&mdash; Mountain Brook client</p>
+          </li>
+          <li class="bg-cream border border-stone/20 rounded-lg p-7">
+            <div class="flex gap-1 text-sun" aria-label="5 out of 5 stars">
+              <span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span><span aria-hidden="true">&starf;</span>
+            </div>
+            <p class="mt-5 font-serif text-xl text-ink leading-snug">&ldquo;You can feel the faith and integrity behind this team. Rare in this industry.&rdquo;</p>
+            <p class="mt-5 text-sm text-stone">&mdash; Repeat client</p>
+          </li>
+        </ul>
+        <div class="mt-12 text-center">
+          <a href="https://www.google.com/maps/search/?api=1&query=La+Vida+Landscapes+Birmingham+AL" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-forest hover:text-bark text-sm tracking-wide transition-colors">Read more reviews on Google <span aria-hidden="true">&rarr;</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service area -->
+    <section aria-labelledby="area-title" class="py-20 md:py-28">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-1">
+          <p class="text-moss text-xs tracking-[0.3em] uppercase">Where We Work</p>
+          <h2 id="area-title" class="mt-4 font-serif text-4xl text-ink leading-tight">Serving the Heart of the Southeast.</h2>
+          <p class="mt-6 text-stone leading-relaxed">Headquartered in Birmingham, we serve homeowners and commercial partners across central Alabama and the lake country.</p>
+        </div>
+        <ul class="md:col-span-2 grid sm:grid-cols-2 gap-px bg-stone/20 rounded-lg overflow-hidden border border-stone/20">
+          <li class="bg-cream p-6"><span class="block text-xs tracking-[0.2em] uppercase text-moss">Headquarters</span><span class="mt-2 block font-serif text-2xl text-ink">Birmingham, AL</span></li>
+          <li class="bg-cream p-6"><span class="block text-xs tracking-[0.2em] uppercase text-moss">North Region</span><span class="mt-2 block font-serif text-2xl text-ink">Huntsville</span></li>
+          <li class="bg-cream p-6"><span class="block text-xs tracking-[0.2em] uppercase text-moss">Lake Country</span><span class="mt-2 block font-serif text-2xl text-ink">Lake Martin</span></li>
+          <li class="bg-cream p-6"><span class="block text-xs tracking-[0.2em] uppercase text-moss">Lake Country</span><span class="mt-2 block font-serif text-2xl text-ink">Smith Lake</span></li>
+          <li class="bg-cream p-6"><span class="block text-xs tracking-[0.2em] uppercase text-moss">West Region</span><span class="mt-2 block font-serif text-2xl text-ink">Jasper</span></li>
+          <li class="bg-cream p-6"><span class="block text-xs tracking-[0.2em] uppercase text-moss">East Region</span><span class="mt-2 block font-serif text-2xl text-ink">Alexander City</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section aria-labelledby="cta-title" class="py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-6 md:px-10 text-center">
+        <p class="text-moss text-xs tracking-[0.3em] uppercase">Let&rsquo;s Begin</p>
+        <h2 id="cta-title" class="mt-4 font-serif text-4xl md:text-6xl text-ink leading-tight">Ready to make your yard the favorite room in your home?</h2>
+        <p class="mt-6 text-stone text-lg max-w-2xl mx-auto leading-relaxed">Tell us about your property. We&rsquo;ll respond within one business day with the next step.</p>
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+          <a href="contact.html" class="inline-flex items-center gap-3 bg-forest hover:bg-bark text-cream text-base tracking-wide px-8 py-4 rounded-full transition-colors">Request a Consultation <span aria-hidden="true">&rarr;</span></a>
+          <a href="tel:+12058008432" class="inline-flex items-center gap-3 border border-forest/40 hover:border-forest text-forest text-base tracking-wide px-8 py-4 rounded-full transition-colors">(205) 800-8432</a>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- ========== Footer ========== -->
-  <footer style="background:var(--ink);color:rgba(245,241,232,.7)">
-    <div class="container-wide pt-24 pb-12">
-      <div class="grid lg:grid-cols-12 gap-12">
-        <div class="lg:col-span-5">
-          <a href="#top" class="flex items-center gap-4 group shrink-0">
-            <span class="inline-flex items-center justify-center rounded-full overflow-hidden shrink-0" style="width:72px;height:72px;background:var(--cream);border:1px solid rgba(245,241,232,.35);box-shadow:0 2px 18px rgba(0,0,0,.35)">
-              <img src="assets/logo.jpg" alt="La Vida Landscapes" class="w-full h-full object-cover" />
-            </span>
-            <span class="flex flex-col leading-none">
-              <span class="font-serif" style="font-size:33px;color:var(--cream);text-shadow:0 1px 14px rgba(0,0,0,.5);letter-spacing:-0.005em">La Vida Landscapes</span>
-              <span class="eyebrow mt-2" style="color:rgba(245,241,232,.9);text-shadow:0 1px 8px rgba(0,0,0,.5);font-size:13px">Birmingham &middot; Est. 2018</span>
-            </span>
-          </a>
-          <p class="mt-8 max-w-md font-serif italic text-2xl leading-snug" style="color:var(--cream)">&ldquo;Using Creation to Glorify the Creator.&rdquo;</p>
-          <p class="mt-6 max-w-md text-sm leading-relaxed">Faith-driven design-build &amp; maintenance landscapes serving Birmingham and the greater Southeast since 2018.</p>
-        </div>
-
-        <div class="lg:col-span-2">
-          <p class="eyebrow mb-5" style="color:var(--sun)">Explore</p>
-          <ul class="space-y-3 text-sm">
-            <li><a href="#work" class="u-link" style="color:rgba(245,241,232,.7)">Work</a></li>
-            <li><a href="#services" class="u-link" style="color:rgba(245,241,232,.7)">Services</a></li>
-            <li><a href="#process" class="u-link" style="color:rgba(245,241,232,.7)">Process</a></li>
-            <li><a href="#story" class="u-link" style="color:rgba(245,241,232,.7)">Story</a></li>
-            <li><a href="#gardens" class="u-link" style="color:rgba(245,241,232,.7)">Vida Gardens</a></li>
-            <li><a href="#contact" class="u-link" style="color:rgba(245,241,232,.7)">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="lg:col-span-3">
-          <p class="eyebrow mb-5" style="color:var(--sun)">Contact</p>
-          <ul class="space-y-3 text-sm">
-            <li><a href="tel:+12058008432" class="u-link">(205) 800-8432</a></li>
-            <li><a href="mailto:livinlavida@lavidalandscapes.com" class="u-link break-all">livinlavida@lavidalandscapes.com</a></li>
-            <li>Birmingham, AL</li>
-          </ul>
-          <div class="mt-6 flex flex-wrap gap-3">
-            <a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" class="social-icon-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
-            </a>
-            <a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" class="social-icon-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.27-1.46 1.5-1.46H17V4.45c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.04 1.48-4.04 4.2v2.34H8v3h2.5V21h3z"/></svg>
-            </a>
-            <a href="https://www.linkedin.com/company/la-vida-landscapes-llc" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" class="social-icon-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.4 0h4.37v1.92h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.27c0-1.5-.03-3.42-2.08-3.42-2.08 0-2.4 1.63-2.4 3.31V22H7.62V8z"/></svg>
-            </a>
-            <a href="https://nextdoor.com/pages/la-vida-landscapes-birmingham-al/" target="_blank" rel="noopener" aria-label="Nextdoor" title="Nextdoor" class="social-icon-btn">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9z"/></svg>
-            </a>
-          </div>
-        </div>
-
-        <div class="lg:col-span-2">
-          <p class="eyebrow mb-5" style="color:var(--sun)">Values</p>
-          <ul class="space-y-2 text-sm">
-            <li class="font-serif text-base">Faith</li>
-            <li class="font-serif text-base">Family</li>
-            <li class="font-serif text-base">Integrity</li>
-            <li class="font-serif text-base">Positive Mindset</li>
-            <li class="font-serif text-base">Responsibility</li>
-            <li class="font-serif text-base">Teamwork</li>
-            <li class="font-serif text-base">Commitment</li>
-            <li class="font-serif text-base">Fun</li>
-          </ul>
-        </div>
+  <!-- footer:start -->
+  <footer class="bg-forest text-cream/90">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 py-20 grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-2">
+        <a href="index.html" class="inline-flex items-center gap-3">
+          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream text-forest font-serif text-xl">LV</span>
+          <span class="font-serif text-2xl text-cream">La Vida Landscapes</span>
+        </a>
+        <p class="mt-6 max-w-md font-serif italic text-cream/80 text-lg leading-relaxed">&ldquo;Using Creation to Glorify the Creator.&rdquo;</p>
+        <p class="mt-4 max-w-md text-sm leading-relaxed text-cream/70">Faith-driven design-build &amp; maintenance landscapes serving Birmingham and the greater Southeast since 2018.</p>
       </div>
-
-      <hr class="hr-thin-light mt-16" />
-
-      <div class="mt-8 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-xs" style="color:rgba(245,241,232,.5)">
+      <div>
+        <h3 class="text-xs tracking-[0.25em] uppercase text-sun mb-5">Explore</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="services.html" class="hover:text-cream text-cream/70 transition-colors">Services</a></li>
+          <li><a href="portfolio.html" class="hover:text-cream text-cream/70 transition-colors">Portfolio</a></li>
+          <li><a href="vida-gardens.html" class="hover:text-cream text-cream/70 transition-colors">Vida Gardens</a></li>
+          <li><a href="blog.html" class="hover:text-cream text-cream/70 transition-colors">Journal</a></li>
+          <li><a href="about.html" class="hover:text-cream text-cream/70 transition-colors">About</a></li>
+          <li><a href="contact.html" class="hover:text-cream text-cream/70 transition-colors">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xs tracking-[0.25em] uppercase text-sun mb-5">Connect</h3>
+        <ul class="space-y-3 text-sm">
+          <li><a href="tel:+12058008432" aria-label="Call La Vida Landscapes" class="hover:text-cream text-cream/70 transition-colors">(205) 800-8432</a></li>
+          <li><a href="mailto:livinlavida@lavidalandscapes.com" class="hover:text-cream text-cream/70 transition-colors break-all">livinlavida@lavidalandscapes.com</a></li>
+        </ul>
+        <ul class="mt-6 flex flex-wrap gap-3" aria-label="Social media">
+          <li><a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a></li>
+          <li><a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13 22v-9h3l.5-4H13V6.5c0-1 .3-1.7 1.8-1.7H17V1.2C16.6 1.1 15.4 1 14.1 1 11.4 1 9.6 2.6 9.6 5.7V9H7v4h2.6v9z"/></svg>
+          </a></li>
+          <li><a href="https://www.linkedin.com/company/la-vida-landscapes-llc" target="_blank" rel="noopener" aria-label="LinkedIn" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.55 0h4.37v1.92h.06c.61-1.15 2.1-2.36 4.32-2.36 4.62 0 5.48 3.04 5.48 7v7.44h-4.56v-6.6c0-1.57-.03-3.6-2.2-3.6-2.2 0-2.54 1.72-2.54 3.49V22H7.77V8z"/></svg>
+          </a></li>
+          <li><a href="https://nextdoor.com/pages/la-vida-landscapes-birmingham-al/" target="_blank" rel="noopener" aria-label="Nextdoor" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors text-xs font-bold"><span aria-hidden="true">ND</span></a></li>
+          <li><a href="https://www.google.com/maps/search/?api=1&query=La+Vida+Landscapes+Birmingham+AL" target="_blank" rel="noopener" aria-label="Google Business profile" class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-cream/10 hover:bg-sun hover:text-forest transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2C8 2 5 5 5 9c0 5.5 7 13 7 13s7-7.5 7-13c0-4-3-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-cream/10">
+      <div class="max-w-7xl mx-auto px-6 md:px-10 py-6 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-xs text-cream/60">
         <p>&copy; <span data-year>2026</span> La Vida Landscapes, LLC. All rights reserved.</p>
-        <p class="font-script text-xl" style="color:var(--sun)">Faith &middot; Family &middot; Craft</p>
+        <p class="font-serif italic">Faith &middot; Family &middot; Integrity &middot; Positive Mindset &middot; Responsibility &middot; Teamwork &middot; Commitment &middot; Fun</p>
       </div>
     </div>
   </footer>
-
-  <!-- Floating CTA -->
-  <a href="#contact" class="floating-cta btn btn-primary">Begin a project
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-  </a>
+  <!-- footer:end -->
 
   <script src="js/main.js" defer></script>
 </body>

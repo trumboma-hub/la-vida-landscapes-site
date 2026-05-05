@@ -19,11 +19,12 @@ Open <http://localhost:8000>.
 
 ```
 la-vida-landscapes-site/
-├── index.html              # Home — tone-setter
+├── index.html              # Home — tone-setter (video hero + Vida Gardens promoted + Signature Projects)
 ├── services.html           # Service lines + commercial partners
-├── portfolio.html          # Project grid + lightbox
+├── portfolio.html          # Project grid + lightbox (location-tagged)
 ├── about.html              # Founder story, mission, values
 ├── vida-gardens.html       # Long-term therapeutic-gardens vision
+├── blog.html               # Journal stub (auto-generated weekly content target)
 ├── contact.html            # Phone, email, socials, service area
 ├── 404.html                # Friendly fallback
 ├── css/custom.css          # Small overrides Tailwind can't express cleanly
@@ -75,8 +76,10 @@ la-vida-landscapes-site/
 ## Image replacement guide
 
 - **Hero/section imagery** uses Unsplash hotlinks via `https://images.unsplash.com/...?w=1600&q=80&auto=format`. These render immediately for the design tool pass. Replace with real La Vida photography by swapping the `src` attribute on each `<img>`.
+- **Hero video** on `index.html` references `videos/hero-loop.mp4`. Drop Triston's looping property video into `videos/` with that filename. The Unsplash poster fallback covers the gap; reduced-motion users see the still image instead of the video.
 - **Portfolio tiles** use SVG/CSS gradients with project-name labels — clearly placeholders. Each tile in `portfolio.html` is one `<article>`; replace the gradient `<div>` with an `<img>` to drop in real photography.
-- Recommended dimensions: hero 1920x1080, section 1600x900, portfolio tile 1200x900.
+- **Featured before/after tiles** on `index.html` use a two-column gradient split (`gradient-bw` for the "before" half, a colored gradient for the "after" half). Replace each half-pane with the real before/after photo plus the location caption already in place.
+- Recommended dimensions: hero 1920x1080, section 1600x900, portfolio tile 1200x900, hero video 1920x1080 H.264 MP4 (≤8 MB, ~10–20s loop).
 
 ## Deploy
 
