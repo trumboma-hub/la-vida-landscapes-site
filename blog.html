@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Journal &mdash; La Vida Landscapes | Birmingham, AL</title>
+  <meta name="description" content="Notes from the field — seasonal landscape tips, project case studies, and reflections from the La Vida Landscapes team in Birmingham, Alabama." />
+  <link rel="canonical" href="https://lavidalandscapes.com/blog.html" />
+  <link rel="icon" href="assets/logo.jpg" />
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Journal &mdash; La Vida Landscapes" />
+  <meta property="og:description" content="Seasonal landscape tips, project case studies, and reflections from La Vida Landscapes." />
+  <meta property="og:image" content="https://lavidalandscapes.com/images/og-default.svg" />
+  <meta property="og:url" content="https://lavidalandscapes.com/blog.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = { theme: { extend: {
+      colors: {
+        forest:'#2C4A3E','forest-deep':'#1F3528',
+        moss:'#6B8E5A','moss-soft':'#8FA67E',
+        bark:'#3D2E1F','bark-deep':'#2A1F14',
+        stone:'#A89B8C','stone-soft':'#C8BFB3',
+        cream:'#F5F1E8','cream-warm':'#EFE8D6',
+        paper:'#FAF7F0',
+        sun:'#C9A961','sun-soft':'#DEC489',
+        ink:'#1A1F1B'
+      },
+      fontFamily: {
+        serif:['"Cormorant Garamond"','Georgia','serif'],
+        sans:['Inter','system-ui','sans-serif'],
+        script:['Caveat','cursive'],
+        mono:['"JetBrains Mono"','ui-monospace','monospace']
+      }
+    }}}
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/custom.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "La Vida Landscapes Journal",
+    "url": "https://lavidalandscapes.com/blog.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "La Vida Landscapes, LLC"
+    }
+  }
+  </script>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <!-- nav:start -->
+  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/75 border-b border-stone/20">
+    <nav aria-label="Primary" class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif text-xl group-hover:bg-bark transition-colors">LV</span>
+        <span class="flex flex-col leading-none">
+          <span class="font-serif text-xl text-ink">La Vida Landscapes</span>
+          <span class="text-[11px] tracking-[0.2em] uppercase text-stone">Birmingham, AL</span>
+        </span>
+      </a>
+      <ul class="hidden lg:flex items-center gap-8 text-sm tracking-wide text-ink">
+        <li><a href="services.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Services</a></li>
+        <li><a href="portfolio.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Portfolio</a></li>
+        <li><a href="vida-gardens.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Vida Gardens</a></li>
+        <li><a href="blog.html" class="text-forest font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5" aria-current="page">Journal</a></li>
+        <li><a href="about.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">About</a></li>
+        <li><a href="contact.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Contact</a></li>
+      </ul>
+      <div class="hidden lg:flex items-center gap-5">
+        <a href="tel:+12058008432" aria-label="Call La Vida Landscapes at (205) 800-8432" class="text-sm text-ink hover:text-forest transition-colors">(205) 800-8432</a>
+        <a href="contact.html" class="inline-flex items-center gap-2 bg-forest hover:bg-bark text-cream text-sm tracking-wide px-5 py-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">Request a Consultation <span aria-hidden="true">&rarr;</span></a>
+      </div>
+      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-ink hover:bg-stone/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobile-menu" hidden class="lg:hidden border-t border-stone/20 bg-cream">
+      <ul class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-1 text-base">
+        <li><a href="services.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Services</a></li>
+        <li><a href="portfolio.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Portfolio</a></li>
+        <li><a href="vida-gardens.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Vida Gardens</a></li>
+        <li><a href="blog.html" class="block py-3 px-2 rounded-md bg-stone/10 text-forest" aria-current="page">Journal</a></li>
+        <li><a href="about.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">About</a></li>
+        <li><a href="contact.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Contact</a></li>
+      </ul>
+      <div class="max-w-7xl mx-auto px-6 pb-6 flex flex-col gap-3">
+        <a href="tel:+12058008432" class="inline-flex items-center justify-center gap-2 bg-cream border border-forest/30 text-forest text-sm tracking-wide px-5 py-3 rounded-full">Call (205) 800-8432</a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-forest text-cream text-sm tracking-wide px-5 py-3 rounded-full">Request a Consultation</a>
+      </div>
+    </div>
+  </header>
+  <!-- nav:end -->
+
+  <main id="main">
+    <!-- Hero -->
+    <section aria-labelledby="page-title" class="section" style="background:var(--paper);border-bottom:1px solid rgba(168,155,140,.22)">
+      <div class="container-wide">
+        <div class="grid lg:grid-cols-12 gap-10 items-end">
+          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; Journal</p></div>
+          <div class="lg:col-span-7">
+            <p class="eyebrow" style="color:var(--moss)">Notes from the Field</p>
+            <h1 id="page-title" class="display mt-6" style="color:var(--ink);font-size:clamp(48px,7vw,108px)">Field notes,<br/><span class="italic" style="color:var(--moss)">freshly cut.</span></h1>
+          </div>
+          <div class="lg:col-span-4 flex flex-col justify-end">
+            <p class="text-base leading-relaxed" style="color:var(--bark)">Seasonal landscape tips, project case studies, and reflections from the La Vida team. Updated weekly &mdash; pull up a chair.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Posts grid -->
+    <section aria-label="Recent posts" class="section" style="background:var(--cream)">
+      <div class="container-wide">
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style="background:rgba(168,155,140,.22);border:1px solid rgba(168,155,140,.22)">
+          <li>
+            <article class="block h-full" style="background:var(--cream)">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="assets/hero/03-courtyard-garden-thumb.jpg" alt="Spring mulching reference" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-7 md:p-9">
+                <div class="flex items-center gap-3">
+                  <span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--moss)">Seasonal</span>
+                  <span class="block w-6 h-px" style="background:var(--moss)"></span>
+                  <span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--stone)">Spring</span>
+                </div>
+                <h2 class="display mt-5" style="color:var(--ink);font-size:clamp(24px,2.4vw,30px);line-height:1.1">When to put the mulch down in Birmingham (and when not to).</h2>
+                <p class="mt-5 text-sm leading-relaxed" style="color:var(--bark)">A quick rundown of timing, depth, and material choice for Alabama&rsquo;s freeze-thaw shoulder season &mdash; plus the one mistake we see every spring.</p>
+                <p class="mt-7 font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--stone)">Coming soon</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="block h-full" style="background:var(--cream)">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="assets/hero/05-putting-green-lake-thumb.jpg" alt="RGB-lit putting green build" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-7 md:p-9">
+                <div class="flex items-center gap-3">
+                  <span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--moss)">Case Study</span>
+                  <span class="block w-6 h-px" style="background:var(--moss)"></span>
+                  <span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--stone)">Lake Martin, AL</span>
+                </div>
+                <h2 class="display mt-5" style="color:var(--ink);font-size:clamp(24px,2.4vw,30px);line-height:1.1">RGB lighting, real golf: building a putting green that performs.</h2>
+                <p class="mt-5 text-sm leading-relaxed" style="color:var(--bark)">How we engineered the slope, drainage, and lighting plan on our first programmable RGB green &mdash; and what we&rsquo;d do differently next time.</p>
+                <p class="mt-7 font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--stone)">Coming soon</p>
+              </div>
+            </article>
+          </li>
+          <li>
+            <article class="block h-full" style="background:var(--cream)">
+              <div class="aspect-[16/10] overflow-hidden">
+                <img src="assets/hero/02-vida-gardens-entry-thumb.jpg" alt="Vida Gardens entry path" class="w-full h-full object-cover" loading="lazy" />
+              </div>
+              <div class="p-7 md:p-9">
+                <div class="flex items-center gap-3">
+                  <span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--moss)">Reflection</span>
+                  <span class="block w-6 h-px" style="background:var(--moss)"></span>
+                  <span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--stone)">Founder</span>
+                </div>
+                <h2 class="display mt-5" style="color:var(--ink);font-size:clamp(24px,2.4vw,30px);line-height:1.1">From occupational therapy to landscape design.</h2>
+                <p class="mt-5 text-sm leading-relaxed" style="color:var(--bark)">Why the same instinct that drove me toward OT at UAB ended up shaping how I think about every yard we touch.</p>
+                <p class="mt-7 font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--stone)">Coming soon</p>
+              </div>
+            </article>
+          </li>
+        </ul>
+
+        <p class="mt-16 text-center">
+          <span class="font-serif italic text-lg" style="color:var(--bark)">More posts on the way.</span>
+          <span class="text-base ml-2" style="color:var(--bark)">Have a topic you&rsquo;d like us to cover? <a href="contact.html" class="link-arrow ml-1">Send it our way
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a></span>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- footer:start -->
+  <footer style="background:var(--ink);color:rgba(245,241,232,.7)">
+    <div class="container-wide pt-24 pb-12">
+      <div class="grid lg:grid-cols-12 gap-12">
+        <div class="lg:col-span-5">
+          <a href="index.html" class="flex items-center gap-4 group shrink-0">
+            <span class="inline-flex items-center justify-center rounded-full overflow-hidden shrink-0" style="width:72px;height:72px;background:var(--cream);border:1px solid rgba(245,241,232,.35);box-shadow:0 2px 18px rgba(0,0,0,.35)">
+              <img src="assets/logo.jpg" alt="La Vida Landscapes" class="w-full h-full object-cover" />
+            </span>
+            <span class="flex flex-col leading-none">
+              <span class="font-serif" style="font-size:33px;color:var(--cream);text-shadow:0 1px 14px rgba(0,0,0,.5);letter-spacing:-0.005em">La Vida Landscapes</span>
+              <span class="eyebrow mt-2" style="color:rgba(245,241,232,.9);text-shadow:0 1px 8px rgba(0,0,0,.5);font-size:13px">Birmingham &middot; Est. 2018</span>
+            </span>
+          </a>
+          <p class="mt-8 max-w-md font-serif italic text-2xl leading-snug" style="color:var(--cream)">&ldquo;Using Creation to Glorify the Creator.&rdquo;</p>
+          <p class="mt-6 max-w-md text-sm leading-relaxed">Faith-driven design-build &amp; maintenance landscapes serving Birmingham and the greater Southeast since 2018.</p>
+        </div>
+
+        <div class="lg:col-span-2">
+          <p class="eyebrow mb-5" style="color:var(--sun)">Explore</p>
+          <ul class="space-y-3 text-sm">
+            <li><a href="services.html" class="u-link" style="color:rgba(245,241,232,.7)">Services</a></li>
+            <li><a href="portfolio.html" class="u-link" style="color:rgba(245,241,232,.7)">Portfolio</a></li>
+            <li><a href="vida-gardens.html" class="u-link" style="color:rgba(245,241,232,.7)">Vida Gardens</a></li>
+            <li><a href="blog.html" class="u-link" style="color:rgba(245,241,232,.7)">Journal</a></li>
+            <li><a href="about.html" class="u-link" style="color:rgba(245,241,232,.7)">About</a></li>
+            <li><a href="contact.html" class="u-link" style="color:rgba(245,241,232,.7)">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <p class="eyebrow mb-5" style="color:var(--sun)">Contact</p>
+          <ul class="space-y-3 text-sm">
+            <li><a href="tel:+12058008432" class="u-link">(205) 800-8432</a></li>
+            <li><a href="mailto:livinlavida@lavidalandscapes.com" class="u-link break-all">livinlavida@lavidalandscapes.com</a></li>
+            <li>Birmingham, AL</li>
+          </ul>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram" class="social-icon-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" title="Facebook" class="social-icon-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.27-1.46 1.5-1.46H17V4.45c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.04 1.48-4.04 4.2v2.34H8v3h2.5V21h3z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/la-vida-landscapes-llc" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn" class="social-icon-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v14H.22V8zm7.4 0h4.37v1.92h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.47 3.04 5.47 6.99V22h-4.56v-6.27c0-1.5-.03-3.42-2.08-3.42-2.08 0-2.4 1.63-2.4 3.31V22H7.62V8z"/></svg>
+            </a>
+            <a href="https://nextdoor.com/pages/la-vida-landscapes-birmingham-al/" target="_blank" rel="noopener" aria-label="Nextdoor" title="Nextdoor" class="social-icon-btn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1v-9z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2">
+          <p class="eyebrow mb-5" style="color:var(--sun)">Values</p>
+          <ul class="space-y-2 text-sm">
+            <li class="font-serif text-base">Faith</li>
+            <li class="font-serif text-base">Family</li>
+            <li class="font-serif text-base">Integrity</li>
+            <li class="font-serif text-base">Positive Mindset</li>
+            <li class="font-serif text-base">Responsibility</li>
+            <li class="font-serif text-base">Teamwork</li>
+            <li class="font-serif text-base">Commitment</li>
+            <li class="font-serif text-base">Fun</li>
+          </ul>
+        </div>
+      </div>
+
+      <hr class="hr-thin-light mt-16" />
+
+      <div class="mt-8 flex flex-col md:flex-row gap-3 md:items-center md:justify-between text-xs" style="color:rgba(245,241,232,.5)">
+        <p>&copy; <span data-year>2026</span> La Vida Landscapes, LLC. All rights reserved.</p>
+        <p class="font-script text-xl" style="color:var(--sun)">Faith &middot; Family &middot; Craft</p>
+      </div>
+    </div>
+  </footer>
+  <!-- footer:end -->
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

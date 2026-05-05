@@ -148,6 +148,7 @@
         <li><a href="#process" class="nav-link u-link">Process</a></li>
         <li><a href="#story" class="nav-link u-link">Story</a></li>
         <li><a href="#gardens" class="nav-link u-link">Vida Gardens</a></li>
+        <li><a href="blog.html" class="nav-link u-link">Journal</a></li>
         <li><a href="#contact" class="nav-link u-link">Contact</a></li>
       </ul>
 
@@ -184,6 +185,7 @@
         <li><a href="#process" class="block py-3 text-base" style="color:var(--ink)">Process</a></li>
         <li><a href="#story" class="block py-3 text-base" style="color:var(--ink)">Story</a></li>
         <li><a href="#gardens" class="block py-3 text-base" style="color:var(--ink)">Vida Gardens</a></li>
+        <li><a href="blog.html" class="block py-3 text-base" style="color:var(--ink)">Journal</a></li>
         <li><a href="#contact" class="block py-3 text-base" style="color:var(--ink)">Contact</a></li>
         <li class="pt-4 mt-2 border-t" style="border-color:rgba(168,155,140,.22)">
           <a href="#contact" class="btn btn-primary w-full justify-center">Begin a project
@@ -198,7 +200,16 @@
     <!-- ========== Hero ========== -->
     <section id="top" class="relative isolate overflow-hidden" style="min-height:100vh;background:var(--ink)">
       <div data-hero-parallax class="absolute inset-0 -z-10 photo-warm" style="min-height:100vh">
-        <img src="assets/hero/hero-main.jpg" alt="" class="absolute inset-0 w-full h-full object-cover hero-img" style="min-height:100vh" />
+        <video
+          id="hero-video"
+          class="absolute inset-0 w-full h-full object-cover hero-img motion-reduce:hidden"
+          style="min-height:100vh"
+          autoplay muted loop playsinline preload="metadata"
+          poster="assets/hero/hero-main.jpg"
+          aria-hidden="true">
+          <source src="videos/hero-loop.mp4" type="video/mp4" />
+        </video>
+        <img src="assets/hero/hero-main.jpg" alt="" class="hidden motion-reduce:block absolute inset-0 w-full h-full object-cover hero-img" style="min-height:100vh" />
         <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,.55) 0%, rgba(31,53,40,.35) 40%, rgba(26,31,27,.85) 100%)"></div>
       </div>
 
@@ -316,11 +327,49 @@
       </div>
     </section>
 
+    <!-- ========== Vida Gardens (promoted differentiator) ========== -->
+    <section id="gardens" class="relative overflow-hidden" style="background:var(--bark)">
+      <div class="container-wide section grid lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5 reveal order-2 lg:order-1">
+          <div class="flex items-center gap-4 mb-6">
+            <span class="font-mono text-xs" style="color:var(--sun)">&sect; 02</span>
+            <span class="block w-8 h-px" style="background:var(--sun)"></span>
+            <span class="eyebrow" style="color:var(--sun)">What Makes Us Different</span>
+          </div>
+          <h2 class="display" style="color:var(--cream);font-size:clamp(40px,5vw,72px)">Gardens that don&rsquo;t just look beautiful.<br/><span class="italic" style="color:var(--sun-soft)">They help people heal.</span></h2>
+          <p class="mt-8 text-lg leading-relaxed" style="color:rgba(245,241,232,.85)">Founder Triston Parsons started in occupational therapy at UAB before pivoting to landscaping &mdash; and he never left the wellness mission behind. Every La Vida design is informed by how plants, light, texture, and sound actually affect the people who live inside them.</p>
+          <p class="mt-5 text-lg leading-relaxed" style="color:rgba(245,241,232,.85)"><span class="font-serif italic" style="color:var(--sun-soft)">Vida Gardens</span> is the long-term expression of that work: therapeutic sensory gardens for pediatric and geriatric wellness, a working nursery, and a Southeast nonprofit dedicated to the science of horticultural therapy.</p>
+          <ul class="mt-10 grid sm:grid-cols-3 gap-4">
+            <li class="border-l-2 pl-4" style="border-color:var(--sun)">
+              <span class="block font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--sun)">Pediatric</span>
+              <span class="mt-1 block font-serif text-base" style="color:rgba(245,241,232,.92)">Sensory play &amp; calming spaces</span>
+            </li>
+            <li class="border-l-2 pl-4" style="border-color:var(--sun)">
+              <span class="block font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--sun)">Geriatric</span>
+              <span class="mt-1 block font-serif text-base" style="color:rgba(245,241,232,.92)">Memory care garden design</span>
+            </li>
+            <li class="border-l-2 pl-4" style="border-color:var(--sun)">
+              <span class="block font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--sun)">Residential</span>
+              <span class="mt-1 block font-serif text-base" style="color:rgba(245,241,232,.92)">Wellness gardens for home</span>
+            </li>
+          </ul>
+          <a href="#contact" class="btn mt-12" style="background:var(--cream);color:var(--bark)">Explore Vida Gardens
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+        <div class="lg:col-span-7 reveal reveal-delay-2 order-1 lg:order-2">
+          <div class="aspect-[5/4] overflow-hidden">
+            <img src="assets/hero/02-vida-gardens-entry-hero.jpg" alt="Vida Gardens entry path" class="w-full h-full object-cover" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ========== Services ========== -->
     <section id="services" class="section" style="background:var(--cream)">
       <div class="container-wide">
         <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; 02</p></div>
+          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; 03</p></div>
           <div class="lg:col-span-7">
             <p class="eyebrow" style="color:var(--moss)">What we do</p>
             <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">A full-service partner<br/><span class="italic" style="color:var(--moss)">for the spaces around your home.</span></h2>
@@ -404,11 +453,88 @@
       </div>
     </section>
 
+    <!-- ========== Signature Projects (distinctive work) ========== -->
+    <section id="signature" class="section" style="background:var(--paper)">
+      <div class="container-wide">
+        <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
+          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 04</p></div>
+          <div class="lg:col-span-7">
+            <p class="eyebrow" style="color:var(--sun)">Signature Work</p>
+            <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">Projects that don&rsquo;t<br/><span class="italic" style="color:var(--bark)">fit a template.</span></h2>
+          </div>
+          <div class="lg:col-span-4 flex flex-col justify-end">
+            <p class="leading-relaxed" style="color:var(--bark)">Some yards ask for the standard playbook. Others ask for something nobody&rsquo;s built before. These are the ones we love most &mdash; designs that started as a sketch on a napkin and ended up in the neighborhood&rsquo;s memory.</p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-px" style="background:rgba(168,155,140,.22);border:1px solid rgba(168,155,140,.22)">
+          <article class="reveal relative group" style="background:var(--cream)">
+            <div class="aspect-[4/5] overflow-hidden relative">
+              <img src="assets/hero/05-putting-green-lake-hero.jpg" alt="RGB-lit putting green at Lake Martin" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,0) 40%, rgba(26,31,27,.85) 100%)"></div>
+              <div class="absolute top-5 left-5">
+                <span class="font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 rounded-full" style="background:rgba(201,169,97,.85);color:var(--ink);backdrop-filter:blur(4px)">Signature</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <p class="font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--sun-soft)">Lake Martin, AL</p>
+                <h3 class="display mt-2" style="color:var(--cream);font-size:clamp(26px,2.4vw,32px);line-height:1.05">RGB Lit Putting Green</h3>
+              </div>
+            </div>
+            <div class="p-7 md:p-8">
+              <p class="text-sm leading-relaxed" style="color:var(--bark)">A backyard putting green engineered with programmable RGB lighting under the cup &mdash; tournament roll by day, color-shifting after-dark theater by night. One of the first installs from our 2025 line.</p>
+              <span class="mt-6 inline-block w-8 h-px" style="background:var(--moss)"></span>
+            </div>
+          </article>
+          <article class="reveal reveal-delay-1 relative group" style="background:var(--cream)">
+            <div class="aspect-[4/5] overflow-hidden relative">
+              <img src="assets/hero/03-courtyard-garden-hero.jpg" alt="Sensory healing courtyard garden" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,0) 40%, rgba(26,31,27,.85) 100%)"></div>
+              <div class="absolute top-5 left-5">
+                <span class="font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 rounded-full" style="background:rgba(201,169,97,.85);color:var(--ink);backdrop-filter:blur(4px)">Signature</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <p class="font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--sun-soft)">Birmingham, AL</p>
+                <h3 class="display mt-2" style="color:var(--cream);font-size:clamp(26px,2.4vw,32px);line-height:1.05">Sensory Healing Garden</h3>
+              </div>
+            </div>
+            <div class="p-7 md:p-8">
+              <p class="text-sm leading-relaxed" style="color:var(--bark)">A pediatric sensory garden built around fragrant herbs, textured paths, and water sound &mdash; designed alongside occupational therapists. The seed of the Vida Gardens vision.</p>
+              <span class="mt-6 inline-block w-8 h-px" style="background:var(--moss)"></span>
+            </div>
+          </article>
+          <article class="reveal reveal-delay-2 relative group" style="background:var(--cream)">
+            <div class="aspect-[4/5] overflow-hidden relative">
+              <img src="assets/hero/04-stone-entry-hero.jpg" alt="Cut-stone entry hardscape" class="w-full h-full object-cover" loading="lazy" />
+              <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,0) 40%, rgba(26,31,27,.85) 100%)"></div>
+              <div class="absolute top-5 left-5">
+                <span class="font-mono text-[10px] tracking-[0.22em] uppercase px-3 py-1.5 rounded-full" style="background:rgba(201,169,97,.85);color:var(--ink);backdrop-filter:blur(4px)">Signature</span>
+              </div>
+              <div class="absolute bottom-6 left-6 right-6">
+                <p class="font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--sun-soft)">Mountain Brook, AL</p>
+                <h3 class="display mt-2" style="color:var(--cream);font-size:clamp(26px,2.4vw,32px);line-height:1.05">Cut-Stone Estate Entry</h3>
+              </div>
+            </div>
+            <div class="p-7 md:p-8">
+              <p class="text-sm leading-relaxed" style="color:var(--bark)">A hillside lot turned hardscape masterpiece &mdash; cut-stone retaining walls cascading down to the entry, with low-voltage architectural lighting set into every tread.</p>
+              <span class="mt-6 inline-block w-8 h-px" style="background:var(--moss)"></span>
+            </div>
+          </article>
+        </div>
+
+        <p class="mt-12 text-center reveal">
+          <span class="font-serif italic text-lg" style="color:var(--bark)">Have a project that needs a from-scratch design?</span>
+          <a href="#contact" class="link-arrow ml-2" style="color:var(--forest)">Tell us about it
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
     <!-- ========== Showcase ========== -->
     <section id="work" class="section relative" style="background:var(--forest)">
       <div class="container-wide" id="showcase">
         <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 03</p></div>
+          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 05</p></div>
           <div class="lg:col-span-7">
             <p class="eyebrow" style="color:var(--sun)">Recent Work</p>
             <h2 class="display mt-4" style="color:var(--cream);font-size:clamp(40px,5.5vw,80px)">Designed by hand.<br/><span class="italic" style="color:var(--sun-soft)">Built by craftsmen.</span></h2>
@@ -552,7 +678,7 @@
     <section id="process" class="section" style="background:var(--paper)">
       <div class="container-wide">
         <div class="grid lg:grid-cols-12 gap-10 mb-20 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; 04</p></div>
+          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; 06</p></div>
           <div class="lg:col-span-7">
             <p class="eyebrow" style="color:var(--moss)">Our Process</p>
             <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">From sketch<br/><span class="italic" style="color:var(--moss)">to soil.</span></h2>
@@ -648,7 +774,7 @@
 
           <div class="lg:col-span-7 lg:pl-10 reveal reveal-delay-2">
             <div class="flex items-center gap-4 mb-8">
-              <span class="font-mono text-xs" style="color:var(--moss)">&sect; 05</span>
+              <span class="font-mono text-xs" style="color:var(--moss)">&sect; 07</span>
               <span class="block w-8 h-px" style="background:var(--moss)"></span>
               <span class="eyebrow" style="color:var(--moss)">Our Story</span>
             </div>
@@ -684,7 +810,7 @@
     <section id="area" class="section" style="background:var(--bark-deep);color:var(--cream)">
       <div class="container-wide" id="service-map">
         <div class="grid lg:grid-cols-12 gap-10 mb-16 reveal">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 06</p></div>
+          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--sun)">&sect; 08</p></div>
           <div class="lg:col-span-7">
             <p class="eyebrow" style="color:var(--sun)">Where we work</p>
             <h2 class="display mt-4" style="font-size:clamp(40px,5vw,72px)">The heart of the<br/><span class="italic" style="color:var(--sun-soft)">Southeast.</span></h2>
@@ -730,35 +856,6 @@
       </div>
     </section>
 
-    <!-- ========== Vida Gardens ========== -->
-    <section id="gardens" class="relative overflow-hidden" style="background:var(--bark)">
-      <div class="container-wide section grid lg:grid-cols-12 gap-12 items-center">
-        <div class="lg:col-span-5 reveal order-2 lg:order-1">
-          <div class="flex items-center gap-4 mb-6">
-            <span class="font-mono text-xs" style="color:var(--sun)">&sect; 07</span>
-            <span class="block w-8 h-px" style="background:var(--sun)"></span>
-            <span class="eyebrow" style="color:var(--sun)">A Vision Taking Root</span>
-          </div>
-          <h2 class="display" style="color:var(--cream);font-size:clamp(40px,5vw,72px)">More than landscaping.<br/><span class="italic" style="color:var(--sun-soft)">A garden for healing.</span></h2>
-          <p class="mt-8 text-lg leading-relaxed" style="color:rgba(245,241,232,.78)">Vida Gardens is our long-term vision &mdash; therapeutic gardens for pediatric and geriatric wellness, an attached nursery, and a sensory-gardens nonprofit serving the Southeast.</p>
-          <ul class="mt-10 space-y-3">
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Sensory &amp; accessibility-first plantings</li>
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Pediatric &amp; geriatric wellness programming</li>
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Attached production nursery</li>
-            <li class="flex items-baseline gap-3 text-sm" style="color:rgba(245,241,232,.85)"><span style="color:var(--sun)">&rarr;</span>Sensory-gardens nonprofit</li>
-          </ul>
-          <a href="#contact" class="btn mt-10" style="background:var(--cream);color:var(--bark)">Explore Vida Gardens
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" class="btn-arrow" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a>
-        </div>
-        <div class="lg:col-span-7 reveal reveal-delay-2 order-1 lg:order-2">
-          <div class="aspect-[5/4] overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=1600&q=85&auto=format&fit=crop" alt="Sunlit therapeutic garden path" class="w-full h-full object-cover" loading="lazy" />
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ========== Testimonials ========== -->
     <section id="testimonials" class="section" style="background:var(--cream)">
       <div class="container-wide">
@@ -798,7 +895,7 @@
       <div class="container-wide grid lg:grid-cols-12 gap-12">
         <div class="lg:col-span-5 reveal">
           <div class="flex items-center gap-4 mb-6">
-            <span class="font-mono text-xs" style="color:var(--sun)">&sect; 08</span>
+            <span class="font-mono text-xs" style="color:var(--sun)">&sect; 09</span>
             <span class="block w-8 h-px" style="background:var(--sun)"></span>
             <span class="eyebrow" style="color:var(--sun)">Begin a project</span>
           </div>
@@ -916,6 +1013,7 @@
             <li><a href="#process" class="u-link" style="color:rgba(245,241,232,.7)">Process</a></li>
             <li><a href="#story" class="u-link" style="color:rgba(245,241,232,.7)">Story</a></li>
             <li><a href="#gardens" class="u-link" style="color:rgba(245,241,232,.7)">Vida Gardens</a></li>
+            <li><a href="blog.html" class="u-link" style="color:rgba(245,241,232,.7)">Journal</a></li>
             <li><a href="#contact" class="u-link" style="color:rgba(245,241,232,.7)">Contact</a></li>
           </ul>
         </div>
