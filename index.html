@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>La Vida Landscapes &mdash; Design-Build &amp; Maintenance Landscaping in Birmingham, AL</title>
+  <title>La Vida Landscapes | Design and Maintenance Landscaping in Birmingham, AL</title>
   <meta name="description" content="Faith-driven design-build and maintenance landscaping serving Birmingham, Huntsville, Lake Martin and the greater Southeast since 2018." />
   <link rel="canonical" href="https://lavidalandscapes.com/" />
   <link rel="icon" href="assets/logo.jpg" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="La Vida Landscapes &mdash; Birmingham, AL" />
-  <meta property="og:description" content="Boutique design-build and full-service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast." />
+  <meta property="og:title" content="La Vida Landscapes | Birmingham, AL" />
+  <meta property="og:description" content="Boutique design and full service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast." />
   <meta property="og:image" content="https://lavidalandscapes.com/images/og-default.svg" />
   <meta property="og:url" content="https://lavidalandscapes.com/" />
   <meta name="twitter:card" content="summary_large_image" />
@@ -197,28 +197,77 @@
   </header>
 
   <main id="main">
+    <style>
+      #top .display, #top h1, #top p, #top .eyebrow, #top a.btn-ghost-light {
+        text-shadow: 0 2px 24px rgba(0,0,0,.55), 0 1px 4px rgba(0,0,0,.4);
+      }
+    </style>
     <!-- ========== Hero ========== -->
     <section id="top" class="relative isolate overflow-hidden" style="min-height:100vh;background:var(--ink)">
       <div data-hero-parallax class="absolute inset-0 -z-10 photo-warm" style="min-height:100vh">
         <video
-          id="hero-video"
-          class="absolute inset-0 w-full h-full object-cover hero-img motion-reduce:hidden"
-          style="min-height:100vh"
-          autoplay muted loop playsinline preload="metadata"
+          id="hero-video-a"
+          class="hero-video absolute inset-0 w-full h-full object-cover hero-img motion-reduce:hidden"
+          style="min-height:100vh;opacity:1;transition:opacity 1.2s ease-in-out;will-change:opacity"
+          autoplay muted playsinline preload="auto"
           poster="assets/hero/hero-main.jpg"
           aria-hidden="true">
           <source src="videos/hero-loop.mp4" type="video/mp4" />
         </video>
+        <video
+          id="hero-video-b"
+          class="hero-video absolute inset-0 w-full h-full object-cover hero-img motion-reduce:hidden"
+          style="min-height:100vh;opacity:0;transition:opacity 1.2s ease-in-out;will-change:opacity"
+          muted playsinline preload="auto"
+          aria-hidden="true">
+          <source src="videos/hero-loop.mp4" type="video/mp4" />
+        </video>
         <img src="assets/hero/hero-main.jpg" alt="" class="hidden motion-reduce:block absolute inset-0 w-full h-full object-cover hero-img" style="min-height:100vh" />
-        <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,.55) 0%, rgba(31,53,40,.35) 40%, rgba(26,31,27,.85) 100%)"></div>
+        <div class="absolute inset-0" style="background:linear-gradient(180deg, rgba(26,31,27,.72) 0%, rgba(26,31,27,.45) 35%, rgba(26,31,27,.55) 65%, rgba(26,31,27,.92) 100%)"></div>
+        <div class="absolute inset-0 pointer-events-none" style="background:radial-gradient(ellipse at 30% 60%, rgba(26,31,27,.45) 0%, rgba(26,31,27,0) 55%)"></div>
       </div>
+      <script>
+        // Seamless hero loop: crossfade between two stacked videos near end-of-clip.
+        (function(){
+          if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+          var a = document.getElementById('hero-video-a');
+          var b = document.getElementById('hero-video-b');
+          if (!a || !b) return;
+          var FADE = 1.2;          // seconds, must match CSS transition duration
+          var active = a, idle = b;
+          function swap(){
+            // Start the idle video from 0, fade it in, fade the active out.
+            idle.currentTime = 0;
+            var p = idle.play();
+            if (p && p.catch) p.catch(function(){});
+            idle.style.opacity = '1';
+            active.style.opacity = '0';
+            // After the fade completes, pause the now-hidden one so it's ready for next handoff.
+            var prev = active;
+            setTimeout(function(){ try { prev.pause(); } catch(e){} }, FADE * 1000 + 50);
+            var t = active; active = idle; idle = t;
+          }
+          function tick(){
+            if (!active.duration || isNaN(active.duration)) return;
+            if (active.duration - active.currentTime <= FADE) {
+              active.removeEventListener('timeupdate', tick);
+              swap();
+              active.addEventListener('timeupdate', tick);
+            }
+          }
+          a.addEventListener('timeupdate', tick);
+          b.addEventListener('timeupdate', tick);
+          // Kick off the first video. Autoplay attr should handle it but be defensive.
+          var p = a.play(); if (p && p.catch) p.catch(function(){});
+        })();
+      </script>
 
       <div class="container-wide relative pt-44 md:pt-52 pb-24 md:pb-32" style="min-height:100vh;display:flex;flex-direction:column;justify-content:space-between">
         <div class="reveal">
           <h1 class="display" style="color:var(--cream);font-size:clamp(56px,9vw,168px)">Landscapes that<br/><span class="font-serif italic" style="color:var(--sun-soft)">tell your story.</span></h1>
           <div class="grid lg:grid-cols-12 gap-10 mt-14 items-end">
             <p class="lg:col-span-5 leading-relaxed" style="color:rgba(245,241,232,.85);font-size:clamp(20px,2.4vw,30px)">
-              Boutique design-build and full-service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast.
+              Boutique design and full service maintenance for homeowners, communities, and commercial partners across Birmingham and the Southeast.
             </p>
             <div class="lg:col-span-7 flex flex-wrap items-center gap-4 lg:justify-end">
               <a href="#work" class="btn" style="background:var(--cream);color:var(--forest)">See the work
@@ -322,7 +371,7 @@
         </div>
         <div class="lg:col-span-4">
           <p class="text-base leading-relaxed" style="color:var(--bark)">Our mission, our compass, and the heartbeat behind every blade, beam, and bloom we install.</p>
-          <p class="font-script text-3xl mt-4" style="color:var(--moss)">&mdash; Triston Parsons</p>
+          <p class="font-script text-3xl mt-4" style="color:var(--moss)">Triston Parsons</p>
         </div>
       </div>
     </section>
@@ -337,7 +386,7 @@
             <span class="eyebrow" style="color:var(--sun)">What Makes Us Different</span>
           </div>
           <h2 class="display" style="color:var(--cream);font-size:clamp(40px,5vw,72px)">Gardens that don&rsquo;t just look beautiful.<br/><span class="italic" style="color:var(--sun-soft)">They help people heal.</span></h2>
-          <p class="mt-8 text-lg leading-relaxed" style="color:rgba(245,241,232,.85)">Founder Triston Parsons started in occupational therapy at UAB before pivoting to landscaping &mdash; and he never left the wellness mission behind. Every La Vida design is informed by how plants, light, texture, and sound actually affect the people who live inside them.</p>
+          <p class="mt-8 text-lg leading-relaxed" style="color:rgba(245,241,232,.85)">Founder Triston Parsons started in occupational therapy at UAB before pivoting to landscaping, and he never left the wellness mission behind. Every La Vida design is informed by how plants, light, texture, and sound actually affect the people who live inside them.</p>
           <p class="mt-5 text-lg leading-relaxed" style="color:rgba(245,241,232,.85)"><span class="font-serif italic" style="color:var(--sun-soft)">Vida Gardens</span> is the long-term expression of that work: therapeutic sensory gardens for pediatric and geriatric wellness, a working nursery, and a Southeast nonprofit dedicated to the science of horticultural therapy.</p>
           <ul class="mt-10 grid sm:grid-cols-3 gap-4">
             <li class="border-l-2 pl-4" style="border-color:var(--sun)">
@@ -359,7 +408,7 @@
         </div>
         <div class="lg:col-span-7 reveal reveal-delay-2 order-1 lg:order-2">
           <div class="aspect-[5/4] overflow-hidden">
-            <img src="assets/hero/02-vida-gardens-entry-hero.jpg" alt="Vida Gardens entry path" class="w-full h-full object-cover" loading="lazy" />
+            <img src="assets/hero/03-courtyard-garden-hero.jpg" alt="Courtyard garden landscape" class="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
       </div>
@@ -375,7 +424,7 @@
             <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">A full-service partner<br/><span class="italic" style="color:var(--moss)">for the spaces around your home.</span></h2>
           </div>
           <div class="lg:col-span-4 lg:pl-8 flex flex-col justify-end">
-            <p class="text-base leading-relaxed mb-6" style="color:var(--bark)">Vertically integrated. The person who designs your space talks weekly with the person installing it &mdash; and the same crew comes back to maintain it.</p>
+            <p class="text-base leading-relaxed mb-6" style="color:var(--bark)">Vertically integrated. The person who designs your space talks weekly with the person installing it, and the same crew comes back to maintain it.</p>
             <a href="#process" class="link-arrow">Read the process
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -446,7 +495,7 @@
               <span class="font-mono text-xs" style="color:var(--moss)">08</span>
             </div>
             <h3 class="display leading-tight" style="color:var(--ink);font-size:clamp(28px,3vw,32px)">Horticultural Therapy</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Sensory and therapeutic gardens designed for healing &mdash; the seed of our Vida Gardens vision.</p>
+            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Sensory and therapeutic gardens designed for healing. The seed of our Vida Gardens vision.</p>
             <span class="mt-8 inline-block w-8 h-px" style="background:var(--moss)"></span>
           </article>
         </div>
@@ -463,7 +512,7 @@
             <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">Projects that don&rsquo;t<br/><span class="italic" style="color:var(--bark)">fit a template.</span></h2>
           </div>
           <div class="lg:col-span-4 flex flex-col justify-end">
-            <p class="leading-relaxed" style="color:var(--bark)">Some yards ask for the standard playbook. Others ask for something nobody&rsquo;s built before. These are the ones we love most &mdash; designs that started as a sketch on a napkin and ended up in the neighborhood&rsquo;s memory.</p>
+            <p class="leading-relaxed" style="color:var(--bark)">Some yards ask for the standard playbook. Others ask for something nobody&rsquo;s built before. These are the ones we love most. designs that started as a sketch on a napkin and ended up in the neighborhood&rsquo;s memory.</p>
           </div>
         </div>
 
@@ -481,7 +530,7 @@
               </div>
             </div>
             <div class="p-7 md:p-8">
-              <p class="text-sm leading-relaxed" style="color:var(--bark)">A backyard putting green engineered with programmable RGB lighting under the cup &mdash; tournament roll by day, color-shifting after-dark theater by night. One of the first installs from our 2025 line.</p>
+              <p class="text-sm leading-relaxed" style="color:var(--bark)">A backyard putting green engineered with programmable RGB lighting under the cup. Tournament roll by day, color-shifting after-dark theater by night. One of the first installs from our 2025 line.</p>
               <span class="mt-6 inline-block w-8 h-px" style="background:var(--moss)"></span>
             </div>
           </article>
@@ -498,7 +547,7 @@
               </div>
             </div>
             <div class="p-7 md:p-8">
-              <p class="text-sm leading-relaxed" style="color:var(--bark)">A pediatric sensory garden built around fragrant herbs, textured paths, and water sound &mdash; designed alongside occupational therapists. The seed of the Vida Gardens vision.</p>
+              <p class="text-sm leading-relaxed" style="color:var(--bark)">A pediatric sensory garden built around fragrant herbs, textured paths, and water sound, designed alongside occupational therapists. The seed of the Vida Gardens vision.</p>
               <span class="mt-6 inline-block w-8 h-px" style="background:var(--moss)"></span>
             </div>
           </article>
@@ -515,7 +564,7 @@
               </div>
             </div>
             <div class="p-7 md:p-8">
-              <p class="text-sm leading-relaxed" style="color:var(--bark)">A hillside lot turned hardscape masterpiece &mdash; cut-stone retaining walls cascading down to the entry, with low-voltage architectural lighting set into every tread.</p>
+              <p class="text-sm leading-relaxed" style="color:var(--bark)">A hillside lot turned hardscape masterpiece. Cut-stone retaining walls cascading down to the entry, with low-voltage architectural lighting set into every tread.</p>
               <span class="mt-6 inline-block w-8 h-px" style="background:var(--moss)"></span>
             </div>
           </article>
@@ -559,7 +608,7 @@
                data-title="Vida Gardens · Pepper Place"
                data-location="Birmingham, AL"
                data-year="2025"
-               data-summary="A walled urban garden welcoming guests off Pepper Place — olive trees, perennials, and a stately gate framed by linen draping."
+               data-summary="A walled urban garden welcoming guests off Pepper Place. Olive trees, perennials, and a stately gate framed by linen draping."
                data-services="Design-Build|Plantings|Hardscapes"
                data-details="Footprint:1,200 sq ft|Specimen:Olive trees|Built:6 weeks"
                data-before="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1400&q=85&auto=format&fit=crop"
@@ -568,7 +617,7 @@
                data-title="Lakeside Putting Green"
                data-location="Lake Martin, AL"
                data-year="2025"
-               data-summary="Tour-spec synthetic surface with hand-cut stone path and a backdrop that drops straight to the water — one of our 2025 installs."
+               data-summary="Tour-spec synthetic surface with hand-cut stone path and a backdrop that drops straight to the water. One of our 2025 installs."
                data-services="Putting Greens|Hardscapes"
                data-details="Surface:1,200 sq ft|Breaks:3|Stone Path:Hand-cut"
                data-before="https://images.unsplash.com/photo-1530541930197-ff16ac917b0e?w=1400&q=85&auto=format&fit=crop"
@@ -577,7 +626,7 @@
                data-title="Dry-Stack Stone Walls"
                data-location="Mountain Brook, AL"
                data-year="2024"
-               data-summary="Stacked-stone retaining walls and bluestone path through layered ferns — a quiet, woodland-shaded approach to the front entry."
+               data-summary="Stacked-stone retaining walls and bluestone path through layered ferns. A quiet, woodland-shaded approach to the front entry."
                data-services="Hardscapes|Plantings"
                data-details="Wall:42 linear ft|Stone:Local fieldstone|Plantings:Native ferns"
                data-before="https://images.unsplash.com/photo-1572731065-2c2e30c4d4f1?w=1400&q=85&auto=format&fit=crop"
@@ -690,31 +739,31 @@
 
         <ol class="grid md:grid-cols-2 lg:grid-cols-5 gap-px" style="background:rgba(168,155,140,.22);border:1px solid rgba(168,155,140,.22)">
           <li class="reveal p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 01</span>
+            <span class="step-num">/ /  01</span>
             <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Walk the property</h3>
             <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Thirty minutes on-site, on us. We listen, sketch, and tell you honestly whether we are the right fit.</p>
             <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
           </li>
           <li class="reveal reveal-delay-1 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 02</span>
+            <span class="step-num">/ /  02</span>
             <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Design &amp; sketch</h3>
-            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Site plans, planting schemes, and 2D/3D renderings &mdash; signed off by ownership before a shovel moves.</p>
+            <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Site plans, planting schemes, and 2D/3D renderings, signed off by ownership before a shovel moves.</p>
             <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
           </li>
           <li class="reveal reveal-delay-2 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 03</span>
+            <span class="step-num">/ /  03</span>
             <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Build &amp; install</h3>
             <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Our crews carry the project end-to-end. Same hands from week one to walk-through.</p>
             <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
           </li>
           <li class="reveal reveal-delay-3 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 04</span>
+            <span class="step-num">/ /  04</span>
             <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Light &amp; irrigate</h3>
             <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">Smart irrigation, low-voltage layered lighting, and any pool or putting-green integration.</p>
             <span class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-10 w-6 h-6 rounded-full grid place-items-center" style="background:var(--paper);color:var(--moss);border:1px solid rgba(168,155,140,.22)"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></span>
           </li>
           <li class="reveal reveal-delay-4 p-8 lg:p-10 relative" style="background:var(--paper)">
-            <span class="step-num">&mdash;&mdash; 05</span>
+            <span class="step-num">/ /  05</span>
             <h3 class="font-serif text-[24px] mt-6" style="color:var(--ink)">Steward</h3>
             <p class="mt-4 text-sm leading-relaxed" style="color:var(--bark)">A maintenance program tuned to your property keeps the install thriving for years to come.</p>
           </li>
@@ -761,7 +810,7 @@
             <div class="mt-6 grid grid-cols-2 gap-4">
               <div class="p-5" style="background:var(--paper);border:1px solid rgba(168,155,140,.25)">
                 <p class="eyebrow" style="color:var(--moss)">Featured In</p>
-                <p class="font-serif text-xl mt-2" style="color:var(--ink)">NALP &mdash; Faces of the Industry</p>
+                <p class="font-serif text-xl mt-2" style="color:var(--ink)">NALP, Faces of the Industry</p>
                 <p class="font-mono text-[10px] mt-1" style="color:var(--stone)">April 2022</p>
               </div>
               <div class="p-5" style="background:var(--forest);color:var(--cream)">
@@ -779,12 +828,12 @@
               <span class="eyebrow" style="color:var(--moss)">Our Story</span>
             </div>
             <h2 class="display" style="color:var(--ink);font-size:clamp(40px,5vw,72px)">Started with 15 lawns<br/><span class="italic" style="color:var(--bark)">and a knock on a door.</span></h2>
-            <p class="mt-8 text-lg leading-relaxed" style="color:var(--bark)">Triston Parsons started La Vida in high school with a push mower and a stubborn faith. A pivot from occupational therapy at UAB into full-time design-build came when one client asked if he could handle more than maintenance &mdash; and the answer became the company.</p>
+            <p class="mt-8 text-lg leading-relaxed" style="color:var(--bark)">Triston Parsons started La Vida in high school with a push mower and a stubborn faith. A pivot from occupational therapy at UAB into full-time design-build came when one client asked if he could handle more than maintenance , and the answer became the company.</p>
 
             <blockquote class="mt-12 pl-8 relative">
               <span class="absolute left-0 top-0 bottom-0 w-px" style="background:var(--sun)"></span>
               <p class="font-serif italic text-2xl md:text-3xl leading-snug" style="color:var(--ink)">&ldquo;I didn&rsquo;t have any systems and was taking on a lot of work. The lack of systems was hurting me. So I built them.&rdquo;</p>
-              <cite class="not-italic block mt-5 font-mono text-[11px] tracking-[0.2em] uppercase" style="color:var(--stone)">&mdash; Triston Parsons, founder</cite>
+              <cite class="not-italic block mt-5 font-mono text-[11px] tracking-[0.2em] uppercase" style="color:var(--stone)">Triston Parsons, founder</cite>
             </blockquote>
 
             <div class="mt-14 grid grid-cols-3 gap-px" style="background:rgba(168,155,140,.25)">
@@ -873,16 +922,16 @@
             <div class="relative">
               <span class="font-serif italic absolute -top-12 -left-4 leading-none" style="color:rgba(44,74,62,.08);font-size:200px">&ldquo;</span>
               <div data-quote>
-                <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">Triston is great to work with &mdash; honest, hardworking, and incredibly professional. The retaining wall came out beautiful.</p>
-                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">&mdash; Birmingham homeowner</p>
+                <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">Triston is great to work with. Honest, hardworking, and incredibly professional. The retaining wall came out beautiful.</p>
+                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">Birmingham homeowner</p>
               </div>
               <div data-quote>
                 <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">Communication on the job was constant. They treated our yard like it was their own.</p>
-                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">&mdash; Mountain Brook client</p>
+                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">Mountain Brook client</p>
               </div>
               <div data-quote>
                 <p class="display italic leading-snug relative" style="color:var(--ink);font-size:clamp(28px,3vw,44px)">You can feel the faith and integrity behind this team. Rare in this industry.</p>
-                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">&mdash; Repeat client</p>
+                <p class="mt-8 font-mono text-[11px] tracking-[0.25em] uppercase" style="color:var(--stone)">Repeat client</p>
               </div>
             </div>
           </div>
@@ -914,7 +963,7 @@
             <div>
               <p class="eyebrow" style="color:var(--sun)">Studio</p>
               <p class="font-serif text-xl mt-2">Birmingham, Alabama</p>
-              <p class="font-mono text-[11px] tracking-[0.2em] uppercase mt-1" style="color:rgba(245,241,232,.55)">Mon&ndash;Fri &middot; By appointment</p>
+              <p class="font-mono text-[11px] tracking-[0.2em] uppercase mt-1" style="color:rgba(245,241,232,.55)">Mon to Fri &middot; By appointment</p>
             </div>
             <div>
               <p class="eyebrow" style="color:var(--sun)">Follow</p>
