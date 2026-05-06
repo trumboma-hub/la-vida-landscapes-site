@@ -289,3 +289,208 @@ textarea.form-input { resize: none; }
 
 /* Lightbox-trigger focus state (used on portfolio.html) */
 [data-lightbox]:focus-visible { outline: 2px solid var(--sun); outline-offset: 4px; }
+
+/* Native [hidden] must beat Tailwind display utilities (fixes lightbox-on-load on portfolio) */
+[hidden] { display: none !important; }
+
+/* Brand-color utilities — explicit fallback in case Tailwind CDN's config
+   doesn't apply (which is intermittent on these pages). Ensures text/bg
+   colors work whether Tailwind picks up the config or not. */
+.text-cream { color: var(--cream); }
+.text-cream\/80 { color: rgba(245, 241, 232, 0.8); }
+.text-cream\/85 { color: rgba(245, 241, 232, 0.85); }
+.text-cream\/90 { color: rgba(245, 241, 232, 0.9); }
+.text-cream\/60 { color: rgba(245, 241, 232, 0.6); }
+.text-ink { color: var(--ink); }
+.text-forest { color: var(--forest); }
+.text-bark { color: var(--bark); }
+.text-sun { color: var(--sun); }
+.text-sun-soft { color: var(--sun-soft); }
+.text-moss { color: var(--moss); }
+.text-stone { color: var(--stone); }
+.text-stone\/80 { color: rgba(168, 155, 140, 0.8); }
+.bg-cream { background-color: var(--cream); }
+.bg-cream-warm { background-color: var(--cream-warm); }
+.bg-paper { background-color: var(--paper); }
+.bg-forest { background-color: var(--forest); }
+.bg-forest\/40 { background-color: rgba(44, 74, 62, 0.4); }
+.bg-bark { background-color: var(--bark); }
+.bg-ink { background-color: var(--ink); }
+.bg-ink\/40 { background-color: rgba(26, 31, 27, 0.4); }
+.bg-ink\/55 { background-color: rgba(26, 31, 27, 0.55); }
+.bg-ink\/65 { background-color: rgba(26, 31, 27, 0.65); }
+.bg-ink\/75 { background-color: rgba(26, 31, 27, 0.75); }
+.bg-ink\/80 { background-color: rgba(26, 31, 27, 0.8); }
+.bg-ink\/85 { background-color: rgba(26, 31, 27, 0.85); }
+.bg-stone { background-color: var(--stone); }
+.bg-moss { background-color: var(--moss); }
+.bg-sun { background-color: var(--sun); }
+.border-forest { border-color: var(--forest); }
+.border-forest\/30 { border-color: rgba(44, 74, 62, 0.3); }
+.border-forest\/40 { border-color: rgba(44, 74, 62, 0.4); }
+.border-stone { border-color: var(--stone); }
+.border-stone\/20 { border-color: rgba(168, 155, 140, 0.2); }
+.border-stone\/30 { border-color: rgba(168, 155, 140, 0.3); }
+.hover\:bg-bark:hover { background-color: var(--bark); }
+.hover\:bg-forest:hover { background-color: var(--forest); }
+.hover\:text-forest:hover { color: var(--forest); }
+.hover\:border-forest:hover { border-color: var(--forest); }
+.hover\:bg-stone\/15:hover { background-color: rgba(168, 155, 140, 0.15); }
+.hover\:bg-stone\/10:hover { background-color: rgba(168, 155, 140, 0.1); }
+.focus-visible\:ring-sun:focus-visible { --tw-ring-color: var(--sun); box-shadow: 0 0 0 2px var(--sun); }
+
+/* ============================================================ */
+/* Polished site-nav — shared across every page                 */
+/* (was inline in index.html; lifted here so all pages match)   */
+/* ============================================================ */
+
+#site-nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background 500ms ease, border-color 500ms ease, height 400ms ease, backdrop-filter 500ms ease;
+}
+/* Override container-wide's 1320px cap on the nav so it can use the full
+   viewport at desktop widths (otherwise space-between pushes the right group
+   past the cap). */
+#site-nav .nav-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  height: 92px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0 20px;
+  transition: height 400ms ease;
+}
+@media (min-width: 768px) { #site-nav .nav-row { padding: 0 32px; } }
+@media (min-width: 1024px) { #site-nav .nav-row { gap: 20px; height: 104px; padding: 0 40px; } }
+@media (min-width: 1280px) { #site-nav .nav-row { gap: 28px; height: 124px; padding: 0 56px; } }
+@media (min-width: 1536px) { #site-nav .nav-row { gap: 40px; height: 158px; padding: 0 64px; } }
+@media (min-width: 1920px) { #site-nav .nav-row { gap: 56px; height: 174px; padding: 0 80px; } }
+
+#site-nav.is-scrolled {
+  background: rgba(245,241,232,0.92);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(168,155,140,.22);
+}
+#site-nav.is-scrolled .nav-row { height: 76px; }
+@media (min-width: 1024px) { #site-nav.is-scrolled .nav-row { height: 84px; } }
+@media (min-width: 1280px) { #site-nav.is-scrolled .nav-row { height: 96px; } }
+@media (min-width: 1536px) { #site-nav.is-scrolled .nav-row { height: 122px; } }
+@media (min-width: 1920px) { #site-nav.is-scrolled .nav-row { height: 138px; } }
+
+.nav-link, .nav-meta {
+  color: var(--cream);
+  text-shadow: 0 1px 10px rgba(0,0,0,.45);
+  transition: color 350ms ease, text-shadow 350ms ease;
+}
+#site-nav.is-scrolled .nav-link, #site-nav.is-scrolled .nav-meta { color: var(--ink); text-shadow: none; }
+.nav-meta-divider { color: rgba(245,241,232,.6); }
+#site-nav.is-scrolled .nav-meta-divider { color: var(--stone); }
+
+.nav-logo-mark {
+  background: var(--cream);
+  border: 1px solid rgba(245,241,232,.35);
+  box-shadow: 0 2px 18px rgba(0,0,0,.35);
+  width: 40px; height: 40px;
+  transition: width 400ms ease, height 400ms ease, border-color 350ms ease, box-shadow 350ms ease;
+}
+@media (min-width: 1024px) { .nav-logo-mark { width: 44px; height: 44px; } }
+@media (min-width: 1280px) { .nav-logo-mark { width: 52px; height: 52px; } }
+@media (min-width: 1536px) { .nav-logo-mark { width: 60px; height: 60px; } }
+@media (min-width: 1920px) { .nav-logo-mark { width: 64px; height: 64px; } }
+@media (min-width: 2200px) { .nav-logo-mark { width: 72px; height: 72px; } }
+#site-nav.is-scrolled .nav-logo-mark { border-color: rgba(168,155,140,.22); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+
+.nav-logo-wordmark {
+  color: var(--cream);
+  text-shadow: 0 1px 14px rgba(0,0,0,.5);
+  font-size: 17px; letter-spacing: -0.005em;
+  transition: color 350ms ease, text-shadow 350ms ease;
+}
+@media (min-width: 1024px) { .nav-logo-wordmark { font-size: 18px; } }
+@media (min-width: 1280px) { .nav-logo-wordmark { font-size: 20px; } }
+@media (min-width: 1536px) { .nav-logo-wordmark { font-size: 24px; } }
+@media (min-width: 1920px) { .nav-logo-wordmark { font-size: 28px; } }
+@media (min-width: 2200px) { .nav-logo-wordmark { font-size: 33px; } }
+#site-nav.is-scrolled .nav-logo-wordmark { color: var(--ink); text-shadow: none; }
+
+.nav-logo-sub {
+  color: rgba(245,241,232,.9);
+  text-shadow: 0 1px 8px rgba(0,0,0,.5);
+  font-size: 11px;
+  display: none;
+  transition: color 350ms ease, text-shadow 350ms ease;
+}
+@media (min-width: 2200px) { .nav-logo-sub { display: inline-block; font-size: 13px; } }
+#site-nav.is-scrolled .nav-logo-sub { color: var(--stone); text-shadow: none; }
+
+#site-nav .nav-links { font-size: 13px; gap: 14px; }
+@media (min-width: 1024px) { #site-nav .nav-links { font-size: 13px; gap: 16px; } }
+@media (min-width: 1280px) { #site-nav .nav-links { font-size: 14px; gap: 20px; } }
+@media (min-width: 1536px) { #site-nav .nav-links { font-size: 16px; gap: 28px; } }
+@media (min-width: 1920px) { #site-nav .nav-links { font-size: 17px; gap: 36px; } }
+@media (min-width: 2200px) { #site-nav .nav-links { font-size: 19px; gap: 44px; } }
+
+.nav-cta {
+  background: var(--cream); color: var(--forest);
+  transition: background 350ms ease, color 350ms ease;
+}
+.nav-cta-btn { font-size: 12px; padding: 8px 14px; gap: 6px; }
+.nav-cta-btn svg { width: 14px; height: 14px; }
+@media (min-width: 1024px) { .nav-cta-btn { font-size: 12px; padding: 9px 14px; gap: 6px; } }
+@media (min-width: 1280px) { .nav-cta-btn { font-size: 13px; padding: 10px 18px; gap: 8px; } }
+@media (min-width: 1536px) { .nav-cta-btn { font-size: 14px; padding: 12px 20px; gap: 10px; } .nav-cta-btn svg { width: 16px; height: 16px; } }
+@media (min-width: 1920px) { .nav-cta-btn { font-size: 16px; padding: 14px 24px; gap: 12px; } }
+@media (min-width: 2200px) { .nav-cta-btn { font-size: 18px; padding: 18px 30px; gap: 14px; } .nav-cta-btn svg { width: 18px; height: 18px; } }
+#site-nav.is-scrolled .nav-cta { background: var(--forest); color: var(--cream); }
+#site-nav.is-scrolled .nav-cta:hover { background: var(--bark); }
+
+/* Google rating + phone — only at 2200+ where there's truly room */
+.nav-google-pill { display: none; font-size: 16px; }
+@media (min-width: 2200px) { .nav-google-pill { display: inline-flex; align-items: center; gap: 8px; font-size: 18px; } }
+
+/* Social icons — at 1536+ */
+.nav-socials-group { display: none; }
+@media (min-width: 1536px) { .nav-socials-group { display: inline-flex; align-items: center; gap: 6px; } }
+
+/* Smaller social icon button below 2200 */
+@media (max-width: 2199px) { .nav-social { width: 34px; height: 34px; } .nav-social svg { width: 16px; height: 16px; } }
+
+.nav-social {
+  color: var(--cream);
+  border-color: rgba(245,241,232,.55);
+  background: rgba(26,31,27,.25);
+  backdrop-filter: blur(2px);
+}
+#site-nav.is-scrolled .nav-social {
+  color: var(--ink);
+  border-color: rgba(31,53,40,.25);
+  background: transparent;
+  backdrop-filter: none;
+}
+
+/* nav-solid: pages without a dark hero — nav is always solid + sticky, never transparent */
+body.nav-solid #site-nav {
+  position: sticky;
+  background: rgba(245,241,232,0.92);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border-bottom: 1px solid rgba(168,155,140,.22);
+}
+body.nav-solid #site-nav .nav-row { height: 92px; }
+@media (min-width: 1280px) { body.nav-solid #site-nav .nav-row { height: 110px; } }
+@media (min-width: 1536px) { body.nav-solid #site-nav .nav-row { height: 138px; } }
+body.nav-solid #site-nav .nav-link,
+body.nav-solid #site-nav .nav-meta { color: var(--ink); text-shadow: none; }
+body.nav-solid #site-nav .nav-meta-divider { color: var(--stone); }
+body.nav-solid #site-nav .nav-logo-mark { border-color: rgba(168,155,140,.22); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+body.nav-solid #site-nav .nav-logo-wordmark { color: var(--ink); text-shadow: none; }
+body.nav-solid #site-nav .nav-logo-sub { color: var(--stone); text-shadow: none; }
+body.nav-solid #site-nav .nav-cta { background: var(--forest); color: var(--cream); }
+body.nav-solid #site-nav .nav-cta:hover { background: var(--bark); }
+body.nav-solid #site-nav .nav-social { color: var(--ink); border-color: rgba(31,53,40,.25); background: transparent; backdrop-filter: none; }

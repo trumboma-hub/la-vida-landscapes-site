@@ -41,35 +41,9 @@
     }}}
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/custom.css?v=5" />
 
   <style>
-    /* Nav state transitions */
-    #site-nav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transition: background 500ms ease, border-color 500ms ease, height 400ms ease, backdrop-filter 500ms ease; background: transparent; border-bottom: 1px solid transparent; }
-    #site-nav .nav-row { display: flex; align-items: center; justify-content: center; gap: 40px; height: 174px; transition: height 400ms ease; }
-    @media (min-width: 1280px) { #site-nav .nav-row { gap: 56px; } }
-    #site-nav.is-scrolled { background: rgba(245,241,232,0.92); backdrop-filter: blur(14px) saturate(140%); -webkit-backdrop-filter: blur(14px) saturate(140%); border-bottom: 1px solid rgba(168,155,140,.22); }
-    #site-nav.is-scrolled .nav-row { height: 138px; }
-
-    .nav-link, .nav-meta { color: var(--cream); text-shadow: 0 1px 10px rgba(0,0,0,.45); transition: color 350ms ease, text-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-link, #site-nav.is-scrolled .nav-meta { color: var(--ink); text-shadow: none; }
-    .nav-meta-divider { color: rgba(245,241,232,.6); }
-    #site-nav.is-scrolled .nav-meta-divider { color: var(--stone); }
-
-    .nav-logo-mark { background: var(--cream); border: 1px solid rgba(245,241,232,.35); box-shadow: 0 2px 18px rgba(0,0,0,.35); transition: border-color 350ms ease, box-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-logo-mark { border-color: rgba(168,155,140,.22); box-shadow: 0 1px 3px rgba(0,0,0,.08); }
-    .nav-logo-wordmark { color: var(--cream); text-shadow: 0 1px 14px rgba(0,0,0,.5); transition: color 350ms ease, text-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-logo-wordmark { color: var(--ink); text-shadow: none; }
-    .nav-logo-sub { color: rgba(245,241,232,.9); text-shadow: 0 1px 8px rgba(0,0,0,.5); transition: color 350ms ease, text-shadow 350ms ease; }
-    #site-nav.is-scrolled .nav-logo-sub { color: var(--stone); text-shadow: none; }
-
-    .nav-cta { background: var(--cream); color: var(--forest); transition: background 350ms ease, color 350ms ease; }
-    #site-nav.is-scrolled .nav-cta { background: var(--forest); color: var(--cream); }
-    #site-nav.is-scrolled .nav-cta:hover { background: var(--bark); }
-
-    .nav-social { color: var(--cream); border-color: rgba(245,241,232,.55); background: rgba(26,31,27,.25); backdrop-filter: blur(2px); }
-    #site-nav.is-scrolled .nav-social { color: var(--ink); border-color: rgba(31,53,40,.25); background: transparent; backdrop-filter: none; }
-
     /* Marker */
     .marker { position: absolute; transform: translate(-50%,-50%); border: 0; background: transparent; padding: 0; cursor: pointer; }
     .marker-dot { display: block; width: 12px; height: 12px; border-radius: 999px; background: var(--moss); position: relative; transition: background 300ms ease; }
@@ -132,17 +106,17 @@
   <!-- ========== Nav ========== -->
   <header id="site-nav" role="banner">
     <div class="container-wide nav-row">
-      <a href="#top" class="flex items-center gap-4 group shrink-0">
-        <span class="nav-logo-mark inline-flex items-center justify-center rounded-full overflow-hidden shrink-0" style="width:72px;height:72px">
+      <a href="#top" class="flex items-center gap-3 group shrink-0">
+        <span class="nav-logo-mark inline-flex items-center justify-center rounded-full overflow-hidden shrink-0">
           <img src="assets/logo.jpg" alt="La Vida Landscapes" class="w-full h-full object-cover" />
         </span>
         <span class="flex flex-col leading-none">
-          <span class="nav-logo-wordmark font-serif" style="font-size:33px;letter-spacing:-0.005em">La Vida Landscapes</span>
-          <span class="nav-logo-sub eyebrow mt-2" style="font-size:13px">Birmingham &middot; Est. 2018</span>
+          <span class="nav-logo-wordmark font-serif">La Vida Landscapes</span>
+          <span class="nav-logo-sub eyebrow mt-2">Birmingham &middot; Est. 2018</span>
         </span>
       </a>
 
-      <ul class="hidden lg:flex items-center gap-7 xl:gap-12 whitespace-nowrap" style="font-size:19px">
+      <ul class="nav-links hidden lg:flex items-center whitespace-nowrap">
         <li><a href="#work" class="nav-link u-link">Work</a></li>
         <li><a href="#services" class="nav-link u-link">Services</a></li>
         <li><a href="#process" class="nav-link u-link">Process</a></li>
@@ -152,14 +126,14 @@
         <li><a href="#contact" class="nav-link u-link">Contact</a></li>
       </ul>
 
-      <div class="hidden lg:flex items-center gap-5 shrink-0">
-        <div class="hidden xl:flex items-center gap-2 nav-meta" style="font-size:18px">
+      <div class="hidden lg:flex items-center gap-3 shrink-0">
+        <div class="nav-google-pill nav-meta">
           <span style="color:var(--sun)" aria-hidden="true">&starf;</span>
           <span>5.0 on Google</span>
           <span class="nav-meta-divider">&middot;</span>
           <a href="tel:+12058008432" class="u-link">(205) 800-8432</a>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="nav-socials-group">
           <a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
           </a>
@@ -167,7 +141,7 @@
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.27-1.46 1.5-1.46H17V4.45c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.04 1.48-4.04 4.2v2.34H8v3h2.5V21h3z"/></svg>
           </a>
         </div>
-        <a href="#contact" class="btn nav-cta" style="font-size:18px;padding:18px 30px;gap:14px">
+        <a href="#contact" class="btn nav-cta nav-cta-btn">
           Begin a project
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
@@ -512,7 +486,7 @@
             <h2 class="display mt-4" style="color:var(--ink);font-size:clamp(40px,5.5vw,80px)">Projects that don&rsquo;t<br/><span class="italic" style="color:var(--bark)">fit a template.</span></h2>
           </div>
           <div class="lg:col-span-4 flex flex-col justify-end">
-            <p class="leading-relaxed" style="color:var(--bark)">Some yards ask for the standard playbook. Others ask for something nobody&rsquo;s built before. These are the ones we love most. designs that started as a sketch on a napkin and ended up in the neighborhood&rsquo;s memory.</p>
+            <p class="leading-relaxed" style="color:var(--bark)">Some yards ask for the standard playbook. Others ask for something nobody&rsquo;s built before. These are the ones we love most. Designs that started as a sketch on a napkin and ended up in the neighborhood&rsquo;s memory.</p>
           </div>
         </div>
 

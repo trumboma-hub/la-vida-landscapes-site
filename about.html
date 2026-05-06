@@ -26,7 +26,7 @@
     }}}
   </script>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="css/custom.css" />
+  <link rel="stylesheet" href="css/custom.css?v=5" />
 
   <script type="application/ld+json">
   {
@@ -39,48 +39,73 @@
   }
   </script>
 </head>
-<body class="bg-cream text-ink font-sans antialiased">
+<body class="bg-cream text-ink font-sans antialiased nav-solid">
   <a href="#main" class="skip-link bg-forest text-cream px-4 py-2 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun">Skip to content</a>
 
   <!-- nav:start -->
-  <header class="sticky top-0 z-40 bg-cream/90 backdrop-blur supports-[backdrop-filter]:bg-cream/75 border-b border-stone/20">
-    <nav aria-label="Primary" class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-forest text-cream font-serif text-xl group-hover:bg-bark transition-colors">LV</span>
+  <header id="site-nav" role="banner">
+    <div class="container-wide nav-row">
+      <a href="index.html" class="flex items-center gap-3 group shrink-0">
+        <span class="nav-logo-mark inline-flex items-center justify-center rounded-full overflow-hidden shrink-0">
+          <img src="assets/logo.jpg" alt="La Vida Landscapes" class="w-full h-full object-cover" />
+        </span>
         <span class="flex flex-col leading-none">
-          <span class="font-serif text-xl text-ink">La Vida Landscapes</span>
-          <span class="text-[11px] tracking-[0.2em] uppercase text-stone">Birmingham, AL</span>
+          <span class="nav-logo-wordmark font-serif">La Vida Landscapes</span>
+          <span class="nav-logo-sub eyebrow mt-2">Birmingham &middot; Est. 2018</span>
         </span>
       </a>
-      <ul class="hidden lg:flex items-center gap-8 text-sm tracking-wide text-ink">
-        <li><a href="services.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Services</a></li>
-        <li><a href="portfolio.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Portfolio</a></li>
-        <li><a href="vida-gardens.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Vida Gardens</a></li>
-        <li><a href="blog.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Journal</a></li>
-        <li><a href="about.html" class="text-forest font-medium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5" aria-current="page">About</a></li>
-        <li><a href="contact.html" class="hover:text-forest transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream rounded px-1 py-0.5">Contact</a></li>
+
+      <ul class="nav-links hidden lg:flex items-center whitespace-nowrap">
+        <li><a href="portfolio.html" class="nav-link u-link">Work</a></li>
+        <li><a href="services.html" class="nav-link u-link">Services</a></li>
+        <li><a href="index.html#process" class="nav-link u-link">Process</a></li>
+        <li><a href="about.html" class="nav-link u-link">Story</a></li>
+        <li><a href="vida-gardens.html" class="nav-link u-link">Vida Gardens</a></li>
+        <li><a href="blog.html" class="nav-link u-link">Journal</a></li>
+        <li><a href="contact.html" class="nav-link u-link">Contact</a></li>
       </ul>
-      <div class="hidden lg:flex items-center gap-5">
-        <a href="tel:+12058008432" aria-label="Call La Vida Landscapes at (205) 800-8432" class="text-sm text-ink hover:text-forest transition-colors">(205) 800-8432</a>
-        <a href="contact.html" class="inline-flex items-center gap-2 bg-forest hover:bg-bark text-cream text-sm tracking-wide px-5 py-2.5 rounded-full transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">Request a Consultation <span aria-hidden="true">&rarr;</span></a>
+
+      <div class="hidden lg:flex items-center gap-3 shrink-0">
+        <div class="nav-google-pill nav-meta">
+          <span style="color:var(--sun)" aria-hidden="true">&starf;</span>
+          <span>5.0 on Google</span>
+          <span class="nav-meta-divider">&middot;</span>
+          <a href="tel:+12058008432" class="u-link">(205) 800-8432</a>
+        </div>
+        <div class="nav-socials-group">
+          <a href="https://www.instagram.com/la.vida.landscapes/" target="_blank" rel="noopener" aria-label="Instagram" class="nav-social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://www.facebook.com/La.Vida.Landscape/" target="_blank" rel="noopener" aria-label="Facebook" class="nav-social">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M13.5 21v-7.5h2.5l.4-3h-2.9V8.6c0-.87.27-1.46 1.5-1.46H17V4.45c-.3-.04-1.3-.13-2.46-.13-2.43 0-4.04 1.48-4.04 4.2v2.34H8v3h2.5V21h3z"/></svg>
+          </a>
+        </div>
+        <a href="contact.html" class="btn nav-cta nav-cta-btn">
+          Begin a project
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
       </div>
-      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full text-ink hover:bg-stone/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sun focus-visible:ring-offset-2 focus-visible:ring-offset-cream">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+
+      <button type="button" id="mobile-menu-toggle" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open menu" class="lg:hidden inline-flex items-center justify-center w-11 h-11 rounded-full nav-meta">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
-    </nav>
-    <div id="mobile-menu" hidden class="lg:hidden border-t border-stone/20 bg-cream">
-      <ul class="max-w-7xl mx-auto px-6 py-6 flex flex-col gap-1 text-base">
-        <li><a href="services.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Services</a></li>
-        <li><a href="portfolio.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Portfolio</a></li>
-        <li><a href="vida-gardens.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Vida Gardens</a></li>
-        <li><a href="blog.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Journal</a></li>
-        <li><a href="about.html" class="block py-3 px-2 rounded-md bg-stone/10 text-forest" aria-current="page">About</a></li>
-        <li><a href="contact.html" class="block py-3 px-2 rounded-md hover:bg-stone/10 text-ink">Contact</a></li>
+    </div>
+
+    <div id="mobile-menu" hidden class="lg:hidden border-t" style="background:var(--cream);border-color:rgba(168,155,140,.22)">
+      <ul class="container-wide py-6 flex flex-col gap-1">
+        <li><a href="portfolio.html" class="block py-3 text-base" style="color:var(--ink)">Work</a></li>
+        <li><a href="services.html" class="block py-3 text-base" style="color:var(--ink)">Services</a></li>
+        <li><a href="index.html#process" class="block py-3 text-base" style="color:var(--ink)">Process</a></li>
+        <li><a href="about.html" class="block py-3 text-base" style="color:var(--ink)">Story</a></li>
+        <li><a href="vida-gardens.html" class="block py-3 text-base" style="color:var(--ink)">Vida Gardens</a></li>
+        <li><a href="blog.html" class="block py-3 text-base" style="color:var(--ink)">Journal</a></li>
+        <li><a href="contact.html" class="block py-3 text-base" style="color:var(--ink)">Contact</a></li>
+        <li class="pt-4 mt-2 border-t" style="border-color:rgba(168,155,140,.22)">
+          <a href="contact.html" class="btn btn-primary w-full justify-center">Begin a project
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </li>
       </ul>
-      <div class="max-w-7xl mx-auto px-6 pb-6 flex flex-col gap-3">
-        <a href="tel:+12058008432" class="inline-flex items-center justify-center gap-2 bg-cream border border-forest/30 text-forest text-sm tracking-wide px-5 py-3 rounded-full">Call (205) 800-8432</a>
-        <a href="contact.html" class="inline-flex items-center justify-center gap-2 bg-forest text-cream text-sm tracking-wide px-5 py-3 rounded-full">Request a Consultation</a>
-      </div>
     </div>
   </header>
   <!-- nav:end -->
