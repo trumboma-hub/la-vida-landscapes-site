@@ -34,6 +34,10 @@ body { font-family: 'Inter', system-ui, sans-serif; background: var(--cream); co
   text-transform: uppercase;
 }
 
+/* Email links — never wrap. Scales font-size with viewport so the 33-char address always fits on one line, even on narrow phones. */
+.email-nowrap { white-space: nowrap; word-break: normal; overflow-wrap: normal; }
+.email-fit { white-space: nowrap; word-break: normal; overflow-wrap: normal; font-size: clamp(13px, 4.4vw, 30px); line-height: 1.15; }
+
 /* Real-photo treatment — subtle bottom darken for legibility */
 .photo-warm { position: relative; }
 .photo-warm::after {

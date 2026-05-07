@@ -238,34 +238,75 @@
       });
     });
 
+    var submitBtn = form.querySelector('button[type="submit"]');
+    var errorEl = document.getElementById('contact-error');
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (errorEl) errorEl.hidden = true;
+
       var fd = new FormData(form);
-      var name = fd.get('name') || '';
-      var email = fd.get('email') || '';
-      var property = fd.get('property') || '';
-      var services = fd.get('services') || '';
-      var message = fd.get('message') || '';
-      var subject = encodeURIComponent('New consultation request — ' + (name || 'La Vida website'));
-      var bodyLines = [
-        'Name: ' + name,
-        'Email: ' + email,
-        'Property: ' + property,
-        'Services of interest: ' + services,
-        '',
-        'Message:',
-        message,
-      ];
-      var body = encodeURIComponent(bodyLines.join('\n'));
-      window.location.href = 'mailto:livinlavida@lavidalandscapes.com?subject=' + subject + '&body=' + body;
-      var success = document.getElementById('contact-success');
-      var formWrap = document.getElementById('contact-form-wrap');
-      if (success && formWrap) {
-        formWrap.hidden = true;
-        success.hidden = false;
-        var nameEl = success.querySelector('[data-success-name]');
-        if (nameEl) nameEl.textContent = name || 'friend';
+      var payload = {
+        name: (fd.get('name') || '').toString().trim(),
+        email: (fd.get('email') || '').toString().trim(),
+        property: (fd.get('property') || '').toString().trim(),
+        services: (fd.get('services') || '').toString().trim(),
+        message: (fd.get('message') || '').toString().trim(),
+        company: (fd.get('company') || '').toString().trim(),
+      };
+
+      if (!payload.name || !payload.email) {
+        if (errorEl) {
+          errorEl.textContent = 'Please include your name and email.';
+          errorEl.hidden = false;
+        }
+        return;
       }
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        if (!submitBtn.dataset._label) submitBtn.dataset._label = submitBtn.innerHTML;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+        .then(function (res) {
+          return res.json().then(function (data) { return { ok: res.ok, data: data }; });
+        })
+        .then(function (result) {
+          if (!result.ok) {
+            var msg = (result.data && result.data.error) || 'Something went wrong. Please email us directly.';
+            if (errorEl) { errorEl.textContent = msg; errorEl.hidden = false; }
+            return;
+          }
+          var success = document.getElementById('contact-success');
+          var formWrap = document.getElementById('contact-form-wrap');
+          if (success && formWrap) {
+            formWrap.hidden = true;
+            success.hidden = false;
+            var nameEl = success.querySelector('[data-success-name]');
+            if (nameEl) nameEl.textContent = payload.name || 'friend';
+          }
+        })
+        .catch(function () {
+          if (errorEl) {
+            errorEl.textContent = 'We couldn’t reach the server. Please try again or email us directly.';
+            errorEl.hidden = false;
+          }
+        })
+        .then(function () {
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            if (submitBtn.dataset._label) {
+              submitBtn.innerHTML = submitBtn.dataset._label;
+              delete submitBtn.dataset._label;
+            }
+          }
+        });
     });
 
     var sendAnother = document.getElementById('send-another');
