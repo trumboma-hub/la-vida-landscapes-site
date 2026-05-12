@@ -1,31 +1,25 @@
 # La Vida Landscapes — Sanity Studio
 
-Sanity Studio for the La Vida Landscapes Journal. Triston writes posts here; the public site fetches them at page load.
+Sanity Studio for the La Vida Landscapes Journal. Source for the CMS that's served at `lavidalandscapes.com/admin`.
 
-- **Live Studio:** https://lavida.sanity.studio (after first deploy)
-- **Schema:** see `schemas/journalPost.ts`
-- **Setup (Marty):** [SETUP.md](./SETUP.md) — one-time, ~20 minutes
-- **Author guide (Triston):** [TRISTON.md](./TRISTON.md) — how to write a post
+- **Live Studio:** https://www.lavidalandscapes.com/admin
+- **Schema:** [`schemas/journalPost.ts`](./schemas/journalPost.ts)
+- **System reference:** [SETUP.md](./SETUP.md) — what was provisioned and how the build pipeline works
+- **Author guide:** [TRISTON.md](./TRISTON.md) — how to write a post
 
 ## Architecture in one paragraph
 
-Sanity hosts the content + the Studio UI. The public site is unchanged in shape — still static HTML on Vercel, no build step — except `blog.html` now fetches the post list from Sanity's CDN on page load, and `post.html` does the same for a single post by slug. Project ID is hardcoded in `js/sanity.js` so the public site needs zero environment variables.
+The Studio is built (`sanity build`) to static files in `dist/`, which Vercel deploys under `/admin` on `lavidalandscapes.com` during each push to `main`. Triston signs in with Google at `/admin` and writes posts that land in Sanity Cloud (project `fzqkb32j`, dataset `production`). The public site (`blog.html`, `post.html`) reads those same posts from Sanity's CDN at page load via `js/sanity.js`. No backend lives on Vercel — Vercel only serves static files.
 
 ## Local dev
 
 ```bash
-npm install
-npm run dev   # opens http://localhost:3333
+npm install --engine-strict=false   # if your local Node isn't 22.x
+npm run dev                          # opens http://localhost:3333
 ```
 
-Posts created locally go straight to the live `production` dataset — there's no separate dev environment. If we ever need one, add a `staging` dataset with `npx sanity dataset create staging`.
+Local Studio talks to the live `production` dataset; there's no staging.
 
-## Deploying schema changes
+## Updating the schema
 
-Edit `schemas/journalPost.ts`, then:
-
-```bash
-npm run deploy
-```
-
-That pushes the new Studio build to `lavida.sanity.studio`. Existing posts keep working — Sanity tolerates fields being added.
+Edit files under `schemas/`, commit, push to `main`. Vercel rebuilds the Studio. New fields appear at `/admin` on next reload. Existing posts keep working.

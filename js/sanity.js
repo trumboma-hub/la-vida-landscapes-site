@@ -1,8 +1,8 @@
 (function () {
   'use strict';
 
-  // ---- Config (filled in by Marty during setup; see studio/SETUP.md) ----
-  var PROJECT_ID = 'REPLACE_ME';
+  // ---- Config ----
+  var PROJECT_ID = 'fzqkb32j';
   var DATASET = 'production';
   var API_VERSION = '2024-10-01';
 

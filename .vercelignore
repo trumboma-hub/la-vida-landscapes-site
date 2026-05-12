@@ -1,0 +1,9 @@
+# Studio source is built into /admin during build; don't ship the source.
+studio/
+# Local-only assets / build artifacts
+node_modules/
+LaVidaLandScapesWebsiteImages.mov
+.git/
+*.log
+.DS_Store
+Thumbs.db

@@ -7,9 +7,9 @@ export default defineConfig({
   name: 'la-vida-studio',
   title: 'La Vida Landscapes — Journal',
 
-  // Filled in by Marty during setup. See SETUP.md.
-  projectId: process.env.SANITY_STUDIO_PROJECT_ID || 'REPLACE_ME',
+  projectId: 'fzqkb32j',
   dataset: 'production',
+  basePath: '/admin',
 
   plugins: [
     structureTool({

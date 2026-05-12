@@ -1,87 +1,91 @@
-# Sanity Studio — one-time setup (Marty)
+# Sanity Studio — system reference
 
-This is a ~20-minute one-time setup. After it's done, Triston logs into a single URL forever and the site picks up his posts automatically.
+This document describes how the La Vida Landscapes Journal CMS is wired up. **Setup is already complete** — Triston can post immediately. This is here for future maintainers (or in case something needs to be reconfigured).
 
-## What you'll end up with
+## What was provisioned
 
-- A free Sanity project hosting the Journal content
-- A Studio (admin UI) deployed at `https://lavida.sanity.studio`
-- Triston invited as an editor — he logs in with email + Google, no GitHub involved
-- The public site (`blog.html`, `post.html`) fetching posts from Sanity's CDN, no build step needed
+| Item | Value |
+|---|---|
+| Sanity organization | **Traverse** (`oQAdnYKtF`) |
+| Sanity project | **La Vida Landscapes - Journal** (`fzqkb32j`) |
+| Dataset | `production` (visibility: **public** — required for client-side reads from the website) |
+| Studio location | **https://www.lavidalandscapes.com/admin** (served from Vercel, built from `studio/`) |
+| Admin link in nav | None — author bookmarks `/admin` directly |
+| CORS origins | `https://lavidalandscapes.com`, `https://www.lavidalandscapes.com`, `http://localhost:8000` |
 
-## 1. Create the Sanity project
+## How the moving parts fit together
+
+```
+┌─────────────────────────────────┐         ┌──────────────────────────────┐
+│  www.lavidalandscapes.com       │         │  Sanity Cloud (fzqkb32j)     │
+│  (Vercel static site)           │         │                              │
+│                                 │         │  ┌──────────────────────┐    │
+│  /blog.html, /post.html         │ <─────> │  │ production dataset   │    │
+│      fetch from CDN ─────────────────────────►  Journal posts       │    │
+│                                 │         │  └──────────────────────┘    │
+│  /admin/* (built Studio)        │         │                              │
+│      writes via auth ────────────────────────►  (same data, write-side)  │
+│                                 │         │                              │
+└─────────────────────────────────┘         └──────────────────────────────┘
+                                                       ▲
+                                                       │ OAuth (Google)
+                                                       │
+                                              Triston's browser
+                                              (lavidalandscapes.com/admin)
+```
+
+The Studio is a React SPA. It's bundled via `sanity build` into `studio/dist/`, then deployed by Vercel as static files under `/admin`. When Triston signs in, the Studio writes to Sanity Cloud. The public site reads from Sanity Cloud's CDN. No backend server lives on Vercel — Vercel only serves static files.
+
+## Vercel build pipeline
+
+Configured in `vercel.json` at the repo root:
+
+1. `npm ci` inside `studio/` (uses `studio/package-lock.json`).
+2. `npm run build` inside `studio/` → produces `studio/dist/`.
+3. `mv studio/dist admin` — the built Studio becomes `/admin/*` in the deployed output.
+4. Vercel serves the repo root as static, filtered through `.vercelignore` (which excludes `studio/`, `node_modules/`, the `.mov` source video, etc.).
+
+Two URL rewrites also live in `vercel.json`:
+- `/static/*` → `/admin/static/*` — Sanity's bundler emits asset paths as root-relative `/static/...`; this rewrite remaps them to the right location without touching the build.
+- `/admin/<non-file-path>` → `/admin/index.html` — SPA fallback so deep links into the Studio (e.g. `/admin/desk/journalPost;some-id`) resolve to the Studio's entry HTML and let client-side routing take over.
+
+## Editing the schema
+
+Edit `studio/schemas/journalPost.ts`. Push to `main`. Vercel rebuilds; the new fields appear in the Studio at `/admin`. Existing posts keep working — Sanity tolerates fields being added.
+
+## Adding an author
+
+Visit https://www.sanity.io/manage/project/fzqkb32j → **Members** → **Invite**. Email + role (Editor for content people, Administrator for Marty/Dobeck). The new member signs in with Google at `lavidalandscapes.com/admin` and they're in.
+
+## Adjusting CORS
+
+If we ever move to a new domain or staging URL, run:
 
 ```bash
-cd "clients/la vida landscapes/la-vida-landscapes-site-main/studio"
-npm install
-npx sanity login        # opens browser — sign in with Google or email
-npx sanity init --env   # creates a NEW project, writes .env with SANITY_STUDIO_PROJECT_ID
+cd studio
+SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors add https://newdomain.com --no-credentials
 ```
 
-When `init` asks:
-- Project name: **La Vida Landscapes — Journal**
-- Use the default dataset configuration? **Y** (creates `production`)
-- Project output path: just press Enter (uses current dir)
-- Add configuration files / sample data: **N** to both — we already have the schema
-
-After this, `.env` contains your `SANITY_STUDIO_PROJECT_ID`. **Copy that ID** — you'll paste it into the site in step 4.
-
-## 2. Allow the public site to read content
-
-By default a Sanity dataset is private to the Studio. We need to make it readable so `blog.html` / `post.html` can fetch from the CDN:
-
-```bash
-npx sanity dataset visibility set production public
-```
-
-And add the public site origin to CORS (so the browser is allowed to fetch):
-
-```bash
-npx sanity cors add https://lavidalandscapes.com --no-credentials
-npx sanity cors add https://www.lavidalandscapes.com --no-credentials
-npx sanity cors add http://localhost:8000 --no-credentials   # for local dev
-```
-
-## 3. Deploy the Studio
-
-```bash
-npm run deploy
-```
-
-When prompted for `studioHost`, accept the default `lavida` (already set in `sanity.cli.ts`). The Studio is now live at **https://lavida.sanity.studio**.
-
-## 4. Wire the project ID into the public site
-
-Open `js/sanity.js` and replace `REPLACE_ME` with the project ID from step 1:
-
-```js
-var PROJECT_ID = 'xyz123abc';   // your actual ID
-```
-
-Commit + push. Vercel auto-deploys. The Journal page now fetches from Sanity.
-
-## 5. Invite Triston
-
-In the Studio (https://lavida.sanity.studio), click your avatar → **Manage project** → **Members** → **Invite**. Use Triston's email. Role: **Editor** (can create + publish posts, can't change schema or invite others — exactly what we want).
-
-He gets an email, clicks the link, signs in with Google or sets a password. Done.
-
-Send him `TRISTON.md` so he knows what to do next.
-
-## Ongoing — what triggers a publish
-
-- Triston hits **Publish** in the Studio.
-- The CDN sees the new post within a few seconds.
-- Next visitor to `lavidalandscapes.com/blog.html` sees it. **No deploy required.**
-
-## Adding fields later
-
-If we want to add a field (e.g. tags, author, related posts), edit `schemas/journalPost.ts`, then `npm run deploy` from this directory. Studio updates; existing posts keep working.
+To see current origins: `SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors list`.
 
 ## Free tier limits (Sanity)
 
 - 3 users — plenty for Marty + Dobeck + Triston
-- 10k documents — Triston would need to post weekly for 192 years to hit this
-- 20 GB asset bandwidth/mo — at La Vida's traffic, irrelevant
+- 10k documents — weekly cadence × 192 years to hit
+- 20 GB asset bandwidth/mo
 
-We will not hit any of these.
+We will not hit any of these at La Vida's scale.
+
+## Local dev
+
+```bash
+cd studio
+npm install --engine-strict=false   # if your local Node isn't 22.x
+npm run dev                          # http://localhost:3333
+```
+
+Local Studio talks to the same `production` dataset — there's no staging dataset. If we ever need one: `SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity dataset create staging`.
+
+## What ever happened to `lavida.sanity.studio`?
+
+We never deployed there. The original spike said we would; we changed approach so Triston only logs in at `lavidalandscapes.com/admin`. The Sanity-hosted studio URL is unused. (Running `npm run deploy` in `studio/` would push to it, but there's no reason to.)

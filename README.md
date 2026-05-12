@@ -78,22 +78,18 @@ la-vida-landscapes-site/
 - **Portfolio tiles** use SVG/CSS gradients with project-name labels — clearly placeholders. Each tile in `portfolio.html` is one `<article>`; replace the gradient `<div>` with an `<img>` to drop in real photography.
 - Recommended dimensions: hero 1920x1080, section 1600x900, portfolio tile 1200x900.
 
-## Journal CMS (Sanity) — spike
+## Journal CMS (Sanity)
 
-The Journal page (`blog.html` + `post.html`) fetches posts from a Sanity dataset. Triston writes posts at https://lavida.sanity.studio with email/Google login — no GitHub, no deploys.
+The Journal (`blog.html` + `post.html`) is content-managed via Sanity. The Studio is served from the same Vercel deployment as the public site under `/admin`, so the author logs in at `lavidalandscapes.com/admin` — no separate platform, no GitHub, no deploys.
 
-- Studio source: [`studio/`](./studio/) — schema, config, docs
-- Public-site client: `js/sanity.js`
-- Setup (one-time, Marty): [`studio/SETUP.md`](./studio/SETUP.md)
-- Author guide (Triston): [`studio/TRISTON.md`](./studio/TRISTON.md)
+- **Author URL:** https://www.lavidalandscapes.com/admin (Google sign-in)
+- **System reference:** [`studio/SETUP.md`](./studio/SETUP.md) — what was provisioned, how the build pipeline works
+- **Author guide:** [`studio/TRISTON.md`](./studio/TRISTON.md) — how to write a post
+- **Schema:** [`studio/schemas/journalPost.ts`](./studio/schemas/journalPost.ts)
+- **Public-site client:** [`js/sanity.js`](./js/sanity.js)
+- **Vercel build config:** [`vercel.json`](./vercel.json) — builds the Studio and mounts it at `/admin`
 
-**Status:** spiked but not provisioned. To activate:
-
-1. Run the steps in `studio/SETUP.md` (creates project, deploys Studio, sets CORS)
-2. Paste the resulting project ID into `js/sanity.js` (`PROJECT_ID = '...'`)
-3. Invite Triston as an Editor
-
-Until step 2 is done, `blog.html` shows a "Journal coming soon" empty state. Nothing else on the site changes.
+A new post hits the live site within a few seconds of clicking Publish — no rebuild required.
 
 ## Deploy
 

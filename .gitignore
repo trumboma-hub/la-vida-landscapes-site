@@ -11,6 +11,9 @@ node_modules/
 .cache/
 dist/
 
+# Sanity Studio build output (built by Vercel into /admin during deploy; not committed)
+/admin/
+
 # Saved-page exports dropped into the working tree (not ours to ship)
 images/Slideshow*
 images/Slidesshow*

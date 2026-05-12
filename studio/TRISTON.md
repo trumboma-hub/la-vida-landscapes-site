@@ -4,8 +4,8 @@ Hey Triston — here's the quick guide for posting to the Journal on lavidalands
 
 ## Logging in
 
-1. Go to **https://lavida.sanity.studio**
-2. Click **Sign in with Google** (or use the email/password Marty set up)
+1. Go to **https://www.lavidalandscapes.com/admin**
+2. Click **Sign in with Google** (use the email Marty invited you with)
 3. You're in.
 
 Bookmark that page — it's where you'll always go.
@@ -32,7 +32,7 @@ The post is live on lavidalandscapes.com/blog.html within a few seconds. No webs
 ## Editing or unpublishing
 
 - Open the post → make changes → **Publish** again.
-- To take a post down: open it → click the three-dot menu next to Publish → **Unpublish**. It's hidden from the site immediately but stays in the Studio so you can republish later.
+- To take a post down: open it → click the three-dot menu next to Publish → **Unpublish**. It's hidden from the site immediately but stays in the admin so you can republish later.
 
 ## Drafts
 
@@ -40,7 +40,7 @@ Anything you don't hit Publish on stays as a draft. Only you can see drafts. Pic
 
 ## Image tips
 
-- Photos straight from your phone work great. Sanity resizes them automatically for the site.
+- Photos straight from your phone work great. The system resizes them automatically for the site.
 - Landscape (horizontal) photos look best as hero images — the index page crops to 16:10.
 - Add **alt text** every time. It's how Google reads the image and how screen readers describe it.
 
