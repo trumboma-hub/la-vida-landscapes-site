@@ -11,7 +11,7 @@ This document describes how the La Vida Landscapes Journal CMS is wired up. **Se
 | Dataset | `production` (visibility: **public** — required for client-side reads from the website) |
 | Studio location | **https://www.lavidalandscapes.com/admin** (served from Vercel, built from `studio/`) |
 | Admin link in nav | None — author bookmarks `/admin` directly |
-| CORS origins | `https://lavidalandscapes.com`, `https://www.lavidalandscapes.com`, `http://localhost:8000` |
+| CORS origins (with credentials) | `https://lavidalandscapes.com`, `https://www.lavidalandscapes.com`, `http://localhost:8000` |
 
 ## How the moving parts fit together
 
@@ -63,10 +63,26 @@ If we ever move to a new domain or staging URL, run:
 
 ```bash
 cd studio
-SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors add https://newdomain.com --no-credentials
+SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors add https://newdomain.com --credentials
 ```
 
+**Use `--credentials`, not `--no-credentials`.** The Studio at `/admin`
+needs to send auth cookies/tokens to Sanity Cloud, which only works
+when the origin allows credentials. Public reads (`js/sanity.js`
+fetching posts from the CDN) work either way because they don't send
+credentials — but the Studio login flow silently breaks with
+`--no-credentials` and shows the "Before you continue… add the
+following URL as a CORS origin" warning panel.
+
 To see current origins: `SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors list`.
+To swap an existing origin from `--no-credentials` to `--credentials`,
+you have to delete and re-add (the CLI errors if you try to re-add an
+existing origin with different credential settings):
+
+```bash
+SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors delete https://example.com
+SANITY_STUDIO_PROJECT_ID=fzqkb32j npx sanity cors add https://example.com --credentials
+```
 
 ## Free tier limits (Sanity)
 
