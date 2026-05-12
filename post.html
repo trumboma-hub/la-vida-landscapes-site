@@ -4,16 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Journal | La Vida Landscapes, Birmingham, AL</title>
-  <meta name="description" content="Notes from the field. Seasonal landscape tips, project case studies, and reflections from the La Vida Landscapes team in Birmingham, Alabama." />
-  <link rel="canonical" href="https://lavidalandscapes.com/blog.html" />
+  <meta name="description" content="A journal entry from La Vida Landscapes — Birmingham, AL." />
   <link rel="icon" href="assets/logo.jpg" />
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml" />
 
-  <meta property="og:type" content="website" />
+  <meta property="og:type" content="article" />
   <meta property="og:title" content="Journal | La Vida Landscapes" />
-  <meta property="og:description" content="Seasonal landscape tips, project case studies, and reflections from La Vida Landscapes." />
   <meta property="og:image" content="https://lavidalandscapes.com/images/og-default.svg" />
-  <meta property="og:url" content="https://lavidalandscapes.com/blog.html" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,18 +40,22 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/custom.css?v=5" />
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Blog",
-    "name": "La Vida Landscapes Journal",
-    "url": "https://lavidalandscapes.com/blog.html",
-    "publisher": {
-      "@type": "Organization",
-      "name": "La Vida Landscapes, LLC"
-    }
-  }
-  </script>
+  <style>
+    /* Journal post body — readable measure, generous rhythm */
+    .journal-body { max-width: 68ch; margin: 0 auto; color: var(--bark); }
+    .journal-body .journal-p { font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: clamp(18px, 1.4vw, 21px); line-height: 1.7; margin-top: 1.25rem; }
+    .journal-body .journal-h2 { font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: clamp(26px, 2.4vw, 34px); line-height: 1.15; margin-top: 2.5rem; color: var(--ink); }
+    .journal-body .journal-h3 { font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: clamp(22px, 2vw, 26px); line-height: 1.2; margin-top: 2rem; color: var(--ink); }
+    .journal-body .journal-quote { border-left: 3px solid var(--moss); padding-left: 1.25rem; margin: 2rem 0; font-style: italic; font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: clamp(20px, 1.8vw, 24px); color: var(--ink); }
+    .journal-body .journal-list { margin-top: 1.25rem; padding-left: 1.25rem; }
+    .journal-body .journal-list li { font-family: var(--font-serif, "Cormorant Garamond", Georgia, serif); font-size: clamp(18px, 1.4vw, 21px); line-height: 1.7; margin-top: .35rem; list-style: disc; }
+    .journal-body .journal-list[class*="ol"] li { list-style: decimal; }
+    .journal-body .journal-figure { margin: 2.5rem 0; }
+    .journal-body .journal-figure img { width: 100%; height: auto; border-radius: 4px; }
+    .journal-body .journal-caption { font-family: var(--font-mono, "JetBrains Mono", monospace); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--stone); margin-top: .75rem; text-align: center; }
+    .journal-body a { color: var(--forest); text-decoration: underline; text-underline-offset: 3px; }
+    .journal-body a:hover { color: var(--moss); }
+  </style>
 </head>
 <body class="bg-cream text-ink font-sans antialiased nav-solid">
   <a href="#main" class="skip-link">Skip to content</a>
@@ -128,39 +129,66 @@
   <!-- nav:end -->
 
   <main id="main">
-    <!-- Hero -->
-    <section aria-labelledby="page-title" class="section" style="background:var(--paper);border-bottom:1px solid rgba(168,155,140,.22)">
-      <div class="container-wide">
-        <div class="grid lg:grid-cols-12 gap-10 items-end">
-          <div class="lg:col-span-1 hidden lg:block"><p class="font-mono text-xs" style="color:var(--moss)">&sect; Journal</p></div>
-          <div class="lg:col-span-7">
-            <p class="eyebrow" style="color:var(--moss)">Notes from the Field</p>
-            <h1 id="page-title" class="display mt-6" style="color:var(--ink);font-size:clamp(48px,7vw,108px)">Field notes,<br/><span class="italic" style="color:var(--moss)">freshly cut.</span></h1>
+    <article id="post-article">
+      <!-- Loading state -->
+      <section id="post-loading" class="section" style="background:var(--paper)">
+        <div class="container-wide">
+          <p class="font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--stone)">Loading&hellip;</p>
+        </div>
+      </section>
+
+      <!-- Hero (filled in by JS) -->
+      <section id="post-hero" hidden aria-labelledby="post-title" class="section" style="background:var(--paper);border-bottom:1px solid rgba(168,155,140,.22)">
+        <div class="container-wide">
+          <p class="font-mono text-xs mb-4">
+            <a href="blog.html" class="u-link" style="color:var(--moss)">&larr; Back to Journal</a>
+          </p>
+          <div class="flex items-center gap-3 mt-2">
+            <span id="post-category" class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--moss)"></span>
+            <span class="block w-6 h-px" style="background:var(--moss)"></span>
+            <span id="post-subtag" class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--stone)"></span>
           </div>
-          <div class="lg:col-span-4 flex flex-col justify-end">
-            <p class="text-base leading-relaxed" style="color:var(--bark)">Seasonal landscape tips, project case studies, and reflections from the La Vida team. Updated weekly. Pull up a chair.</p>
+          <h1 id="post-title" class="display mt-6" style="color:var(--ink);font-size:clamp(36px,5.5vw,84px);line-height:1.05"></h1>
+          <p id="post-date" class="mt-6 font-mono text-xs tracking-[0.18em] uppercase" style="color:var(--stone)"></p>
+        </div>
+      </section>
+
+      <!-- Hero image -->
+      <section id="post-hero-image" hidden class="section" style="background:var(--cream);padding-top:0">
+        <div class="container-wide">
+          <div class="aspect-[16/9] overflow-hidden mt-12">
+            <img id="post-hero-img" alt="" class="w-full h-full object-cover" />
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Posts grid (rendered client-side from Sanity) -->
-    <section aria-label="Recent posts" class="section" style="background:var(--cream)">
-      <div class="container-wide">
-        <ul id="journal-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-px" style="background:rgba(168,155,140,.22);border:1px solid rgba(168,155,140,.22)" aria-busy="true">
-          <li class="journal-loading p-9" style="background:var(--cream)">
-            <p class="font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--stone)">Loading posts&hellip;</p>
-          </li>
-        </ul>
+      <!-- Body -->
+      <section id="post-body-wrap" hidden class="section" style="background:var(--cream)">
+        <div class="container-wide">
+          <div id="post-body" class="journal-body"></div>
+          <hr class="hr-thin mt-20" style="max-width:68ch;margin-left:auto;margin-right:auto" />
+          <p class="mt-12 text-center">
+            <a href="blog.html" class="link-arrow">Back to the Journal
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M19 12H5M11 18l-6-6 6-6"/></svg>
+            </a>
+          </p>
+        </div>
+      </section>
 
-        <p id="journal-footer-note" class="mt-16 text-center">
-          <span class="font-serif italic text-lg" style="color:var(--bark)">More posts on the way.</span>
-          <span class="text-base ml-2" style="color:var(--bark)">Have a topic you&rsquo;d like us to cover? <a href="contact.html" class="link-arrow ml-1">Send it our way
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-          </a></span>
-        </p>
-      </div>
-    </section>
+      <!-- 404 state -->
+      <section id="post-missing" hidden class="section" style="background:var(--paper)">
+        <div class="container-wide text-center py-16">
+          <p class="eyebrow" style="color:var(--moss)">Not found</p>
+          <h1 class="display mt-6" style="color:var(--ink);font-size:clamp(36px,4.5vw,64px)">That post seems to have wandered off.</h1>
+          <p class="mt-6 text-base" style="color:var(--bark)">It may have been moved or unpublished.</p>
+          <p class="mt-10">
+            <a href="blog.html" class="btn btn-primary">Back to the Journal
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" class="btn-arrow"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </p>
+        </div>
+      </section>
+    </article>
   </main>
 
   <!-- footer:start -->
@@ -245,58 +273,62 @@
   <script src="js/sanity.js" defer></script>
   <script defer>
     document.addEventListener('DOMContentLoaded', function () {
-      var grid = document.getElementById('journal-grid');
-      if (!grid || !window.LaVidaSanity) return;
       var S = window.LaVidaSanity;
+      if (!S) return;
 
-      function emptyState(msg) {
-        grid.setAttribute('aria-busy', 'false');
-        grid.innerHTML =
-          '<li class="p-9" style="background:var(--cream);grid-column:1/-1">' +
-            '<p class="font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--stone)">' +
-            S.escapeHtml(msg) +
-            '</p>' +
-          '</li>';
+      var slug = new URLSearchParams(window.location.search).get('slug');
+
+      function showMissing() {
+        document.getElementById('post-loading').hidden = true;
+        document.getElementById('post-missing').hidden = false;
       }
 
-      if (!S.isConfigured()) {
-        emptyState('Journal coming soon.');
+      if (!slug || !S.isConfigured()) {
+        showMissing();
         return;
       }
 
-      S.fetchPostList().then(function (posts) {
-        grid.setAttribute('aria-busy', 'false');
-        if (!posts || !posts.length) {
-          emptyState('First post is on the way.');
+      S.fetchPostBySlug(slug).then(function (post) {
+        if (!post) {
+          showMissing();
           return;
         }
-        var html = posts.map(function (p) {
-          var imgUrl = S.imageUrl(p.heroImage, {w: 900, h: 565, fit: 'crop'});
-          var alt = (p.heroImage && p.heroImage.alt) ? p.heroImage.alt : p.title;
-          var subtag = p.subtag ? p.subtag : S.formatDate(p.publishedAt);
-          return '' +
-            '<li>' +
-              '<a href="post.html?slug=' + encodeURIComponent(p.slug) + '" class="block h-full group" style="background:var(--cream)">' +
-                '<div class="aspect-[16/10] overflow-hidden">' +
-                  (imgUrl ? '<img src="' + imgUrl + '" alt="' + S.escapeHtml(alt) + '" class="w-full h-full object-cover" loading="lazy" />' : '<div class="w-full h-full" style="background:var(--cream-warm)"></div>') +
-                '</div>' +
-                '<div class="p-7 md:p-9">' +
-                  '<div class="flex items-center gap-3">' +
-                    '<span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--moss)">' + S.escapeHtml(p.category || '') + '</span>' +
-                    '<span class="block w-6 h-px" style="background:var(--moss)"></span>' +
-                    '<span class="font-mono text-[10px] tracking-[0.22em] uppercase" style="color:var(--stone)">' + S.escapeHtml(subtag) + '</span>' +
-                  '</div>' +
-                  '<h2 class="display mt-5" style="color:var(--ink);font-size:clamp(24px,2.4vw,30px);line-height:1.1">' + S.escapeHtml(p.title || '') + '</h2>' +
-                  '<p class="mt-5 text-sm leading-relaxed" style="color:var(--bark)">' + S.escapeHtml(p.excerpt || '') + '</p>' +
-                  '<p class="mt-7 font-mono text-[11px] tracking-[0.22em] uppercase" style="color:var(--moss)">Read &rarr;</p>' +
-                '</div>' +
-              '</a>' +
-            '</li>';
-        }).join('');
-        grid.innerHTML = html;
+
+        // Page metadata
+        document.title = post.title + ' | La Vida Landscapes Journal';
+        var metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc && post.excerpt) metaDesc.setAttribute('content', post.excerpt);
+        var ogTitle = document.querySelector('meta[property="og:title"]');
+        if (ogTitle) ogTitle.setAttribute('content', post.title + ' | La Vida Landscapes');
+        var ogImg = document.querySelector('meta[property="og:image"]');
+        var heroSocial = S.imageUrl(post.heroImage, {w: 1200, h: 630, fit: 'crop'});
+        if (ogImg && heroSocial) ogImg.setAttribute('content', heroSocial);
+
+        // Hero
+        document.getElementById('post-category').textContent = post.category || '';
+        document.getElementById('post-subtag').textContent = post.subtag || '';
+        document.getElementById('post-title').textContent = post.title || '';
+        document.getElementById('post-date').textContent = S.formatDate(post.publishedAt);
+
+        // Hero image
+        var heroBig = S.imageUrl(post.heroImage, {w: 1800, h: 1013, fit: 'crop'});
+        var heroImg = document.getElementById('post-hero-img');
+        if (heroBig) {
+          heroImg.src = heroBig;
+          heroImg.alt = (post.heroImage && post.heroImage.alt) ? post.heroImage.alt : post.title;
+          document.getElementById('post-hero-image').hidden = false;
+        }
+
+        // Body
+        document.getElementById('post-body').innerHTML = S.portableToHtml(post.body);
+
+        // Reveal, hide loading
+        document.getElementById('post-loading').hidden = true;
+        document.getElementById('post-hero').hidden = false;
+        document.getElementById('post-body-wrap').hidden = false;
       }).catch(function (err) {
-        console.error('[journal]', err);
-        emptyState('Could not load posts right now. Please try again shortly.');
+        console.error('[journal:post]', err);
+        showMissing();
       });
     });
   </script>

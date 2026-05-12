@@ -78,6 +78,23 @@ la-vida-landscapes-site/
 - **Portfolio tiles** use SVG/CSS gradients with project-name labels — clearly placeholders. Each tile in `portfolio.html` is one `<article>`; replace the gradient `<div>` with an `<img>` to drop in real photography.
 - Recommended dimensions: hero 1920x1080, section 1600x900, portfolio tile 1200x900.
 
+## Journal CMS (Sanity) — spike
+
+The Journal page (`blog.html` + `post.html`) fetches posts from a Sanity dataset. Triston writes posts at https://lavida.sanity.studio with email/Google login — no GitHub, no deploys.
+
+- Studio source: [`studio/`](./studio/) — schema, config, docs
+- Public-site client: `js/sanity.js`
+- Setup (one-time, Marty): [`studio/SETUP.md`](./studio/SETUP.md)
+- Author guide (Triston): [`studio/TRISTON.md`](./studio/TRISTON.md)
+
+**Status:** spiked but not provisioned. To activate:
+
+1. Run the steps in `studio/SETUP.md` (creates project, deploys Studio, sets CORS)
+2. Paste the resulting project ID into `js/sanity.js` (`PROJECT_ID = '...'`)
+3. Invite Triston as an Editor
+
+Until step 2 is done, `blog.html` shows a "Journal coming soon" empty state. Nothing else on the site changes.
+
 ## Deploy
 
 GitHub Pages from the `main` branch:
@@ -102,7 +119,7 @@ This is a **baseline**: solid semantic HTML, accessible interaction patterns, se
 - Real project photography to replace portfolio placeholders
 - Real founder/team headshots
 - Optional contact form backend (Formspree or Netlify Forms) if the team wants form submissions in addition to `tel:` / `mailto:`
-- Blog / journal section for SEO long-tail (project case studies, seasonal landscape tips, faith reflections)
+- Activate the Journal CMS spike (see "Journal CMS" section above) — provision Sanity project + invite Triston
 - Vida Gardens dedicated microsite once the nonprofit launches
 - Real `og-default.jpg` (1200x630) once brand photography is in hand
 - DNS cutover to GitHub Pages / Cloudflare Pages
