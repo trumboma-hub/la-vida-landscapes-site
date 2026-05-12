@@ -3,7 +3,15 @@
   "private": true,
   "version": "0.1.0",
   "description": "La Vida Landscapes — Sanity Studio for the Journal",
+  "engines": {
+    "node": "22.x",
+    "npm": ">=11.0.0"
+  },
+  "packageManager": "npm@11.6.2",
   "scripts": {
+    "preinstall": "npx --yes only-allow npm",
+    "audit:ci": "npm audit --audit-level=moderate",
+    "audit:signatures": "npm audit signatures",
     "dev": "sanity dev",
     "start": "sanity start",
     "build": "sanity build",
@@ -11,10 +19,10 @@
     "deploy-graphql": "sanity graphql deploy"
   },
   "dependencies": {
-    "@sanity/vision": "^3.57.0",
+    "@sanity/vision": "4.22.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sanity": "^3.57.0",
+    "sanity": "4.22.0",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
@@ -23,5 +31,9 @@
     "eslint": "^9.9.0",
     "prettier": "^3.3.3",
     "typescript": "^5.5.4"
+  },
+  "overrides": {
+    "glob": ">=10.5.0",
+    "prismjs": ">=1.30.0"
   }
 }
