@@ -2,7 +2,7 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
   "installCommand": "echo 'no root install — studio installs itself in buildCommand'",
-  "buildCommand": "cd studio && npm ci && npm run build && cd .. && rm -rf admin && mv studio/dist admin",
+  "buildCommand": "cd studio && npm ci && npm run build && cd .. && rm -rf admin && mv studio/dist admin && rm -rf studio",
   "outputDirectory": ".",
   "rewrites": [
     { "source": "/static/(.*)", "destination": "/admin/static/$1" },

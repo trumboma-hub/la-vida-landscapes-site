@@ -1,6 +1,6 @@
-# Studio source is built into /admin during build; don't ship the source.
-studio/
-# Local-only assets / build artifacts
+# Things that should not be uploaded to Vercel's build environment.
+# (Studio source must be uploaded — it's required by buildCommand. After
+#  build runs, the buildCommand itself cleans up studio/ from the deploy.)
 node_modules/
 LaVidaLandScapesWebsiteImages.mov
 .git/
