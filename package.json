@@ -1,0 +1,8 @@
+{
+  "name": "la-vida-landscapes-site",
+  "private": true,
+  "description": "Tells Vercel which Node version to use for the studio build. The actual studio package is in studio/.",
+  "engines": {
+    "node": "22.x"
+  }
+}
